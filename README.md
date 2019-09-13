@@ -1,0 +1,1 @@
+# Event_management_built_with_Django
