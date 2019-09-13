@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+{% extends 'base2.html' %}
+{% load static %}
+<html lang="en">
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Service provider : <b>{{ service.vendor_company_name }}</b></h3>
+<label>Service provider website:</label>
+<p>&nbsp;&nbsp;&nbsp; Website: <a href="https://{{ service.vendor_company_website }}">{{ service.vendor_company_website }}</a></p>
+<label>Service provider contact: </label><br>
+<p>&nbsp;&nbsp;&nbsp; Email address: {{ service.vendor_email }}</p>
+<p>&nbsp;&nbsp;&nbsp; Contact number: {{ service.vendor_contact_number }}</p>
+{% for serviceinfo in service_info %}
+{% if serviceinfo.vendor_company_address %}
+<label>Company Address(es) :</label><br>
+    <p>&nbsp;&nbsp;&nbsp; {{ serviceinfo.vendor_company_address }}</p>
+{% endif %}
+{% if serviceinfo.vendor_social_media %}
+<label>Social media(s) :</label><br>
+    <p>&nbsp;&nbsp;&nbsp; {{ serviceinfo.vendor_social_media }}</p>
+{% endif %}
+{% endfor %}
+<label>Company establish year : {{ service.vendor_establish_time }}</label><br>
+<label>language: {{ service.vendor_language }}</label><br>
+<label>Company size : {{ service.vendor_studio_size }} (employee number : {{ service.vendor_employee_number }} )</label><br>
+<label>Description : <br>&nbsp;&nbsp;&nbsp;{{ service.vendor_description }}</label>
+
+</body>
+{% endblock %}
+</html>

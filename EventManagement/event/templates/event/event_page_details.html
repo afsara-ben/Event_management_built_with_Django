@@ -1,0 +1,3124 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>All Events</title>
+    <center><h1>Event details</h1></center>
+</head>
+<body>
+
+in main event page
+
+
+{% if values.event_name %}
+
+
+
+<table class="table table-bordered" style="width:100%; ">
+    <tr>
+        <th>Event Name</th>
+        <th>Event Venue</th>
+        <th>Event Description</th>
+        <th>Event Time</th>
+        <th>Event Date</th>
+        <th>Event Creator</th>
+    </tr>
+    <tr>
+        <td>{{ values.event_name }}</td>
+        <td>{{ values.event_venue }}</td>
+        <td>{{ values.event_description }}</td>
+        <td>{{ values.event_time }}</td>
+        <td>{{ values.event_date }}</td>
+        <td>{{ values.event_username }}</td>
+    </tr>
+    &lt;!&ndash;<td>
+        <a class="btn-link" href="event/details/?sku={{ i.event_name }}">{{ i.event_name }}</a>
+    </td>&ndash;&gt;
+
+</table>
+
+
+{% endif %}
+
+
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="Head1">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="description"/>
+    <meta name="author"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <title>event page</title>
+
+    <!-- Bootstrap core and plugins -->
+    <link href="https://d2poexpdc5y9vj.cloudfront.net/lib/bootstrap/v3/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Font Awesome -->
+
+    <link href="https://d2poexpdc5y9vj.cloudfront.net/public/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Theme 3.0 -->
+    <link href="https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/css/plugins.css" rel="stylesheet"/>
+    <link href="https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/css/main-style.css" rel="stylesheet"/>
+    <link href="https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/css/responsive.css" rel="stylesheet"/>
+
+    <!-- JQuery Library Core -->
+    <script type="text/javascript"
+            src="https://d2poexpdc5y9vj.cloudfront.net/lib/jquery/v1.11.1/jquery.min.js"></script>
+    <!-- JQuery UI Framework -->
+    <script type="text/javascript"
+            src="https://d2poexpdc5y9vj.cloudfront.net/lib/jquery-ui/js/jquery-ui-1.8.21.min.js"></script>
+
+    <script type="text/javascript"
+            src="https://d2poexpdc5y9vj.cloudfront.net/lib/jquery-social-stream/inc/js/jquery.plugins.min.js"></script>
+    <script type="text/javascript"
+            src="https://d2poexpdc5y9vj.cloudfront.net/lib/jquery-social-stream/inc/js/jquery.site.min.js"></script>
+    <script type="text/javascript"
+            src="https://d2poexpdc5y9vj.cloudfront.net/lib/jquery-social-stream/js/jquery.social.stream.wall.1.6.min.js"></script>
+    <script type="text/javascript"
+            src="https://d2poexpdc5y9vj.cloudfront.net/lib/jquery-social-stream/js/jquery.social.more.1.5.9.min.js"></script>
+
+    <!-- Bootstrap Framework Core -->
+    <script type="text/javascript"
+            src="https://d2poexpdc5y9vj.cloudfront.net/lib/bootstrap/v3/js/bootstrap.min.js"></script>
+
+    <!-- Web Theme functions -->
+    <script type="text/javascript" src="https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/js/plugins.js"></script>
+    <script type="text/javascript" src="https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/js/core.js"></script>
+    <script type="text/javascript" src="https://www.eventzilla.net/ezstatic_assets/scripts/custom.js"></script>
+
+
+    <!-- External Plugins -->
+    <script type="text/javascript" src="https://connect.facebook.net/en_US/all.js#xfbml=1&appId=215909627843"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Josefin+Sans|Arvo|Lato|Vollkorn|Ubuntu|Old+Standard+TT|PT+Serif|Fjalla+One|Gloria+Hallelujah|Rock+Salt|Yesteryear'
+          rel='stylesheet' type='text/css'/>
+
+    <title>
+        event page
+    </title></head>
+
+<body id="body" data-spy="scroll">
+
+<!-- Tag Management -->
+
+<!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-TX8F8W"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+        'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-TX8F8W');</script>
+<!-- End Google Tag Manager -->
+
+<form method="post" action="www.eventzilla.net/web/e/wealth-blueprint-with-mel-2138741090" id="form1">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+           value="/wEPDwUILTgxMTI0ODkPZBYCZg9kFgQCAQ9kFgICBg9kFgJmD2QWAmYPFgIeBFRleHQFMVdFQUxUSCBCTFVFUFJJTlQgV0lUSCBNRUwgLSBQb3dlcmVkIGJ5IEV2ZW50emlsbGFkAgMPZBYCAgMPFgIeBmFjdGlvbgU9d3d3LmV2ZW50emlsbGEubmV0L3dlYi9lL3dlYWx0aC1ibHVlcHJpbnQtd2l0aC1tZWwtMjEzODc0MTA5MBYCAgYPZBYCAgEPZBYCZg9kFkgCAQ8WAh4FY2xhc3MFD2V2ZW50LWxvZ28gaGlkZWQCAg8PFgIfAAUZV0VBTFRIIEJMVUVQUklOVCBXSVRIIE1FTGRkAgMPDxYCHwAFDk11bHRpcGxlIERhdGVzZGQCBA8WAh4Fc3R5bGUFDGRpc3BsYXk6bm9uZWQCBQ8WAh8DBVdiYWNrZ3JvdW5kLWltYWdlOnVybChodHRwczovL2QycG9leHBkYzV5OXZqLmNsb3VkZnJvbnQubmV0L3RoZW1lcy8zLjAvYmcvYWJzdHJhY3Q2LmpwZylkAgYPFgIfAwUMZGlzcGxheTpub25lZAIHDxYCHwMFDGRpc3BsYXk6bm9uZWQCCA8WAh8DBQxkaXNwbGF5Om5vbmVkAgkPFgIfAwUMZGlzcGxheTpub25lZAIKDxYCHwMFDGRpc3BsYXk6bm9uZWQCCw8WAh8DBQ1kaXNwbGF5Om5vbmU7FgJmDxYCHgRocmVmBUt+L2Fic3RyYWN0cGFwZXJzdWJtaXNzaW9uLmFzcHg/ZXZlbnRpZD13ZWFsdGgtYmx1ZXByaW50LXdpdGgtbWVsLTIxMzg3NDEwOTBkAgwPFgIfAwUMZGlzcGxheTpub25lZAINDxYCHgdWaXNpYmxlaGQCDg8WAh8DBQxkaXNwbGF5Om5vbmVkAhEPDxYCHwBlZGQCLQ8QDxYCHwVoZA8WAWYWARAFDVNlbGVjdCBhIGRhdGUFATBnFgFmZAIuDxYCHgtfIUl0ZW1Db3VudAIEFghmD2QWBgIBDw9kFgIfAgUfdGlja2V0LXR5cGUgc2FsZS1lbmQtdGlja2V0IHBhZBYUAgUPDxYCHwVnZGQCBw8WAh8DBQ1kaXNwbGF5OmJsb2NrZAIJD2QWAmYPD2QWAh4LZGF0YS10YXJnZXQFByM1NTc5NzNkAgoPFQEIUExBVElOVU1kAhEPDxYCHwAFByQxOTkuOTlkZAIVDxYCHwVoFgJmDw8WAh8ABQNOL0FkZAIXDw8WBB8ABQ9TYWxlcyBlbmQgb24gLSAfBWhkZAIYDw8WBB8ABQpTYWxlIGVuZGVkHwVoZGQCHA8QDxYIHghDc3NDbGFzcwUjUXVhbnRpdHlBZGQgZm9ybS1jb250cm9sIGhhbGYtd2lkdGgeC18hRGF0YUJvdW5kZx4HRW5hYmxlZGgeBF8hU0ICAmQQFQsBMAExATIBMwE0ATUBNgE3ATgBOQIxMBULATABMQEyATMBNAE1ATYBNwE4ATkCMTAUKwMLZ2dnZ2dnZ2dnZ2cWAWZkAiAPZBYGZg8VAQY1NTc5NzNkAgMPDxYCHwAFKkZST05UIFNJVCBQTFVTIDMgSE9VUiBTRVNTSU9OIFdJVEggTUVMSVNTQWRkAgUPDxYCHwVoZGQCCw8PFgIfAAUKU2FsZSBlbmRlZGRkAhMPFgIfAwUMZGlzcGxheTpub25lZAIBD2QWBgIBDw9kFgIfAgUfdGlja2V0LXR5cGUgc2FsZS1lbmQtdGlja2V0IHBhZBYUAgUPDxYCHwVnZGQCBw8WAh8DBQ1kaXNwbGF5OmJsb2NrZAIJD2QWAmYPD2QWAh8HBQcjNTU3OTc0ZAIKDxUBBEdPTERkAhEPDxYCHwAFByQxNDkuOTlkZAIVDxYCHwVoFgJmDw8WAh8ABQNOL0FkZAIXDw8WBB8ABQ9TYWxlcyBlbmQgb24gLSAfBWhkZAIYDw8WBB8ABQpTYWxlIGVuZGVkHwVoZGQCHA8QDxYIHwgFI1F1YW50aXR5QWRkIGZvcm0tY29udHJvbCBoYWxmLXdpZHRoHwlnHwpoHwsCAmQQFQsBMAExATIBMwE0ATUBNgE3ATgBOQIxMBULATABMQEyATMBNAE1ATYBNwE4ATkCMTAUKwMLZ2dnZ2dnZ2dnZ2cWAWZkAiAPZBYGZg8VAQY1NTc5NzRkAgMPDxYCHwAFI1JPVyAyIC0zIEdST1VQIE1FRVRJTkcgV0lUSCBNRUxJU1NBZGQCBQ8PFgIfBWhkZAILDw8WAh8ABQpTYWxlIGVuZGVkZGQCEw8WAh8DBQxkaXNwbGF5Om5vbmVkAgIPZBYGAgEPD2QWAh8CBR90aWNrZXQtdHlwZSBzYWxlLWVuZC10aWNrZXQgcGFkFhQCBQ8PFgIfBWdkZAIHDxYCHwMFDWRpc3BsYXk6YmxvY2tkAgkPZBYCZg8PZBYCHwcFByM1NTc5NzVkAgoPFQEGU0lMVkVSZAIRDw8WAh8ABQYkOTkuOTlkZAIVDxYCHwVoFgJmDw8WAh8ABQNOL0FkZAIXDw8WBB8ABQ9TYWxlcyBlbmQgb24gLSAfBWhkZAIYDw8WBB8ABQpTYWxlIGVuZGVkHwVoZGQCHA8QDxYIHwgFI1F1YW50aXR5QWRkIGZvcm0tY29udHJvbCBoYWxmLXdpZHRoHwlnHwpoHwsCAmQQFQsBMAExATIBMwE0ATUBNgE3ATgBOQIxMBULATABMQEyATMBNAE1ATYBNwE4ATkCMTAUKwMLZ2dnZ2dnZ2dnZ2cWAWZkAiAPZBYGZg8VAQY1NTc5NzVkAgMPDxYCHwAFKlJPVyAzLTUgR1JPVVAgTUVFVElORyBXSVRIIE1FTElTU0EgSEFNTU9ORGRkAgUPDxYCHwVoZGQCCw8PFgIfAAUKU2FsZSBlbmRlZGRkAhMPFgIfAwUMZGlzcGxheTpub25lZAIDD2QWBgIBDw9kFgIfAgUfdGlja2V0LXR5cGUgc2FsZS1lbmQtdGlja2V0IHBhZBYUAgUPDxYCHwVnZGQCBw8WAh8DBQ1kaXNwbGF5OmJsb2NrZAIJD2QWAmYPD2QWAh8HBQcjNTU3OTc2ZAIKDxUBBkJST05aRWQCEQ8PFgIfAAUGJDQ5Ljk5ZGQCFQ8WAh8FaBYCZg8PFgIfAAUDTi9BZGQCFw8PFgQfAAUPU2FsZXMgZW5kIG9uIC0gHwVoZGQCGA8PFgQfAAUKU2FsZSBlbmRlZB8FaGRkAhwPEA8WCB8IBSNRdWFudGl0eUFkZCBmb3JtLWNvbnRyb2wgaGFsZi13aWR0aB8JZx8KaB8LAgJkEBULATABMQEyATMBNAE1ATYBNwE4ATkCMTAVCwEwATEBMgEzATQBNQE2ATcBOAE5AjEwFCsDC2dnZ2dnZ2dnZ2dnFgFmZAIgD2QWBmYPFQEGNTU3OTc2ZAIDDw8WAh8ABQdST1cgNS03ZGQCBQ8PFgIfBWhkZAILDw8WAh8ABQpTYWxlIGVuZGVkZGQCEw8WAh8DBQxkaXNwbGF5Om5vbmVkAjMPZBYCAgEPDxYCHwAFBUFQUExZZGQCNA9kFgQCAQ8WAh8FaBYCAgEPZBYCAgEPDxYCHwBlZGQCAw8PFgIfBWhkZAI1Dw8WAh8ABQxSRUdJU1RFUiBOT1dkZAI2Dw8WAh8ABQ5NdWx0aXBsZSBEYXRlc2RkAjcPDxYCHwAF0gc8cD5BIHNpbXBsZSA1LXN0ZXAgc3lzdGVtIHRoYXQgc2hvd3MgaG93IHRvIGJ1aWxkIGEgcHJvZml0YWJsZSBlQ29tbWVyY2UgYnVzaW5lc3MgZnJvbSBzY3JhdGNoLi4uwqA8L3A+DQo8cD7CoDwvcD4NCjxwPkhvdyB0byB2aXJ0dWFsbHkgZ3JhYiBhIHBpZWNlIG9mIHRoaXMgbXVsdGktdHJpbGxpb24gZG9sbGFyIG1hcmtldCB0aGF04oCZcyBvbiB0aGUgdXByaXNpbmcgd2l0aCBubyBzaWducyBvZiBzdG9wcGluZyHCoDwvcD4NCjxwPsKgPC9wPg0KPHA+RGlzY292ZXIgdGhlIOKAnG5ld+KAnSB3YXkgdG8gY3JlYXRlIGFuIG9ubGluZSBzdG9yZSB3aXRoIG1pbmltYWwgcmlza3MgYW5kIGVmZm9ydHMhPC9wPg0KPHA+wqA8L3A+DQo8cD5Ib3cgdG8gdXNlIOKAnE90aGVyIFBlb3BsZeKAmXMgTW9uZXnigJ0gdG8gc3RhcnQgYnVpbGRpbmcgYSBidXNpbmVzcyB0byBkcmFzdGljYWxseSByZWR1Y2Ugcmlza3MuLi7CoDwvcD4NCjxwPsKgPC9wPg0KPHA+TGVhcm4gaG93IHRvIGlkZW50aWZ5IHRoZSBtb3N0IHByb2ZpdGFibGUgbmljaGUgZm9yIGFueSBidXNpbmVzcyB0aGF04oCZbGwgcHJvZHVjZSByZXdhcmRpbmcgcmVzdWx0cyHCoDwvcD4NCjxwPsKgPC9wPg0KPHA+SG93IHRvIHVzZSBhIHNpbXBsZSB0ZWNobm9sb2d5IHRoYXQgYWxsb3dzIGluZGl2aWR1YWxzIHdpdGhvdXQgdGVjaG5pY2FsIHNraWxscyB0byBidWlsZCBhbiBlbnRpcmUgb25saW5lIHN0b3JlIcKgPC9wPg0KPHA+wqA8L3A+DQo8cD5BIHN0ZXAtYnktc3RlcCBndWlkZSBvbiBwcm9jZXNzaW5nIGN1c3RvbWVy4oCZcyBjcmVkaXQgY2FyZHMgcmVnYXJkbGVzcyBvZiB3aGVyZSB5b3UgbGl2ZSBhcm91bmQgdGhlIHdvcmxkIcKgPC9wPg0KPHA+wqA8L3A+DQo8cD5Ib3cgdG8gZ2V0IGFjY2VzcyB0byBtaWxsaW9ucyBvZiBwcm9kdWN0cyB0byBzZWxsIHdpdGhvdXQgZGV2ZWxvcGluZywgb3duaW5nIGFuZCBzZWVpbmcgdGhlIHByb2R1Y3QuLi7CoDwvcD5kZAI6DxYCHwMFDGRpc3BsYXk6bm9uZRYCAgIPDxYCHwBlZGQCPA8PFgIeBlRhcmdldAUGX2JsYW5rFgIfAwUMZGlzcGxheTpub25lZAI/DxYCHwVoZAJADxYCHwVoZAJBDw8WAh8ABZgETWVsaXNzYSBIYW1tb25kIHN0YXJ0ZWQgaGVyIGZpcnN0IG9ubGluZSBidXNpbmVzcyBhdCB0aGUgYWdlIG9mIDE1LCBzaGUgaGFzIHNlZW4gZ3Jvd24gbXVsdGlwbGUgb25saW5lDQpidXNpbmVzc2VzIHRvIG1pbGxpb25zIG9mIGRvbGxhcnMuIFNoZSBicm9rZSB0aGUgbWlsbGlvbiBkb2xsYXIgbWFyayBhdCB0aGUgYWdlIG9mIDIxIOKAkw0KYW5kIHNoZSBpbW1lZGlhdGVseSBkcm9wcGVkIG91dCBvZiBjb2xsZWdlIHRvIHB1cnN1ZSBpbnRlcm5ldCBidXNpbmVzcyBmdWxsIHRpbWUuDQoNClRvZGF5LCBNZWxpc3NhIEhhbW1vbmQgaXMgYSB3ZWxsIHNvdWdodC1hZnRlciBjb25zdWx0YW50IGZvciBzb21lIG9mIHRoZQ0KYmlnZ2VzdCBjb21wYW5pZXMgaW4gdGhlIHdvcmxkLiBTaGUgaGFzIGJlZW4gaW52aXRlZCB0byBzcGVhayBpbiBvcmdhbml6YXRpb25zIHJlZ2FyZGluZw0KdGhlIHRvcGljcyBvZiBkaWdpdGFsIG1hcmtldGluZywgaW5mb3JtYXRpb24gcHJvZHVjdHMsIHdlYWx0aCBidWlsZGluZyBhbmQgZW50cmVwcmVuZXVyc2hpcC5kZAJCDxYEHwQFQGh0dHA6Ly93d3cuZXZlbnR6aWxsYS5uZXQvd2ViL29yZ2FuaXplci5hc3B4P0NsaWVudElEPTIxMzU3MjYyMTUfBWhkAkUPFgIfAwUMZGlzcGxheTpub25lFgICAw8WAh8GZmQCRg8WAh8DBQxkaXNwbGF5Om5vbmUWAgIDDxYCHwZmZAJHDxYCHwMFDGRpc3BsYXk6bm9uZRYCAgMPFgIfBmZkAkgPFgIfAwUMZGlzcGxheTpub25lZAJJDxYCHwMFDGRpc3BsYXk6bm9uZWQCUA8PFgIfAAUGU3VibWl0ZGQCVg8PFgIfAAUEU2VuZGRkAlsPFgIfAGVkZDP3Iq1EgcWxwpxe3BbOQzH2xMSuB94vmlwyP5b6kBCW"/>
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F08808CF"/>
+    <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+           value="/wEdAH+rXGX2N9ZL4Kl4x+XzzSHuYF0b6AZSMB+1nK+7+kxzPOTM2ChGyDcDZxk/38+1n+vuTdEwKv22vZzJL40HQGKbMufEAhl/t5brz1q1IyBj214yhf/DSYJHC4bDsRvQ0xanP5r4VtZkOrZ1PltV/R10sjDWyYRoNjcvxpSwLOE2A3NHbAUaqrg6AbWDeKiCG8++ZxOQaCqlh9blOWfuLsTpZj9VxOKO4zrezgIzpN1PHNCc1XYShieCviLIzzZwenxZl32rzSB6CHwcisTPQjxLo0lBcZi+BRA6MY0j604rRCo/QE2n7zLpdSUXjUFgWpeb6DHZ0RTWmcBx7s8pVfuICRO2DK9Zd1XEbYsCGG8MOHBdPKOeTlkpMWtgUYT+42xFYpC6I+ogOzyYOQZNl6gzg4yF1bi/L+kcnCoxhxtxOrKTS8HaBC+eKHM/E8a6Y5PfvXF4Q2El1gULUMuxgGadIdXqzz4yIfQnLs5me4+X+2ME/rcwvjrt1U7bl87tvDObOhC+oxQwUILXTqqEIkAHB4E4lGa8wnJsq8/Z3UwOmEkajJsxpMpLLDcm3j0cFiw3bk5pmiXy+97csG1RWBzW53JoPsWf+/S7AkEIwV61G1HGk4QFeiK9UbfJqpIcfcD1eue0lhaYM4//3FO1wPeVUuZE8jeRRHDxZH4DqznIpbgoeDxY7purH2E5CrwBMMNNDlJO80XN9Vs91+q9RI0N1VM4YrXIVcpstWbv51L5JmNlUtJjVn1lACcDg8kf++xOqFL9Wm/HvKkb99JolGNDG3ByyHLFab0LoxHbSnuWIuj1GUkSOyJJPQZrk+EpzG62aQC7hri63i8QQnzbHIIk2z5GAR7iQN1e+6XjCjDwS4MFPccozFiK5Iqt91Ye3MeXf5fpKaxEZYlu1uU7ZcTmQQPLxyzryda9CGO7f1yLFQdQqb9DKbBD/hfixEaIGX/3iElSz9DTYNVB0SLCJXIRZLAsjFhnm24FLyXE2XuRCuqK15TxrIXN9U1ItIQTkat5MeeFxZjRtOpxAL+zy9ZKvuYjvfA3ttYYh/jfYj5l+N7Hrn2fZWr5GOUXfRCuwVHR/nPvCx9gR7OQJhh76UxyUcygcH28pdR9UKn1Nx/5arTdZWZHSD6iCNmayTrAPQf5ebjyEb19zsjN/f0i3ATK5tZ7V7SEh5SARlZ79dEYsnjjtnmIK7IMR8H6QzAn13DwPy0n/V9itpMx8uaSWGBlMNlc04+YfD0LdzrH3543yO7N0LFWBIFPzWtrfdryZpNg9170jKv7hhMgNGZ+F+d8wGhigcuqh4ar8cuF0eFuiBULuulUiAu0qOcQQHgVSfcNH6z0MsMYq1FdLyWaToRbeJRZ90hD71FNbCHIwXc9Rtk0Y5puDe3AUAKv5AUCe1Tt1bQCIv/kofTHxeVcBNxLNzLGgycyIdW32gqTWT5Q++mPMyeiBrn7DX6fkrOD2JQS2vRk6ksnsyF3V+I8RBTsmaNjCSEZAACOBof5fS7b/spwljLiw183VGsoqlz99IafqGP0ZEOCGLnsKWCwNZ6cE7jCcr0062n9jPJov9GJjlQ/ph+Vo39hx/PmiQyEa8ABkVhU8XnWIuKuJnVbZCXQXdgfa0vn0MaBekcXXQod32yMk3ooRKmd5jurbFbnIOtQm4kfbxWptqVSaKuyHbSSEs3DmjGXe24ly60P4vRaZMaNjkZJzS5pWnCWsT+qfmXS68BJ8CuLDE8EpENs2TG4SeT+iviV0c8KI9HFKefrdM4qUlDAKdBH5Tqk33WJXPY2VSLMeYqCrlIoFRM2FliVEc/0XH6jQUeF7zamT5t3retHNzffqdpxYNvBL1inpMofz2lcCtrvQVkxERI+w+ktlY95CYsxijtFVf0VtB1SEOYgPMoq/TDJP3uoK+WIbV2XxKQ4CR3KqEabxXYiHAeNQ2pHX6a8ulzXwp+rLKKp8DB0xnW8+0UyT8dAePWPDM1E43cvJbw2kCuG9ijprfZ4NCXQNKfqBF6mj3oyQ4ARUh2hhQ/wNq/fVziOCrKTvnJnQwrDZ9tds6Fk0jj2HQFq2/8T/OFNN8naNDd9a+5pgZqqHl1mnJkE/MB7lqT5r+y6HeZuQ2nw4D5SdmWDEmH0RtFIOcUmJiLI+Z4GqCm7YZTsY3hq3KUlgFgu0WcZBpZOlQrCZXGMfOO5ossKeMCeYU9HCflHn0TFCIX1mmIffijNQnKkjkhM6P2pJjIQJRbuzIKVY6jMe/SODscLVr0KrUZlFJVtoLE85Kd6ILnJv+fXIPaAqzedS1PY8N+5f/JS4pZtFzho1G+lylzbiCuMm4FXAX4PXgH5+eyM0BLFTfIrOWxf7L4dMLo+LnuX3UKt67QUHiQYbWOeHvu1gLIWOe3V0ZOKWKIdqZeZ8dMrxwEZ9xrykVsxXCmrUxwDLhk1dE+HEEppsL8Uq7Pw+pBWgtDPLCmUg7BbNJmJELQleqdng3EvFmCaa1TLmnUhlUwLrkrDKmOt19ZLerE6joVWvPWdvS8yBVxftIr4HMOPtHUFaEGjbRKfpSaibq7HQCKwni6y1cO8yxV+TY7SZ5q/OJkQFxBzEYgLv9BMgr3X4TbTg4xLH0O9p5NldfgOFfY6PBCnlsG5RLYxeBKp2werz9StjLakCdoHidmKVpB8638368EU9LdHAttHQ/m5gHEC47rOzEPJWtnAE5Ke3rYNo6zIcMJGgrXX4osxfGSXw7/jCyo509i9zjEenZjV9LE="/>
+    <input type="hidden" name="ctl00$hdn_eventurlforabuse" id="hdn_eventurlforabuse"
+           value="https://www.eventzilla.net/web/event/wealth-blueprint-with-mel-2138741090"/>
+    <input type="hidden" name="ctl00$hdnGaEzRegistrations" id="hdnGaEzRegistrations"/>
+    <input type="hidden" name="ctl00$hdnGaEzItemsTrack" id="hdnGaEzItemsTrack"/>
+
+
+    <script type="text/javascript"
+            src="https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/js/easyResponsiveTabs.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet'/>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet'/>
+    <script src='https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js'></script>
+    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+
+    <link rel="stylesheet" href="https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/css/jquery.fancybox.min.css"/>
+    <script type="text/javascript"
+            src="https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/js/jquery.fancybox.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            if ($("#CPMain_ctl00_hfEventSort").val() != "") {
+                var EventSortOrder = JSON.parse($("#CPMain_ctl00_hfEventSort").val());
+                for (var Esort = 1; Esort <= 11; Esort++) {
+                    if (Esort == EventSortOrder.Ticket)
+                        $("#EventSort").append($("#divregister"));
+                    else if (Esort == EventSortOrder.EventDesc) {
+                        $("#EventSort").append($("#diveventinfo"));
+                        $("#lieventinfo").attr("rowchange", Esort);
+                    } else if (Esort == EventSortOrder.OrganizerDesc) {
+                        $("#EventSort").append($("#divabout"));
+                        $("#liorganizer").attr("rowchange", Esort);
+                    } else if (Esort == EventSortOrder.Venue) {
+                        $("#EventSort").append($("#CPMain_ctl00_eventlocation"));
+                        $("#CPMain_ctl00_lilocation").attr("rowchange", Esort);
+                    } else if (Esort == EventSortOrder.EventSpeaker) {
+                        $("#EventSort").append($("#CPMain_ctl00_eventspeaker"));
+                        $("#CPMain_ctl00_lispeakers").attr("rowchange", Esort);
+                    } else if (Esort == EventSortOrder.EventSponsor) {
+                        $("#EventSort").append($("#CPMain_ctl00_eventsponsor"));
+                        $("#CPMain_ctl00_lisponsors").attr("rowchange", Esort);
+                    } else if (Esort == EventSortOrder.Whoattending) {
+                        $("#EventSort").append($("#CPMain_ctl00_eventwhoattending"));
+                        $("#CPMain_ctl00_liwhoattending").attr("rowchange", Esort);
+                    } else if (Esort == EventSortOrder.EventSchedule) {
+                        $("#EventSort").append($("#CPMain_ctl00_eventschedule"));
+                        $("#CPMain_ctl00_lischedule").attr("rowchange", Esort);
+                    } else if (Esort == EventSortOrder.PhotoGallery) {
+                        $("#EventSort").append($("#CPMain_ctl00_secphotogallery"));
+                        $("#CPMain_ctl00_liphotogallery").attr("rowchange", Esort);
+                    } else if (Esort == EventSortOrder.EventComments) {
+                        $("#EventSort").append($("#eventcomments"));
+                        $("#licomment").attr("rowchange", Esort);
+                    } else if (Esort == EventSortOrder.EnableAbstract) {
+                        $("#CPMain_ctl00_liAbstract").attr("rowchange", Esort);
+                    }
+
+                }
+                var $table = $('#particles .navbar-main-collapse');
+                var rows = $table.find('li').get();
+                rows.sort(function (a, b) {
+                    var keyA = $(a).attr('rowchange');
+                    var keyB = $(b).attr('rowchange');
+                    if (parseInt(keyA) > parseInt(keyB)) return 1;
+                    if (parseInt(keyA) < parseInt(keyB)) return -1;
+                    return 0;
+                });
+                $.each(rows, function (index, row) {
+                    $table.children('.navbar-nav').append(row);
+                });
+                RemoveHideSort();
+            } else {
+                RemoveHideSort();
+            }
+
+            function RemoveHideSort() {
+                $("#divabout").removeClass("hide");
+                $("#eventcomments").removeClass("hide");
+                $("#divregister").removeClass("hide");
+                $("#diveventinfo").removeClass("hide");
+                $("#CPMain_ctl00_eventlocation").removeClass("hide");
+                $("#CPMain_ctl00_eventspeaker").removeClass("hide");
+                $("#CPMain_ctl00_eventsponsor").removeClass("hide");
+                $("#CPMain_ctl00_eventwhoattending").removeClass("hide");
+                $("#CPMain_ctl00_eventschedule").removeClass("hide");
+                $("#eventcomments").removeClass("hide");
+                $("#CPMain_ctl00_secphotogallery").removeClass("hide");
+            }
+        });
+    </script>
+    <header id="particles">
+
+        <!-- overlay div Start -->
+        <div class="overlay">
+            <div class="container height-100">
+                <!-- Top Header div Start -->
+                <div class="row hide evbrand">
+                    <div class="col-md-12">
+                        <ul class="help-mdiv">
+                            <li>
+                                <a onclick="ga('send', 'event', 'AttendeeInteractions', 'CTASalesFunnel', 'FindTickets');"
+                                   href="http://www.eventzilla.net/attendee/login"> Find your tickets </a>
+                                <span>|</span></li>
+                            <li>
+                                <a onclick="ga('send', 'event', 'AttendeeInteractions', 'CTASalesFunnel', 'FindEvents');"
+                                   href="http://www.eventzilla.net/events"> Find More Events </a> <span>|</span></li>
+                            <li>
+                                <a onclick="ga('send', 'event', 'AttendeeInteractions', 'CTASalesFunnel', 'CreateEvent-Top');"
+                                   href="/"> Create Your own</a></li>
+                            <div class="clearfix"></div>
+                        </ul>
+                        <logo id="logo"><a
+                                onclick="ga('send', 'event', 'AttendeeInteractions', 'CTASalesFunnel', 'EventzillaLogo');"
+                                class="logo" title="Eventzilla" href="/">Manage Event</a></logo>
+                    </div>
+                </div>
+
+                <!-- Event Title Start -->
+                <div class="event-mtitle">
+                    <div id="CPMain_ctl00_divevelogo" class="event-logo hide">
+                        <img id="CPMain_ctl00_evelogo" alt="Event Logo"/></div>
+                    <h1 class="event-name">
+                        <span id="CPMain_ctl00_lblEventTitle">{{ values.event_name }}</span>
+                    </h1>
+                    <p class="event-venue"><span class="venue-icon"></span>
+                        <span id="CPMain_ctl00_lblEventDateTime">{{ values.event_date}}</span></p>
+                    <p id="CPMain_ctl00_plocation" class="event-location" style="display:none"><span
+                            class="location-icon"></span>
+                        <span id="CPMain_ctl00_lblLocation"></span></p>
+                    <a class="register-btn page-scroll customlabelregisternow" href="/">Home</a>
+                </div>
+            </div>
+        </div>
+        <!-- overlay div End -->
+        <div id="CPMain_ctl00_bgimg" class="bg-img"
+             style="background-image:url(https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/bg/abstract6.jpg)"></div>
+
+
+        <!-- Main Menu div Start -->
+        <div class="main-nav">
+            <nav class="navbar navbar-custom" role="navigation">
+
+                <div class="container nav-bg">
+                    <div class="row">
+                        <div class="col-md-12 position-relative">
+                            <div class="navbar-header">
+							<span class="visible-xs"><a class="menu-logo page-scroll hide evbrand" href="/">
+								<img src="https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/img/nt-eventzilla-emblem.png"
+                                     alt="Eventzilla"/></a></span>
+                                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                        data-target=".navbar-main-collapse"><span>
+								<img class="mobile-micon"
+                                     src="https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/img/nt-mobile-micon.png"
+                                     alt="Main Menu"/></span></button>
+                            </div>
+                            <a class="btn-div pull-right hidden-xs m-r-15 page-scroll customlabelregisternow"
+                               href="/accounts/signup">REGISTER NOW</a>
+                            <a id="logoicon" class="menu-logo page-scroll hidden-xs hide evbrand" href="/">
+                                <img src="https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/img/nt-eventzilla-emblem.png"
+                                     alt="Eventzilla"/></a>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse navbar-main-collapse">
+                                <ul class="nav navbar-nav pull-left">
+                                    <li class="hidden"><a href="#page-top"></a></li>
+                                    <li id="lieventinfo"><a class="page-scroll customlabeleventinfo" href="#event-info">Event
+                                        Information</a></li>
+                                    <li id="CPMain_ctl00_lilocation" style="display:none"><a
+                                            class="page-scroll customlabeleventloc" href="#CPMain_ctl00_eventlocation">LOCATION</a>
+                                    </li>
+                                    <li id="liorganizer"><a class="page-scroll tempspace customlabelabttheorg"
+                                                            href="#organizer">ORGANIZER</a></li>
+                                    <li id="CPMain_ctl00_lispeakers" style="display:none"><a
+                                            class="page-scroll customlabelspeakers" href="#CPMain_ctl00_eventspeaker">Event
+                                        Speakers</a></li>
+                                    <li id="CPMain_ctl00_lisponsors" style="display:none"><a
+                                            class="page-scroll customlabelsponsors" href="#CPMain_ctl00_eventsponsor">SPONSORS</a>
+                                    </li>
+                                    <li id="CPMain_ctl00_liwhoattending" style="display:none"><a class="page-scroll"
+                                                                                                 href="#CPMain_ctl00_eventwhoattending">WHO
+                                        IS ATTENDING</a></li>
+                                    <li id="CPMain_ctl00_lischedule" style="display:none"><a
+                                            class="page-scroll customlabelschedules" href="#CPMain_ctl00_eventschedule">Schedule</a>
+                                    </li>
+                                    <li id="CPMain_ctl00_liAbstract" rowchange="10" style="display:none;"><a
+                                            href="../abstractpapersubmission.aspx?eventid=wealth-blueprint-with-mel-2138741090"
+                                            id="CPMain_ctl00_aAbstractmanagement" target="_blank"
+                                            class="page-scroll customlabelabstract">Abstract Management</a></li>
+                                    <li id="licomment"><a class="page-scroll" href="#eventcomments">COMMENTS</a></li>
+                                    <li id="CPMain_ctl00_liphotogallery" style="display:none"><a class="page-scroll"
+                                                                                                 href="#CPMain_ctl00_secphotogallery">Photo
+                                        Gallery </a></li>
+
+                                    <li><a class="page-scroll visible-xs customlabelregisternow" href="#register">REGISTER
+                                        NOW</a></li>
+
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container -->
+            </nav>
+        </div>
+        <!-- Main Menu div End -->
+
+    </header>
+
+
+    <!-- Countdown Timer Table Start -->
+
+    <div id="CPMain_ctl00_divcountdown" class="countdown" style="display:none">
+
+        <h4 class="title">COUNTDOWN TO EVENT!</h4>
+        <input type="hidden" name="ctl00$CPMain$ctl00$hdncountdown" id="CPMain_ctl00_hdncountdown"/>
+        <input type="hidden" name="ctl00$CPMain$ctl00$hdnutcoffsetcountdown" id="CPMain_ctl00_hdnutcoffsetcountdown"/>
+        <input type="hidden" name="ctl00$CPMain$ctl00$hdnCustomdomainSecure" id="CPMain_ctl00_hdnCustomdomainSecure"
+               value="false"/>
+        <div class="number" id="pcountdown"><span>Days</span></div>
+        <div class="number" id="pcountdownh"><span>Hours</span></div>
+        <div class="number" id="pcountdownm"><span>Minutes</span></div>
+        <div class="number last" id="pcountdowns"><span>Seconds</span></div>
+    </div>
+
+    <!-- Countdown Timer Table End -->
+
+    <!-- Reserve Seat Table Start -->
+    <section style="display:none;">
+        <div class="reserve-mdiv position-relative">
+
+            <div class="bg-white reserve-left">
+                <h2 class="reserve-title"><span>1.</span> Select Seats <span class="event-date"></span></h2>
+                <!-- Reserve Seat Chart Table Start -->
+                <div class="select-seat">
+                    <div id="ReservChart"></div>
+                </div>
+            </div>
+
+
+            <div class="bg-gray reserve-right reservseatstable">
+                <h2 class="reserve-title"><span>2.</span> Review and Proceed</h2>
+
+
+                <div id="divReservDiscount">
+
+                </div>
+
+                <div class="reserve-seat-total">
+                </div>
+            </div>
+
+        </div>
+        <!-- Reserve Seat Table End -->
+    </section>
+    <div id="EventSort"></div>
+    <input type="hidden" name="ctl00$CPMain$ctl00$hfEventSort" id="CPMain_ctl00_hfEventSort"/>
+    <!-- Register Table Start -->
+    <section id="divregister" class="hide">
+        <div class="height-40" id="register"></div>
+
+        <!-- Grid Start -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <span id="CPMain_ctl00_lblErrorMessage"></span>
+                    <span id="CPMain_ctl00_lblerrormessageforrecurring"></span>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfCurrencySymbol" id="CPMain_ctl00_hfCurrencySymbol"
+                           value="$"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hftaxamount" id="CPMain_ctl00_hftaxamount"
+                           value="0.00"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hftaxtotalamount" id="CPMain_ctl00_hftaxtotalamount"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hftaxname" id="CPMain_ctl00_hftaxname"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfFees" id="CPMain_ctl00_hfFees"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfOriginalFees" id="CPMain_ctl00_hfOriginalFees"
+                           value="0"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hdnshowmodal" id="CPMain_ctl00_hdnshowmodal"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfEventzillaPlanCommission"
+                           id="CPMain_ctl00_hfEventzillaPlanCommission" value="0.99,1.9,9.99"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfConvenienceFee" id="CPMain_ctl00_hfConvenienceFee"
+                           value="e"/>
+
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfstatus" id="CPMain_ctl00_hfstatus"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfddlEventDateDefault"
+                           id="CPMain_ctl00_hfddlEventDateDefault"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfallcid" id="CPMain_ctl00_hfallcid"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfpromocid" id="CPMain_ctl00_hfpromocid"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfpromoticket" id="CPMain_ctl00_hfpromoticket"
+                           value="False"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfPromoPrice" id="CPMain_ctl00_hfPromoPrice"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfIsEachTicket" id="CPMain_ctl00_hfIsEachTicket"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfPromoPercentage"
+                           id="CPMain_ctl00_hfPromoPercentage"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfPromoPercentageFees"
+                           id="CPMain_ctl00_hfPromoPercentageFees"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfDiscountMoretickets"
+                           id="CPMain_ctl00_hfDiscountMoretickets"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfDiscountMoreticketsCategoryId"
+                           id="CPMain_ctl00_hfDiscountMoreticketsCategoryId"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfReservSeatbool" id="CPMain_ctl00_hfReservSeatbool"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hf_TwitterTags" id="CPMain_ctl00_hf_TwitterTags"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfPreApproval" id="CPMain_ctl00_hfPreApproval"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfunlockcodealertLang"
+                           id="CPMain_ctl00_hfunlockcodealertLang"
+                           value="The unlock code you entered does not match our records. Please try again or check with this event&#39;s organizer."/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hfEventZillaPayment"
+                           id="CPMain_ctl00_hfEventZillaPayment"/>
+
+                    <!-- Register Title Start -->
+                    <h2 class="stitle position-relative" id="regtitle"><label class="customlabelregistration">Know more about the event!</label>
+                        <span class="tline"></span>
+
+                    </h2>
+
+                    <div class="register-table">
+
+                        <div id="CPMain_ctl00_rpCategory_fade_0" class="ticket-type sale-end-ticket pad">
+
+
+                            <div id="CPMain_ctl00_rpCategory_fadepanel_0" class="overlay-tag"
+                                 style="display:block"></div>
+                            <!--  <span id="CPMain_ctl00_rpCategory_spanclick_0" class="drop-icon" data-toggle="tooltip" title=""><a id="CPMain_ctl00_rpCategory_datatarget_0" class="collapsed" data-toggle="collapse" href="javascript:void(0);" data-target="#557973" href="javascript:__doPostBack(&#39;ctl00$CPMain$ctl00$rpCategory$ctl00$datatarget&#39;,&#39;&#39;)"></a></span>-->
+                            <div class="over-hidden">
+                                <div class="row">
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <h2 class="ticket-mtitle">Event Venue<span
+                                                id="CPMain_ctl00_rpCategory_lblApproval_0"></span>
+
+                                            <span class="dash-line">-</span><span class="ticket-price"><span
+                                                    id="CPMain_ctl00_rpCategory_lblCategoryPrice_0"
+                                                    class="CategoryPriceAdd">{{ values.event_venue }}</span></span></h2>
+                                        <span id="CPMain_ctl00_rpCategory_lblpartialpaymentdesc_0"
+                                              class="parcial-text"></span>
+                                        <p class="ticket-stext">
+
+
+                                            <span id="CPMain_ctl00_rpCategory_lblsavetag_0" class="save-tag"></span>
+
+
+                                        </p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div visible="false">
+
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl00$hfStartDate"
+                                   id="CPMain_ctl00_rpCategory_hfStartDate_0" value="6/11/2019 12:00:00 AM"/>
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl00$hfCategoryID"
+                                   id="CPMain_ctl00_rpCategory_hfCategoryID_0" value="2138486984"/>
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl00$hfAvailableTicket"
+                                   id="CPMain_ctl00_rpCategory_hfAvailableTicket_0" value="10"/>
+
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl00$hf_Catfee"
+                                   id="CPMain_ctl00_rpCategory_hf_Catfee_0" value="0"/>
+
+
+                            <input name="ctl00$CPMain$ctl00$rpCategory$ctl00$txtCatgoryInvite" type="text"
+                                   id="CPMain_ctl00_rpCategory_txtCatgoryInvite_0" class="hide"
+                                   placeholder="Enter Invite Code" onblur="CategoryInvitecode(this.id);"/>
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl00$hfCategoryInvite"
+                                   id="CPMain_ctl00_rpCategory_hfCategoryInvite_0"/>
+
+                        </div>
+
+
+                        <div id="CPMain_ctl00_rpCategory_fade_1" class="ticket-type sale-end-ticket pad">
+
+
+                            <div id="CPMain_ctl00_rpCategory_fadepanel_1" class="overlay-tag"
+                                 style="display:block"></div>
+                            <!--  <span id="CPMain_ctl00_rpCategory_spanclick_1" class="drop-icon" data-toggle="tooltip" title=""><a id="CPMain_ctl00_rpCategory_datatarget_1" class="collapsed" data-toggle="collapse" href="javascript:void(0);" data-target="#557974" href="javascript:__doPostBack(&#39;ctl00$CPMain$ctl00$rpCategory$ctl01$datatarget&#39;,&#39;&#39;)"></a></span>-->
+                            <div class="over-hidden">
+                                <div class="row">
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <h2 class="ticket-mtitle">Type of event
+                                            <span id="CPMain_ctl00_rpCategory_lblApproval_1"></span>
+
+                                            <span class="dash-line">-</span> <span class="ticket-price">
+													<span id="CPMain_ctl00_rpCategory_lblCategoryPrice_1"
+                                                          class="CategoryPriceAdd">{{ values.event_type }}</span></span></h2>
+                                        <span id="CPMain_ctl00_rpCategory_lblpartialpaymentdesc_1"
+                                              class="parcial-text"></span>
+
+                                        <p class="ticket-stext">
+
+
+                                            <span id="CPMain_ctl00_rpCategory_lblsavetag_1" class="save-tag"></span>
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div visible="false">
+
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl01$hfStartDate"
+                                   id="CPMain_ctl00_rpCategory_hfStartDate_1" value="6/11/2019 12:00:00 AM"/>
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl01$hfCategoryID"
+                                   id="CPMain_ctl00_rpCategory_hfCategoryID_1" value="2138486987"/>
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl01$hfAvailableTicket"
+                                   id="CPMain_ctl00_rpCategory_hfAvailableTicket_1" value="20"/>
+
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl01$hf_Catfee"
+                                   id="CPMain_ctl00_rpCategory_hf_Catfee_1" value="0"/>
+
+
+                            <input name="ctl00$CPMain$ctl00$rpCategory$ctl01$txtCatgoryInvite" type="text"
+                                   id="CPMain_ctl00_rpCategory_txtCatgoryInvite_1" class="hide"
+                                   placeholder="Enter Invite Code" onblur="CategoryInvitecode(this.id);"/>
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl01$hfCategoryInvite"
+                                   id="CPMain_ctl00_rpCategory_hfCategoryInvite_1"/>
+
+                        </div>
+
+                        <div id="CPMain_ctl00_rpCategory_fade_2" class="ticket-type sale-end-ticket pad">
+
+
+
+                            <div id="CPMain_ctl00_rpCategory_fadepanel_2" class="overlay-tag"
+                                 style="display:block"></div>
+                            <!--  <span id="CPMain_ctl00_rpCategory_spanclick_2" class="drop-icon" data-toggle="tooltip" title=""><a id="CPMain_ctl00_rpCategory_datatarget_2" class="collapsed" data-toggle="collapse" href="javascript:void(0);" data-target="#557975" href="javascript:__doPostBack(&#39;ctl00$CPMain$ctl00$rpCategory$ctl02$datatarget&#39;,&#39;&#39;)"></a></span>-->
+                            <div class="over-hidden">
+                                <div class="row">
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <h2 class="ticket-mtitle">Number of guests<span
+                                                id="CPMain_ctl00_rpCategory_lblApproval_2"></span>
+
+                                            <span class="dash-line">-</span><span class="ticket-price"><span
+                                                    id="CPMain_ctl00_rpCategory_lblCategoryPrice_2"
+                                                    class="CategoryPriceAdd">{{ values.event_guest_number }}</span></span></h2>
+                                        <span id="CPMain_ctl00_rpCategory_lblpartialpaymentdesc_2"
+                                              class="parcial-text"></span>
+                                        <p class="ticket-stext">
+
+
+                                            <span id="CPMain_ctl00_rpCategory_lblsavetag_2" class="save-tag"></span>
+
+
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div id="CPMain_ctl00_rpCategory_catdescription_2">
+
+                                <div id='557975' class="collaps detail-mdiv">
+                                    <div id="CPMain_ctl00_rpCategory_lblDescriptionline_2" class="line-div"></div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div visible="false">
+
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl02$hfStartDate"
+                                   id="CPMain_ctl00_rpCategory_hfStartDate_2" value="6/11/2019 12:00:00 AM"/>
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl02$hfCategoryID"
+                                   id="CPMain_ctl00_rpCategory_hfCategoryID_2" value="2138486986"/>
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl02$hfAvailableTicket"
+                                   id="CPMain_ctl00_rpCategory_hfAvailableTicket_2" value="30"/>
+
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl02$hf_Catfee"
+                                   id="CPMain_ctl00_rpCategory_hf_Catfee_2" value="0"/>
+
+
+                            <input name="ctl00$CPMain$ctl00$rpCategory$ctl02$txtCatgoryInvite" type="text"
+                                   id="CPMain_ctl00_rpCategory_txtCatgoryInvite_2" class="hide"
+                                   placeholder="Enter Invite Code" onblur="CategoryInvitecode(this.id);"/>
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl02$hfCategoryInvite"
+                                   id="CPMain_ctl00_rpCategory_hfCategoryInvite_2"/>
+
+                        </div>
+
+
+                        <div id="CPMain_ctl00_rpCategory_fade_3" class="ticket-type sale-end-ticket pad">
+
+
+                            <div id="CPMain_ctl00_rpCategory_fadepanel_3" class="overlay-tag"
+                                 style="display:block"></div>
+                            <!--  <span id="CPMain_ctl00_rpCategory_spanclick_3" class="drop-icon" data-toggle="tooltip" title=""><a id="CPMain_ctl00_rpCategory_datatarget_3" class="collapsed" data-toggle="collapse" href="javascript:void(0);" data-target="#557976" href="javascript:__doPostBack(&#39;ctl00$CPMain$ctl00$rpCategory$ctl03$datatarget&#39;,&#39;&#39;)"></a></span>-->
+                            <div class="over-hidden">
+                                <div class="row">
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <h2 class="ticket-mtitle">Client
+                                            <span id="CPMain_ctl00_rpCategory_lblApproval_3"></span>
+
+                                            <span class="dash-line">-</span> <span class="ticket-price">
+													<span id="CPMain_ctl00_rpCategory_lblCategoryPrice_3"
+                                                          class="CategoryPriceAdd">{{ values.event_client }}</span></span></h2>
+                                        <span id="CPMain_ctl00_rpCategory_lblpartialpaymentdesc_3"
+                                              class="parcial-text"></span>
+
+                                        <p class="ticket-stext">
+
+
+                                            <span id="CPMain_ctl00_rpCategory_lblsavetag_3" class="save-tag"></span>
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="CPMain_ctl00_rpCategory_catdescription_3">
+
+                                <div id='557976' class="collap detail-mdiv">
+                                    <div id="CPMain_ctl00_rpCategory_lblDescriptionline_3" class="line-div"></div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div visible="false">
+
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl03$hfStartDate"
+                                   id="CPMain_ctl00_rpCategory_hfStartDate_3" value="6/11/2019 12:00:00 AM"/>
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl03$hfCategoryID"
+                                   id="CPMain_ctl00_rpCategory_hfCategoryID_3" value="2138486981"/>
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl03$hfAvailableTicket"
+                                   id="CPMain_ctl00_rpCategory_hfAvailableTicket_3" value="30"/>
+
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl03$hf_Catfee"
+                                   id="CPMain_ctl00_rpCategory_hf_Catfee_3" value="0"/>
+
+
+                            <input name="ctl00$CPMain$ctl00$rpCategory$ctl03$txtCatgoryInvite" type="text"
+                                   id="CPMain_ctl00_rpCategory_txtCatgoryInvite_3" class="hide"
+                                   placeholder="Enter Invite Code" onblur="CategoryInvitecode(this.id);"/>
+                            <input type="hidden" name="ctl00$CPMain$ctl00$rpCategory$ctl03$hfCategoryInvite"
+                                   id="CPMain_ctl00_rpCategory_hfCategoryInvite_3"/>
+
+                        </div>
+
+
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- Ticket type Bottom Start -->
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Grid End -->
+
+    </section>
+    <!-- Register Table End -->
+
+    <!-- Event Information Start -->
+    <section id="diveventinfo" class="hide">
+        <div class="height-40" id="event-info"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Event Information Start -->
+                    <h2 class="stitle position-relative customlabeleventinfo" id="infotitle">Event Information<span
+                            class="tline"></span></h2>
+                    <!-- Event Information End -->
+                    <div class="event-info">
+
+                        <h2 class="stitle customlabelabtevents">About the Event </h2>
+
+                        <div class="info-content">
+                            <p>
+                                <span id="CPMain_ctl00_lblEventDescription">
+                            <p>{{ values.event_description }}</p></span>
+                            </p>
+
+                            <p>
+                                <span id="CPMain_ctl00_lblEventCancelDescription"></span></p>
+                            <div id="twitteslinks"></div>
+                        </div>
+
+                        <input type="hidden" name="ctl00$CPMain$ctl00$hfTwitterTags" id="CPMain_ctl00_hfTwitterTags"/>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Event Information End -->
+
+
+    <!-- Event Location Start -->
+    <section id="CPMain_ctl00_eventlocation" class="hide" style="display:none">
+        <div class="height-40"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Event Location Start -->
+                    <h2 id="CPMain_ctl00_infolocation" class="stitle position-relative customlabeleventloc"> Event
+                        Location<span class="tline"></span></h2>
+                    <!-- Event Location End -->
+                </div>
+            </div>
+        </div>
+
+        <div class="map-mdiv">
+
+            <aside class="listing-map-footer">
+                <section class="listing-map-card js-listing-map-card l-align-center" data-automation="event-map-card">
+                    <div class="listing-map-card-body">
+                        <h2 class='listing-map-card-title'>
+                            <span id="CPMain_ctl00_lblVenueTitle"></span>
+                        </h2>
+                        <div>
+                            <p class="info-location listing-map-card-street-address text-default">
+                                <span class="info-location-icon"></span>
+                                <span id="CPMain_ctl00_lblLocationMap"></span>
+                            </p>
+                        </div>
+                    </div>
+                    <footer class="listing-map-card-footer">
+                        <div>
+                            <h4>Getting there</h4>
+                            <ul class="grouped-ico" style="padding: 0">
+                                <li>
+                                    <a href="https://maps.google.com?saddr=Current+Location&daddr=13.05296653863434,80.21388255291754&driving"
+                                       id="CPMain_ctl00_driving" target="_blank"
+                                       class="btn btn--target is-collapsed js-drive-directions-link btn--invert">
+                                        <img src="https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/img/icon-car.png"
+                                             alt="By Car"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://maps.google.com?saddr=Current+Location&dirflg=w&daddr=-28.0770357,153.3825551"
+                                       id="CPMain_ctl00_walk" target="_blank"
+                                       class="btn btn--target is-collapsed js-walk-directions-link btn--invert">
+                                        <img src="https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/img/icon-walk.png"
+                                             alt="By Walk"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://maps.google.com?saddr=Current+Location&dirflg=r&daddr=-28.0770357,153.3825551&mode=transit"
+                                       id="CPMain_ctl00_transport" target="_blank"
+                                       class="btn btn--target is-collapsed js-transit-directions-link btn--invert">
+                                        <img src="https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/img/icon-train.png"
+                                             alt="By public transport"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://maps.google.com?saddr=Current+Location&dirflg=b&daddr=-28.0770357,153.3825551&mode=bicycling"
+                                       id="CPMain_ctl00_bike" target="_blank"
+                                       class="btn btn--target is-collapsed js-bike-directions-link btn--invert">
+                                        <img src="https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/img/icon-bike.png"
+                                             alt="By Bike"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </footer>
+                </section>
+            </aside>
+
+            <input type="hidden" name="ctl00$CPMain$ctl00$hf_address" id="CPMain_ctl00_hf_address"/>
+            <input type="hidden" name="ctl00$CPMain$ctl00$hf_addlocation" id="CPMain_ctl00_hf_addlocation"/>
+            <div class="google_map">
+                <div id="map_canvas" style="width: 100%; height: 420px;"></div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Event Location End -->
+
+    <!-- Event Organizer Start -->
+    <section id="divabout" class="hide">
+        <div class="height-40" id="organizer"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Event Location Start -->
+                    <h2 id="CPMain_ctl00_infoabout" class="stitle position-relative customlabelabttheorg">About the
+                        Organizer
+                        <span class="tline"></span></h2>
+                    <!-- Event Location End -->
+                    <div class="organizer-info">
+
+
+                        <a id="CPMain_ctl00_hlfburl" target="_blank" style="display:none"></a>
+
+
+                        <span id="CPMain_ctl00_lblClientUrl"></span>
+                        <span id="CPMain_ctl00_lblContact"></span>
+
+
+                    </div>
+                    <div class="info-content">
+                        <p>
+                            <span id="CPMain_ctl00_lblEventOrganizerDescription"> {{ values.event_agency.agency_description }}</span>
+                        </p>
+                        <a class="organizer-btn m-t-10 customlabelcontact" href=";"
+                           id="triggerContact">CONTACT ORGANIZER</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="speaker-background" class="modal fade speaker-background new-spearker-popup-detail">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close new-spearker-popup-close" data-dismiss="modal"
+                            aria-hidden="true">&times;
+                    </button>
+                    <div class="new-spearker-popup-image hidden-xs">
+                        <img class="img-responsive imspk"/>
+                    </div>
+                    <div class="new-spearker-popup-title">
+                        <h5 class="speaker-title"></h5>
+                        <p class="speaker-text"></p>
+                        <p class="new-spearker-popup-url awebsiteurl"><i class="fa fa-globe"></i><a class="speakerurl"
+                                                                                                    target="_blank"> </a>
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="modal-body bodyremove">
+                    <div class="divabtspeaker">
+                        <h4>About the Speaker</h4>
+                        <p class="speaker-description"></p>
+                    </div>
+                    <div class="divcontspeaker">
+                        <h4>Connect</h4>
+                        <a id="CPMain_ctl00_facebooklink" class="social-btn facebook-color" target="_blank"><i
+                                class="fa fa-facebook"></i></a>
+                        <a id="CPMain_ctl00_twitterlink" class="social-btn twitter-color" target="_blank"><i
+                                class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <section id="CPMain_ctl00_eventspeaker" class="hide" style="display:none">
+        <div class="height-40"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 id="CPMain_ctl00_infospeakers" class="stitle position-relative customlabelspeakers">Event
+                        Speakers<span class="tline"></span>
+                    </h2>
+                    <div class="row new-spearker-mdiv">
+
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Event Speakers End -->
+    <!-- /Event Speakers .modal -->
+    <div id="speaker-backgrounda" class="modal fade speaker-backgrounda">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true">&times;
+                    </button>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="modal-body">
+                    <p class="speaker-description"></p>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /Event Speakers .modal -->
+
+    <!-- Event Sponsors Start -->
+    <section id="CPMain_ctl00_eventsponsor" class="hide" style="display:none">
+        <div class="height-40"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Event Sponsors Start -->
+                    <h2 id="CPMain_ctl00_infosponsors" class="stitle position-relative">Event Sponsors<span
+                            class="tline"></span>
+
+                    </h2>
+                    <!-- Event Sponsors End -->
+                    <div class="sponsor-info">
+
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Event Sponsors End -->
+
+    <!-- Event Who'sAttending Start -->
+    <section id="CPMain_ctl00_eventwhoattending" class="hide" style="display:none">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 id="CPMain_ctl00_infowhosattend" class="stitle position-relative">WHO IS ATTENDING<span
+                            class="tline"></span></h2>
+                    <div class="row main-attentee">
+
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Event Who'sAttending End -->
+
+
+    <!-- Event Add Schedule&Tracks for Events Start -->
+    <section id="CPMain_ctl00_eventschedule" class="bg-gray hide" style="display:none">
+        <div class="height-40"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 id="CPMain_ctl00_infoschedule" class="stitle position-relative">Event Schedule<span
+                            class="tline"></span><br/>
+                    </h2>
+                    <div class="session-info">
+                        <div id="parentHorizontalTab">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="CPMain_ctl00_secphotogallery" class="hide" style="display:none">
+        <div class="height-40"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 pad-right0">
+                    <!-- Event Location Start -->
+                    <h2 class="stitle position-relative">Photo Gallery <span class="tline"></span></h2>
+                    <!-- Event Location End -->
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Add Schedule&Tracks for Events End -->
+
+    <!-- Event comments Start -->
+    <section id="eventcomments" class="hide">
+        <div class="height-40"></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Event comments Start -->
+                    <h2 class="stitle position-relative" id="infocomments">Event Comments<span class="tline"></span>
+                    </h2>
+                    <!-- Event comments End -->
+                    <div class="comment-info">
+                        <div class="panel">
+
+
+                            <div id="discussion" style="visibility: hidden">
+                                <input type="hidden" name="ctl00$CPMain$ctl00$HiddenField3"
+                                       id="CPMain_ctl00_HiddenField3"/>
+
+
+                                <div id="div_desqus">
+                                    <div class="dotdivider offsettop"></div>
+
+                                    <div id="disqus_thread"></div>
+                                    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span
+                                            class="logo-disqus">Disqus</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Event comments End -->
+    <!-- Invite Event modal Start  -->
+    <div id="pnlInvite" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true">&times;
+                    </button>
+                    <h4 class="modal-title">Enter unlock code</h4>
+
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="form-group" style="margin: 0">
+                        <div class="col-sm-8">
+                            <p style="margin: 0">Please enter below, the secure invite code provided to you by the event
+                                organizer in order to proceed...</p>
+
+                        </div>
+                        <div class="col-sm-4">
+                            <input name="ctl00$CPMain$ctl00$txtInvitecode" type="text" id="CPMain_ctl00_txtInvitecode"
+                                   class="form-control" onblur="setHiddenFieldVal(this.value);"/>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hdnInviteCode" id="CPMain_ctl00_hdnInviteCode"/>
+                    <input type="hidden" name="ctl00$CPMain$ctl00$hdnInviteccode" id="CPMain_ctl00_hdnInviteccode"/>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-primary proceed-icon" onclick="return sendHiddenVariable();"
+                           value="Proceed"/>
+                </div>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- Invite Event modal End -->
+    <div id="divCategoryInvite" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true">&times;
+                    </button>
+                    <h4 class="modal-title">Enter unlock code</h4>
+
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-horizontal CategoryInviteAppender">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button id="CPMain_ctl00_Button1" class="btn border close-icon" data-dismiss="modal"
+                            aria-hidden="true">Close
+                    </button>
+                    <input type="submit" name="ctl00$CPMain$ctl00$btnValidateCatInvite" value="Submit"
+                           onclick="return ValidateCatInvite();" id="CPMain_ctl00_btnValidateCatInvite"
+                           class="btn btn-primary save-icon"/>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- Sponsor Event Contact Organozer modal Start -->
+    <div id="contactOrganizer" class="modal fade" tabindex="-1" role="grid" aria-labelledby="basicModal"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content NewContactPopup">
+                <div class="modal-body">
+                    <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true">&times;
+                    </button>
+                    <h3 class="PopupTitle">Contact Organizer</h3>
+                    <div class="row">
+                        <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <label class="control-label">Your Name</label>
+                            <input name="ctl00$CPMain$ctl00$txtYourName" type="text" id="CPMain_ctl00_txtYourName"
+                                   class="form-control"/>
+                            <span id="spReqlblUsrName" class="hide" style="color: red;">Name is required</span>
+
+
+                        </div>
+                        <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <label class="control-label" for="inputEmail3">Email Address</label>
+                            <input name="ctl00$CPMain$ctl00$txtEmailAddress" type="text"
+                                   id="CPMain_ctl00_txtEmailAddress" class="form-control"/>
+                            <span id="spReqlblOrgMail" class="hide" style="color: red;">Email is required</span>
+                            <span id="spRegularlblOrgMail" class="hide" style="color: red;">Please enter a valid email address</span>
+
+
+                        </div>
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label class="control-label" for="inputEmail3">Subject</label>
+                            <input name="ctl00$CPMain$ctl00$txtSubject" type="text" id="CPMain_ctl00_txtSubject"
+                                   class="form-control"/>
+                            <span id="spReqlblSubject" class="hide" style="color: red;">Subject is required</span>
+
+
+                        </div>
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label class="control-label" for="inputEmail3">Enquiry</label>
+                            <textarea name="ctl00$CPMain$ctl00$txtSendmessage" rows="4" cols="20"
+                                      id="CPMain_ctl00_txtSendmessage" class="form-control">
+</textarea>
+                            <span id="spReqenquiry" class="hide" style="color: red;">Enquiry is required</span>
+
+
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 popup-action">
+                            <button id="CPMain_ctl00_modalhide" class="btn border close-btn" data-dismiss="modal"
+                                    aria-hidden="true">Close
+                            </button>
+                            <input type="submit" name="ctl00$CPMain$ctl00$btnSendMessage" value="Send"
+                                   id="CPMain_ctl00_btnSendMessage" class="btn btn-primary save-btn"/>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /.modal-content --></div> <!-- /.modal-dialog -->
+        <div id='recaptcha' class="g-recaptcha" data-sitekey="6LeAW1AUAAAAALuw0EO_fuwZUck3UF48nqwauCKL"
+             data-callback="onSubmit" data-size="invisible"></div>
+    </div>
+    <!-- /.modal -->
+    <!-- Sponsor Event Contact Organozer modal End -->
+    <!-- have to add Comments feature  satesh-->
+    <input type="hidden" name="ctl00$CPMain$ctl00$hdn_ShowDiscussion" id="CPMain_ctl00_hdn_ShowDiscussion" value="2"/>
+    <input type="hidden" name="ctl00$CPMain$ctl00$hdnwaitdiscount" id="CPMain_ctl00_hdnwaitdiscount"/>
+
+    <footer class="footer-mdiv evbrand hide" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6 col-sm-5 col-xs-12 nopadding">
+                        <img class="emblem-icon"
+                             src="https://d2poexpdc5y9vj.cloudfront.net/themes/3.0/img/nt-eventzilla-emblem.png"
+                             alt="EventZilla"/>
+
+                        <a onclick="ga('send', 'event', 'AttendeeInteractions', 'CTASalesFunnel', 'FindTickets-Btm');"
+                           href="/">List your event with us today</a>
+
+                    </div>
+                    <div class="col-md-6 col-sm-7 col-xs-12 nopadding foot-attendee text-right">
+                        <a onclick="ga('send', 'event', 'AttendeeInteractions', 'CTASalesFunnel', 'ContactUs');"
+                           class="m-r-15" href="http://eventzilla.net/contact">Contact Us</a>
+                        <a onclick="ga('send', 'event', 'AttendeeInteractions', 'CTASalesFunnel', 'Privacy');"
+                           class="m-r-15" href="http://eventzilla.net/privacy">Privacy Policy</a>
+                        <a onclick="ga('send', 'event', 'AttendeeInteractions', 'CTASalesFunnel', 'TermsOfUse');"
+                           class="m-r-15" href="http://eventzilla.net/terms-conditions">Terms of Service</a>
+                        <a id="a_reportabuselink"
+                           onclick="ga('send', 'event', 'AttendeeInteractions', 'CTASalesFunnel', 'AbuseReport');"
+                           href="mailto:help@eventzilla.net?subject=Abuse Report&body">Report abuse</a>
+                        <div class="clearfix"></div>
+
+
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript">
+
+        function btnSessionCalendar_Click(id) {
+            var sp = id.split('_');
+            $("#" + sp[0] + "_" + sp[1] + "_" + "calendarsession" + sp[3]).slideToggle();
+        }
+
+        function btnSessionSpeaker_Click(id) {
+            var sp = id.split('_');
+            $("#" + sp[0] + "_" + sp[1] + "_" + "speakerdetail" + "_" + sp[3]).slideToggle();
+        }
+
+        $(document).ready(function () {
+            // <!--Plug-in Initialisation-->
+            //Horizontal Tab
+            $('#parentHorizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true, // 100% fit in a container
+                tabidentify: 'hor_1', // The tab groups identifier
+                activate: function (event) { // Callback function if tab is switched
+                    var $tab = $(this);
+                    var $info = $('#nested-tabInfo');
+                    var $name = $('span', $info);
+                    $name.text($tab.text());
+                    $info.show();
+                }
+            });
+        });
+        $('.flipper').hover(function () {
+            $(this).addClass('flip');
+        }, function () {
+            $(this).removeClass('flip');
+        });
+
+        $(document).ready(function () {
+            $(".new-spearker-info .speaker-detail").click(function () {
+
+                $('.speaker-background .speaker-title').html($(this).closest(".new-spearker-info").find(".speakerfullname").html());
+                $('.speaker-background .speaker-text').html($(this).closest(".new-spearker-info").find(".speaker-text").html());
+                $('.speaker-background .speaker-description').html($(this).closest(".new-spearker-info").find(".speaker-description").html());
+                $('.speaker-background .facebook-color').attr("href", "javascript:void(0);");
+
+                $('.speaker-background .imspk').attr("src", $(this).closest(".new-spearker-info").find(".imgspk").attr("src"));
+
+
+                $('.speaker-background .facebook-color').attr("href", $(this).closest(".new-spearker-info").find(".facebook-color").attr("href"));
+                if ($('.speaker-background .facebook-color').attr("href") == "javascript:void(0);") {
+                    $('.speaker-background .facebook-color').attr("style", "display:none");
+                } else {
+                    $('.speaker-background .facebook-color').attr("style", "display:inline-block");
+                }
+
+                $('.speaker-background .twitter-color').attr("href", "javascript:void(0);");
+                $('.speaker-background .twitter-color').attr("href", $(this).closest(".new-spearker-info").find(".twitter-color").attr("href"));
+                if ($('.speaker-background .twitter-color').attr("href") == "javascript:void(0);") {
+                    $('.speaker-background .twitter-color').attr("style", "display:none");
+                } else {
+                    $('.speaker-background .twitter-color').attr("style", "display:inline-block");
+                }
+
+                if ($(this).closest(".new-spearker-info").find(".speakerurl").attr("href") == "") {
+                    $(".awebsiteurl").attr("class", "new-spearker-popup-url awebsiteurl hide");
+                } else {
+                    $(".awebsiteurl").removeClass("hide");
+                }
+
+                // alert($(this).closest(".new-spearker-info").find(".facebook-color").attr("href"));
+                if ($(this).closest(".new-spearker-info").find(".speaker-description").html() == "" &&
+                    typeof $(this).closest(".new-spearker-info").find(".twitter-color").attr("href") === "undefined" &&
+                    typeof $(this).closest(".new-spearker-info").find(".facebook-color").attr("href") === "undefined") {
+                    $(".bodyremove").attr("class", "modal-body bodyremove hide");
+                } else {
+                    $(".bodyremove").removeClass("hide");
+                }
+
+                if ($(this).closest(".new-spearker-info").find(".speaker-description").html() == "") {
+                    $(".divabtspeaker").attr("class", "divabtspeaker hide");
+                } else {
+                    $(".divabtspeaker").removeClass("hide");
+                }
+
+                if (typeof $(this).closest(".new-spearker-info").find(".twitter-color").attr("href") === "undefined" &&
+                    typeof $(this).closest(".new-spearker-info").find(".facebook-color").attr("href") === "undefined") {
+                    $(".divcontspeaker").attr("class", "divcontspeaker hide");
+                } else {
+                    $(".divcontspeaker").removeClass("hide");
+                }
+
+                $('.speaker-background .speakerurl').attr("href", $(this).closest(".new-spearker-info").find(".speakerurl").attr("href"));
+                $('.speaker-background .speakerurl').html($(this).closest(".new-spearker-info").find(".speakerurl").attr("href"));
+                if ($('.speaker-background .speakerurl').attr("href") == "") {
+                    $('.speaker-background .speaker-url').attr("style", "display:none");
+                } else {
+                    $('.speaker-background .speaker-url').attr("style", "display:inline-block");
+                }
+                $('.speaker-background').modal('show');
+            });
+        });
+
+        $(document).ready(function () {
+            var $map, $cover;
+            $map = $('.google_map');
+            $cover = $('<div class="cover"></div>');
+            $map.append($cover);
+            $cover.on('click', function () {
+                $cover.remove();
+            });
+        });
+
+
+        $(window).bind('scroll', function () {
+            var navHeight = 600; // custom nav height
+            ($(window).scrollTop() > navHeight) ? $('nav').addClass('goToTop') : $('nav').removeClass('goToTop');
+        });
+
+        $(function () {
+            $('a.page-scroll').bind('click', function (event) {
+                var $anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top
+                }, 800, 'easeInOutExpo');
+                event.preventDefault();
+            });
+        });
+
+        // Closes the Responsive Menu on Menu Item Click
+        $('.navbar-collapse ul li a').click(function () {
+            $('.navbar-toggle:visible').click();
+        });
+
+        $('.animated').appear(function () {
+            var element = $(this);
+            var animation = element.data('animation');
+            var animationDelay = element.data('delay');
+            if (animationDelay) {
+                setTimeout(function () {
+                    element.addClass(animation + " visible");
+                    element.removeClass('hiding');
+                    if (element.hasClass('counter')) {
+                        element.children('.value').countTo();
+                    }
+                }, animationDelay);
+            } else {
+                element.addClass(animation + " visible");
+                element.removeClass('hiding');
+                if (element.hasClass('counter')) {
+                    element.children('.value').countTo();
+                }
+            }
+        }, {accY: -110});
+
+        $(document).ready(function () {
+            var showChar = 100;  // How many characters are shown by default
+            var ellipsestext = "...";
+            var moretext = "Show more";
+            var lesstext = "Show less";
+            $('.more').each(function () {
+                var content = $(this).html();
+                if (content.length > showChar) {
+                    var c = content.substr(0, showChar);
+                    var h = content.substr(showChar, content.length - showChar);
+                    var html = c + '<span class="moreellipses">' + ellipsestext + '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+                    $(this).html(html);
+                }
+            });
+
+            $(".morelink").click(function () {
+                if ($(this).hasClass("less")) {
+                    $(this).removeClass("less");
+                    $(this).html(moretext);
+                } else {
+                    $(this).addClass("less");
+                    $(this).html(lesstext);
+                }
+                $(this).parent().prev().toggle();
+                $(this).prev().toggle();
+                return false;
+            });
+        });
+
+        $(document).ready(function () {
+            var showChar = 100;  // How many characters are shown by default
+            var ellipsestext = "";
+            var moretext = "More";
+            var lesstext = "Less";
+            $('.description-more').each(function () {
+                var content = $(this).html();
+                if (content.length > showChar) {
+                    var c = content.substr(0, showChar);
+                    var h = content.substr(showChar, content.length - showChar);
+                    var html = c + '<span class="moreellipses">...' + ellipsestext + '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="track-more">' + moretext + '</a></span>';
+                    $(this).html(html);
+                }
+            });
+
+            $(".track-more").click(function () {
+                if ($(this).hasClass("Less")) {
+                    $(this).removeClass("Less");
+                    $(this).html(moretext);
+                } else {
+                    $(this).addClass("Less");
+                    $(this).html(lesstext);
+                }
+                $(this).parent().prev().toggle();
+                $(this).prev().toggle();
+                return false;
+            });
+        });
+
+        $(document).ready(function () {
+            $("#chkdiscount").click(function () {
+                $(".discount-box").slideToggle("slow");
+            });
+
+            var btnName = $("#CPMain_ctl00_btnPromo").attr("value");
+            if (btnName == "Clear") {
+                $("#chkdiscount").prop('checked', true);
+            }
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+            if ("e" == $("#CPMain_ctl00_hfConvenienceFee").val()) {
+                $("#divTotalFee").hide();
+            }
+
+            QuantityAdd($(".QuantityAdd").index(this), "pageload");
+            DiscountMoreTickets();
+        });
+
+        $(".QuantityAdd").change(function () {
+            QuantityAdd($(".QuantityAdd").index(this), "ddl");
+            DiscountMoreTickets();
+        });
+
+        function DonationAddfun() {
+            QuantityAdd("0", "donation");
+            DiscountMoreTickets();
+        }
+
+        function DiscountMoreTickets() {
+            if ($("#CPMain_ctl00_hfDiscountMoretickets").val() != "") {
+
+                for (var s = 0; s < $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|').length; s++) {
+                    var j = 0;
+                    var iquantity = 0;
+                    var discountprice = $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[2].split(':')[0] == "price" ? $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[2].split(':')[1] : "0";
+                    var discountCategory = $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[0];
+                    var discountCategoryList = discountCategory.split('|');
+                    var discountmoreticket = $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[1];
+                    var discountpercentage = $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[2].split(':')[0] == "percentage" ? $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[2].split(':')[1] : "0";
+                    var calculatedprice = 0;
+                    $(".QuantityAdd").each(function () {
+                        if (!isNaN($(this).val()) && $(this).val() != "") {
+                            j = $(".QuantityAdd").index(this);
+                            iquantity = parseInt($(this).val());
+                            var CategoryPrice = parseFloat($("#CPMain_ctl00_rpCategory_lblCategoryPrice_" + j).html().replace($("#CPMain_ctl00_hfCurrencySymbol").val(), "").replace(",", ""));
+
+
+                            var hfcid = parseFloat($("#CPMain_ctl00_rpCategory_hfCategoryID_" + j).val());
+
+                            if (!isNaN(CategoryPrice)) {
+                                for (var i = 0; i < discountCategoryList.length; i++) {
+                                    if (iquantity >= discountmoreticket && hfcid == discountCategoryList[i]) {
+                                        if (parseFloat(discountprice) > 0) {
+
+                                            //calculatedprice = parseFloat(calculatedprice) + parseFloat(discountprice);
+                                        } else {
+                                            //calculatedprice = parseFloat(parseFloat(CategoryPrice * iquantity) * parseFloat(discountpercentage)) / 100;
+                                        }
+                                        $("#divTotalFee").hide();
+                                        $(".gtotal").addClass("hide");
+                                    }
+                                }
+                            }
+                        }
+                    });
+
+                    // var total = $(".totalfeecostlabel").html().replace($("#CPMain_ctl00_hfCurrencySymbol").val(), '');
+                    //total = parseFloat(total - calculatedprice).toFixed(2);
+                    //$(".totalfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + total);
+                    //if (total > 0) {
+                    //    var discountfee = $(".disfeecostlabel").html().replace($("#CPMain_ctl00_hfCurrencySymbol").val(), '').replace('-', '');
+                    //    discountfee = parseFloat(discountfee) + parseFloat(calculatedprice);
+                    //    if (discountfee != "0") {
+                    //        $(".disfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + "-" + parseFloat(discountfee).toFixed(2));
+                    //    }
+                    //    else {
+
+                    //        $(".disfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + "" + parseFloat(discountfee).toFixed(2));
+                    //    }
+                    //}
+
+                }
+            }
+        }
+
+        function QuantityAdd(index, value) {
+            var subtotal = 0;
+            var taxamount = 0;
+            var disamt = 0;
+
+            var totalPrice = 0;
+            var iquantity = 0;
+            var j = 0;
+            var Feevalue = 0;
+            var donationFeevalue = 0;
+            var indexvalue = 0;
+            var feescat = 0;
+
+            var lastdropdownindex = 0;
+            if (value == "ddl") {
+                indexvalue = index;
+            }
+            $(".QuantityAdd").each(function () {
+
+
+                if (!isNaN($(this).val()) && $(this).val() != "" && $(this).val() != "0") {
+                    lastdropdownindex += 1;
+                }
+            });
+            var promocid = $("#CPMain_ctl00_hfpromocid").val();
+            var words = promocid.split('|');
+            var len = words.length;
+            var p = "";
+
+            $(".QuantityAdd").each(function () {
+
+                if (!isNaN($(this).val()) && $(this).val() != "" && $(this).val() != "0") {
+
+
+                    j = $(".QuantityAdd").index(this);
+                    iquantity = parseInt($(this).val());
+                    var CategoryPrice = parseFloat($("#CPMain_ctl00_rpCategory_lblCategoryPrice_" + j).html().replace($("#CPMain_ctl00_hfCurrencySymbol").val(), "").replace(",", ""));
+
+                    var taxrate = $("#CPMain_ctl00_hftaxamount").val();
+
+
+                    lastdropdownindex--;
+                    var hfcid = parseFloat($("#CPMain_ctl00_rpCategory_hfCategoryID_" + j).val());
+
+                    if (!isNaN(CategoryPrice)) {
+
+                        $("#CPMain_ctl00_btnAddOrder").val("CHECKOUT NOW")
+                        Feevalue += iquantity;
+                        var s;
+
+
+                        if (promocid.indexOf(hfcid) > -1 && $("#CPMain_ctl00_hfpromoticket").val() == "True") {
+
+
+                            if ($("#CPMain_ctl00_hfPromoPrice").val() != "" && $("#CPMain_ctl00_hfPromoPrice").val() != "0" && $("#CPMain_ctl00_hfIsEachTicket").val() == "True") {
+
+                                subtotal += parseFloat(iquantity * parseFloat(CategoryPrice));
+
+
+                                disamt += parseFloat(iquantity * parseFloat($("#CPMain_ctl00_hfPromoPrice").val()));
+                                taxamount = parseFloat((subtotal - disamt) * taxrate) / 100;
+                                $("#CPMain_ctl00_hftaxtotalamount").val(taxamount);
+                                totalPrice += parseFloat(iquantity * parseFloat(CategoryPrice)) - parseFloat(iquantity * parseFloat($("#CPMain_ctl00_hfPromoPrice").val()));
+
+                                feescat += iquantity * parseFloat($("#CPMain_ctl00_rpCategory_hf_Catfee_" + j).val());
+                                if (totalPrice <= 0 && feescat <= 0) {
+                                    totalPrice = 0;
+                                    feescat = 0;
+                                }
+                            } else if ($("#CPMain_ctl00_hfPromoPrice").val() != "" && $("#CPMain_ctl00_hfPromoPrice").val() != "0" && $("#CPMain_ctl00_hfIsEachTicket").val() == "False") {
+
+                                if (iquantity != 0) {
+
+                                    if (p.indexOf(hfcid) == -1) {
+                                        p = hfcid + '|' + p;
+                                        $("#CPMain_ctl00_hfallcid").val(p);
+
+                                    }
+                                } else {
+                                    $("#CPMain_ctl00_hfallcid").val(p);
+                                }
+
+                                subtotal += parseFloat(iquantity * parseFloat(CategoryPrice));
+                                taxamount = parseFloat(subtotal * taxrate) / 100;
+                                $("#CPMain_ctl00_hftaxtotalamount").val(taxamount);
+                                feescat += iquantity * parseFloat($("#CPMain_ctl00_rpCategory_hf_Catfee_" + j).val());
+                                if (len > 1) {
+                                    totalPrice += parseFloat(iquantity * parseFloat(CategoryPrice));
+
+
+                                } else {
+                                    totalPrice += parseFloat(iquantity * parseFloat(CategoryPrice)) - parseFloat($("#CPMain_ctl00_hfPromoPrice").val());
+                                    //totalPrice += parseFloat(iquantity * parseFloat(CategoryPrice));
+                                    disamt += parseFloat($("#CPMain_ctl00_hfPromoPrice").val());
+                                    taxamount = parseFloat((subtotal - disamt) * taxrate) / 100;
+                                    $("#CPMain_ctl00_hftaxtotalamount").val(taxamount);
+                                }
+
+                                if (totalPrice <= 0 && feescat <= 0) {
+                                    totalPrice = 0;
+                                    feescat = 0;
+                                }
+
+
+                            } else if ($("#CPMain_ctl00_hfPromoPercentage").val() != "" && $("#CPMain_ctl00_hfIsEachTicket").val() == "True") {
+
+                                subtotal += parseFloat(iquantity * parseFloat(CategoryPrice));
+
+
+                                totalPrice += (parseFloat(iquantity * parseFloat(CategoryPrice)) * parseFloat($("#CPMain_ctl00_hfPromoPercentage").val())) / 100;
+                                //disamt += (((parseFloat(iquantity * parseFloat(CategoryPrice)) * parseFloat($("#CPMain_ctl00_hfPromoPercentage").val())) / 100) - parseFloat(iquantity * parseFloat(CategoryPrice)));
+                                disamt += (parseFloat(iquantity * parseFloat(CategoryPrice)) - ((parseFloat(iquantity * parseFloat(CategoryPrice)) * parseFloat($("#CPMain_ctl00_hfPromoPercentage").val())) / 100));
+                                taxamount = parseFloat((subtotal - disamt) * taxrate) / 100;
+                                $("#CPMain_ctl00_hftaxtotalamount").val(taxamount);
+                                feescat += iquantity * parseFloat($("#CPMain_ctl00_rpCategory_hf_Catfee_" + j).val());
+                                if (totalPrice <= 0) {
+                                    totalPrice = 0;
+                                    feescat = 0;
+                                }
+                            } else if ($("#CPMain_ctl00_hfPromoPercentage").val() != "" && $("#CPMain_ctl00_hfIsEachTicket").val() == "False") {
+
+                                subtotal += parseFloat(iquantity * parseFloat(CategoryPrice));
+                                totalPrice += (parseFloat(iquantity * parseFloat(CategoryPrice)) * parseFloat($("#CPMain_ctl00_hfPromoPercentage").val())) / 100;
+                                //disamt += (((parseFloat(iquantity * parseFloat(CategoryPrice)) * parseFloat($("#CPMain_ctl00_hfPromoPercentage").val())) / 100) - parseFloat(iquantity * parseFloat(CategoryPrice)));
+                                disamt += (parseFloat(iquantity * parseFloat(CategoryPrice)) - ((parseFloat(iquantity * parseFloat(CategoryPrice)) * parseFloat($("#CPMain_ctl00_hfPromoPercentage").val())) / 100));
+                                taxamount = parseFloat((subtotal - disamt) * taxrate) / 100;
+                                $("#CPMain_ctl00_hftaxtotalamount").val(taxamount);
+                                feescat += iquantity * parseFloat($("#CPMain_ctl00_rpCategory_hf_Catfee_" + j).val());
+
+                                if (totalPrice <= 0) {
+                                    totalPrice = 0;
+                                    feescat = 0;
+                                }
+                            } else {
+
+                                subtotal += parseFloat(iquantity * parseFloat(CategoryPrice));
+
+                                taxamount = parseFloat(subtotal * taxrate) / 100;
+                                $("#CPMain_ctl00_hftaxtotalamount").val(taxamount);
+
+
+                                totalPrice += iquantity * CategoryPrice;
+                                feescat += iquantity * parseFloat($("#CPMain_ctl00_rpCategory_hf_Catfee_" + j).val());
+                                if (totalPrice <= 0) {
+                                    totalPrice = 0;
+                                    feescat = 0;
+
+                                }
+                            }
+
+
+                        } else if ($("#CPMain_ctl00_hfPromoPrice").val() != "" && $("#CPMain_ctl00_hfPromoPrice").val() != "0" && $("#CPMain_ctl00_hfIsEachTicket").val() == "True" && $("#CPMain_ctl00_hfpromoticket").val() == "False") {
+
+
+                            totalPrice += parseFloat(iquantity * parseFloat(CategoryPrice)) - parseFloat(iquantity * parseFloat($("#CPMain_ctl00_hfPromoPrice").val()));
+
+                            subtotal += parseFloat(iquantity * parseFloat(CategoryPrice));
+                            taxamount = parseFloat(totalPrice * taxrate) / 100;
+                            $("#CPMain_ctl00_hftaxtotalamount").val(taxamount);
+
+                            feescat += iquantity * parseFloat($("#CPMain_ctl00_rpCategory_hf_Catfee_" + j).val());
+                            disamt += parseFloat(iquantity * parseFloat($("#CPMain_ctl00_hfPromoPrice").val()));
+                            if (totalPrice <= 0 && feescat <= 0) {
+                                totalPrice = 0;
+                                feescat = 0;
+                            }
+                        } else if ($("#CPMain_ctl00_hfPromoPercentage").val() != "" && $("#CPMain_ctl00_hfIsEachTicket").val() == "True" && $("#CPMain_ctl00_hfpromoticket").val() == "False") {
+
+                            totalPrice += (parseFloat(iquantity * parseFloat(CategoryPrice)) * parseFloat($("#CPMain_ctl00_hfPromoPercentage").val())) / 100;
+                            subtotal += parseFloat(iquantity * parseFloat(CategoryPrice));
+                            taxamount = parseFloat(subtotal * taxrate) / 100;
+                            $("#CPMain_ctl00_hftaxtotalamount").val(taxamount);
+
+                            // disamt += (((parseFloat(iquantity * parseFloat(CategoryPrice)) * parseFloat($("#CPMain_ctl00_hfPromoPercentage").val())) / 100) - parseFloat(iquantity * parseFloat(CategoryPrice)));
+                            disamt += (parseFloat(iquantity * parseFloat(CategoryPrice)) - ((parseFloat(iquantity * parseFloat(CategoryPrice)) * parseFloat($("#CPMain_ctl00_hfPromoPercentage").val())) / 100));
+
+                            feescat += iquantity * parseFloat($("#CPMain_ctl00_rpCategory_hf_Catfee_" + j).val());
+                            if (totalPrice <= 0) {
+                                totalPrice = 0;
+                                feescat = 0;
+                            }
+                        } else if ($("#CPMain_ctl00_hfPromoPercentage").val() != "" && $("#CPMain_ctl00_hfIsEachTicket").val() == "False" && $("#CPMain_ctl00_hfpromoticket").val() == "False") {
+                            if ($("#CPMain_ctl00_hfPromoPrice").val() > 0) {
+
+
+                                if (0 == lastdropdownindex || 0 > lastdropdownindex)
+                                    totalPrice += parseFloat(iquantity * parseFloat(CategoryPrice)) - parseFloat(parseFloat($("#CPMain_ctl00_hfPromoPrice").val()));
+                                else
+                                    totalPrice += parseFloat(iquantity * parseFloat(CategoryPrice));
+
+                            } else {
+
+                                totalPrice += (parseFloat(iquantity * parseFloat(CategoryPrice)) * parseFloat($("#CPMain_ctl00_hfPromoPercentage").val())) / 100;
+
+                            }
+
+                            subtotal += parseFloat(iquantity * parseFloat(CategoryPrice));
+                            taxamount = parseFloat(totalPrice * taxrate) / 100;
+                            $("#CPMain_ctl00_hftaxtotalamount").val(taxamount);
+                            // alert((parseFloat(iquantity * parseFloat(CategoryPrice)) - ((parseFloat(iquantity * parseFloat(CategoryPrice)) * parseFloat($("#CPMain_ctl00_hfPromoPercentage").val())) / 100)));
+                            disamt += (parseFloat(iquantity * parseFloat(CategoryPrice)) - ((parseFloat(iquantity * parseFloat(CategoryPrice)) * parseFloat($("#CPMain_ctl00_hfPromoPercentage").val())) / 100));
+
+                            feescat += iquantity * parseFloat($("#CPMain_ctl00_rpCategory_hf_Catfee_" + j).val());
+
+                            if (totalPrice <= 0) {
+                                totalPrice = 0;
+                                feescat = 0;
+                            }
+                        } else {
+
+                            totalPrice += iquantity * CategoryPrice;
+
+                            subtotal += parseFloat(iquantity * parseFloat(CategoryPrice));
+
+                            taxamount = parseFloat(subtotal * taxrate) / 100;
+
+                            $("#CPMain_ctl00_hftaxtotalamount").val(taxamount);
+
+                            feescat += iquantity * parseFloat($("#CPMain_ctl00_rpCategory_hf_Catfee_" + j).val());
+                            if (totalPrice <= 0 && feescat <= 0) {
+                                totalPrice = 0;
+                                feescat = 0;
+                            }
+
+                        }
+                        var spantxt = 1;
+                        if (value == "ddl") {
+                            $(".spinttext").each(function () {
+                                if (spantxt == parseInt(indexvalue) + 1) {
+                                    $(this).html($(".QuantityAdd:nth(" + indexvalue + ")").val());
+                                }
+                                spantxt++;
+                            });
+                        } else {
+                            indexvalue = $(".QuantityAdd").index(this);
+                            $(".spinttext").each(function () {
+                                if (spantxt == parseInt(indexvalue) + 1) {
+                                    $(this).html($(".QuantityAdd:nth(" + indexvalue + ")").val());
+                                }
+                                spantxt++;
+                            });
+                        }
+                    } else {
+                        var spantxt = 1;
+                        if (value == "ddl") {
+
+                            $(".spinttext").each(function () {
+                                if (spantxt == parseInt(indexvalue) + 1) {
+                                    $(this).html($(".QuantityAdd:nth(" + indexvalue + ")").val());
+                                }
+                                spantxt++;
+                            });
+                        }
+                        indexvalue = $(".QuantityAdd").index(this);
+                        $(".spinttext").each(function () {
+                            if (spantxt == parseInt(indexvalue) + 1) {
+                                $(this).html($(".QuantityAdd:nth(" + indexvalue + ")").val());
+                            }
+                            spantxt++;
+                        });
+                    }
+                    iquantity = 0;
+                }
+            });
+            var DonationPrice = 0;
+            if ($("#CPMain_ctl00_rpDonation_DonationAmount_0").val() != "" && $("#CPMain_ctl00_rpDonation_DonationAmount_0").val() != null && $("#CPMain_ctl00_rpDonation_DonationAmount_0").val().trim() != "0") {
+                donationFeevalue = 1;
+                DonationPrice = parseFloat($("#CPMain_ctl00_rpDonation_DonationAmount_0").val().trim());
+                subtotal += DonationPrice;
+                var spcommission = $("#CPMain_ctl00_hfEventzillaPlanCommission").val().split(',');
+                //feescat += parseFloat(parseInt(donationFeevalue) * parseFloat($("#CPMain_ctl00_hfOriginalFees").val()));
+                if ("i" == $("#CPMain_ctl00_hfConvenienceFee").val()) {
+                    var feeDonation = parseFloat(spcommission[0]) + (DonationPrice * parseFloat(spcommission[1]) / 100);
+                    if (feeDonation > parseFloat(spcommission[2]))
+                        feeDonation = parseFloat(spcommission[2]);
+
+
+                    if ($("#CPMain_ctl00_hfEventZillaPayment").val() != "") {
+                        var eventzillapayment = $("#CPMain_ctl00_hfEventZillaPayment").val().split('|');
+                        feeDonation = feeDonation + (feeDonation * 18 / 100);
+                    }
+                    feescat += feeDonation;
+                }
+            }
+            if ((parseInt(Feevalue) + parseInt(donationFeevalue)) > 0) {
+
+                $("#spFee").html($("#CPMain_ctl00_hfCurrencySymbol").val() + feescat.toFixed(2));
+                $("#CPMain_ctl00_hfPromoPercentageFees").val(feescat);
+            } else {
+                $("#spFee").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "0.00");
+                $("#CPMain_ctl00_hfPromoPercentageFees").val(feescat);
+            }
+            // $("#spFee").html(feescat);
+            if ($("#CPMain_ctl00_hfPromoPrice").val() != "" && $("#CPMain_ctl00_hfPromoPrice").val() != "0" && $("#CPMain_ctl00_hfIsEachTicket").val() == "False" && $("#CPMain_ctl00_hfpromoticket").val() == "False") {
+
+                disamt += parseFloat($("#CPMain_ctl00_hfPromoPrice").val());
+
+                if (totalPrice > 0) {
+                    totalPrice = totalPrice + DonationPrice;
+                } else {
+                    totalPrice = DonationPrice;
+                }
+                if (parseFloat(totalPrice + taxamount).toFixed(2) > 0 && $("#CPMain_ctl00_hfEventZillaPayment").val() != "") {
+                    var eventzillapayment = $("#CPMain_ctl00_hfEventZillaPayment").val().split('|');
+                    //Removed taxamount
+                    CalculatedFee = parseFloat((parseFloat(totalPrice).toFixed(2) * eventzillapayment[0] / 100) + feescat + parseFloat(eventzillapayment[1]));
+                    if (3 == eventzillapayment.length && "i" == $("#CPMain_ctl00_hfConvenienceFee").val()) {
+                        CalculatedFee += parseFloat(parseFloat((parseFloat(totalPrice).toFixed(2) * eventzillapayment[0] / 100)) * 18 / 100);
+                    }
+                    feescat = CalculatedFee;
+                    $("#spFee").html($("#CPMain_ctl00_hfCurrencySymbol").val() + CalculatedFee.toFixed(2));
+                }
+                if (totalPrice > 0) {
+
+
+                    $(".totalfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(totalPrice + feescat).toFixed(2));
+
+                    $(".subfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(subtotal).toFixed(2));
+
+                    //Stopped TaxAmount
+                    //$(".subfeecostlabel2").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(taxamount).toFixed(2));
+
+                    $(".disfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + "-" + parseFloat(disamt).toFixed(2));
+                } else {
+                    if (subtotal > 0) {
+
+                        $(".totalfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(feescat).toFixed(2));
+                        $(".subfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(subtotal).toFixed(2));
+
+                        //Stopped TaxAmount
+                        //$(".subfeecostlabel2").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(taxamount).toFixed(2));
+                        $(".disfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + "-" + parseFloat(disamt).toFixed(2));
+                    } else {
+                        $(".totalfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + " 0.00");
+                        $(".subfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "0.00");
+                        $(".disfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "0.00 ");
+                        $(".subfeecostlabel2").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "0.00");
+                        $("#spFee").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "0.00");
+                        $("#CPMain_ctl00_hfPromoPercentageFees").val(feescat);
+
+                    }
+
+                }
+            } else if ($("#CPMain_ctl00_hfPromoPrice").val() != "" && $("#CPMain_ctl00_hfPromoPrice").val() != "0" && $("#CPMain_ctl00_hfIsEachTicket").val() == "False" && $("#CPMain_ctl00_hfpromoticket").val() == "True") {
+                var split_cid = $("#CPMain_ctl00_hfallcid").val().split('|');
+                var count = 0;
+
+                for (var i = 0; i < split_cid.length - 1; i++) {
+
+                    if (promocid.indexOf(split_cid[i]) > -1) {
+                        count = i + 1;
+
+                    }
+                }
+
+                if (len > 1 && count >= 1) {
+                    totalPrice = parseFloat(totalPrice) - parseFloat($("#CPMain_ctl00_hfPromoPrice").val());
+                    disamt += parseFloat($("#CPMain_ctl00_hfPromoPrice").val());
+                }
+                if (count == 0) {
+                    disamt = 0;
+                }
+
+                if (totalPrice > 0) {
+                    totalPrice = totalPrice + DonationPrice;
+                } else {
+                    totalPrice = DonationPrice;
+                }
+                if (parseFloat(totalPrice + taxamount).toFixed(2) > 0 && $("#CPMain_ctl00_hfEventZillaPayment").val() != "") {
+                    var eventzillapayment = $("#CPMain_ctl00_hfEventZillaPayment").val().split('|');
+                    CalculatedFee = parseFloat((parseFloat(totalPrice + taxamount).toFixed(2) * eventzillapayment[0] / 100) + feescat + parseFloat(eventzillapayment[1]));
+                    if (3 == eventzillapayment.length && "i" == $("#CPMain_ctl00_hfConvenienceFee").val()) {
+                        CalculatedFee += parseFloat(parseFloat((parseFloat(totalPrice + taxamount).toFixed(2) * eventzillapayment[0] / 100)) * 18 / 100);
+                    }
+                    feescat = CalculatedFee;
+                    $("#spFee").html($("#CPMain_ctl00_hfCurrencySymbol").val() + CalculatedFee.toFixed(2));
+                }
+
+                if (totalPrice > 0) {
+                    //$(".totalfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(totalPrice + feescat + taxamount).toFixed(2));
+                    $(".totalfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(totalPrice + feescat).toFixed(2));
+                    $(".subfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(subtotal).toFixed(2));
+                    //$(".subfeecostlabel2").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(taxamount).toFixed(2));
+                    $(".disfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + "-" + parseFloat(disamt).toFixed(2));
+                } else {
+
+                    if (subtotal > 0) {
+                        $(".totalfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(feescat).toFixed(2));
+                        $(".subfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(subtotal).toFixed(2));
+
+                        //$(".subfeecostlabel2").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(taxamount).toFixed(2));
+                        $(".disfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + "-" + parseFloat(disamt).toFixed(2));
+                    } else {
+                        $(".totalfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + " 0.00");
+                        $(".subfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "0.00 ");
+                        $(".subfeecostlabel2").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "0.00 ");
+                        $("#divtax").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "0.00");
+                        $(".disfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "0.00 ");
+                        $("#spFee").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "0.00");
+                        $("#CPMain_ctl00_hfPromoPercentageFees").val(feescat);
+                    }
+
+                }
+            } else {
+                if (!isNaN(parseFloat(totalPrice))) {
+                    var symbol;
+                    symbol = (disamt == '0') ? "" : "-";
+                    var CalculatedFee = 0;
+                    if (parseFloat(totalPrice + DonationPrice + taxamount).toFixed(2) > 0 && $("#CPMain_ctl00_hfEventZillaPayment").val() != "") {
+                        var eventzillapayment = $("#CPMain_ctl00_hfEventZillaPayment").val().split('|');
+                        //CalculatedFee = parseFloat((parseFloat(totalPrice + DonationPrice + taxamount).toFixed(2) * eventzillapayment[0] / 100) + feescat + parseFloat(eventzillapayment[1]));
+                        //Removed TaxAmount
+                        CalculatedFee = parseFloat((parseFloat(totalPrice + DonationPrice).toFixed(2) * eventzillapayment[0] / 100) + feescat + parseFloat(eventzillapayment[1]));
+                        if (3 == eventzillapayment.length && "i" == $("#CPMain_ctl00_hfConvenienceFee").val()) {
+                            CalculatedFee += parseFloat(parseFloat((parseFloat(totalPrice + DonationPrice).toFixed(2) * eventzillapayment[0] / 100)) * 18 / 100);
+                        }
+                        $(".totalfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(totalPrice + DonationPrice + CalculatedFee).toFixed(2));
+                        $("#spFee").html($("#CPMain_ctl00_hfCurrencySymbol").val() + CalculatedFee.toFixed(2));
+                    } else {
+                        $(".totalfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(totalPrice + DonationPrice + feescat).toFixed(2));
+                    }
+                    $(".subfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(subtotal).toFixed(2));
+                    //$(".subfeecostlabel2").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "" + parseFloat(taxamount).toFixed(2));
+                    $(".disfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + symbol + parseFloat(disamt).toFixed(2));
+                } else {
+                    $(".totalfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "0.00");
+                    $(".subfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "0.00 ");
+                    $(".disfeecostlabel").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "0.00 ");
+                    $(".subfeecostlabel2").html($("#CPMain_ctl00_hfCurrencySymbol").val() + "0.00");
+
+                }
+            }
+        }
+    </script>
+
+    <input type="hidden" name="ctl00$CPMain$ctl00$HiddenField1" id="CPMain_ctl00_HiddenField1"/>
+
+    <script type="text/javascript">
+        if ($("#CPMain_ctl00_hdnshowmodal").val() != "show") {
+            $('#facebox').hide();
+            $('#facebox_overlay').hide();
+        }
+
+        function setHiddenFieldVal(strVal) {
+            $("#CPMain_ctl00_hdnInviteCode").val(strVal);
+        }
+
+        function sendHiddenVariable() {
+
+            var hdnvalue = $("#CPMain_ctl00_hdnInviteccode").val();
+            var txtvalue = $('#CPMain_ctl00_hdnInviteCode').val();
+
+            if (hdnvalue == txtvalue) {
+                $("#CPMain_ctl00_hdnshowmodal").val("hide");
+                $("#pnlInvite").modal('hide');
+            } else {
+                $("#CPMain_ctl00_txtInvitecode").val("");
+
+                swal("The invite code you entered does not match our records. Please try again or check with this event's organizer.");
+            }
+            return false;
+        }
+
+        $("#pnlInvite .close").click(function () {
+            $("#body").html("")
+            window.location.replace('/noevent');
+        });
+        $(document).ready(function () {
+
+            //       var tit = document.title;
+            //      document.title = tit.replace(" - Powered by Eventzilla", "");
+            //      $("#footer").addClass("hide");
+            //      $("#evbrand").addClass("hide");
+            $("#logoicon").addClass("hide");
+            //
+            //   }
+
+            if ($("#CPMain_ctl00_lblLocationMap").html() == null || $("#CPMain_ctl00_lblLocationMap").html() == "") {
+                $("#toplocation").hide();
+                $("#location").hide();
+                $(".slicknav_nav li:nth-child(2)").hide();
+            }
+            if ($(".attendee").html() == "" || $(".attendee").html() == undefined) {
+                $("#WhoattendEmpty").show();
+            } else {
+                $("#topsocialmedia").hide();
+            }
+        });
+
+        $("#triggerContact").click(function () {
+            $('#contactOrganizer').removeClass("hide");
+            $('#contactOrganizer').modal('show');
+        });
+
+        $("#CPMain_ctl00_btn_sponsor").click(function () {
+            $('#contactOrganizer').removeClass("hide");
+            $('#contactOrganizer').modal('show');
+            return false;
+        });
+
+        function isValidEmailAddress(emailAddress) {
+            var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+            return pattern.test(emailAddress);
+        }
+
+        $("#check1").click(function () {
+            if ($("#check1").is(":checked") == true) {
+                $("#CPMain_ctl00_txtPromoCode").val("");
+                //$("#CPMain_ctl00_txtPromoCode").show();
+                $("#CPMain_ctl00_promocode").show();
+
+            } else {
+                //$("#CPMain_ctl00_txtPromoCode").hide();
+                $("#CPMain_ctl00_txtPromoCode").val("");
+
+                $("#CPMain_ctl00_promocode").hide();
+            }
+        });
+        $(function () {
+            $("form input").keypress(function (e) {
+                if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+                    var _tmpInviteCode = $("#CPMain_ctl00_txtInvitecode").val();
+                    $("#CPMain_ctl00_hdnInviteCode").val(_tmpInviteCode);
+                    $("#CPMain_ctl00_btnInvite").click();
+                    return false;
+                } else {
+                    return true;
+                }
+            });
+        });
+
+        var hrefsocial = $("#CPMain_ctl00_asocialwall").attr('href');
+        if ("../#" == hrefsocial) {
+            $("#CPMain_ctl00_lisocialwall").hide();
+        }
+    </script>
+    <input type="hidden" name="ctl00$CPMain$ctl00$HiddenField2" id="CPMain_ctl00_HiddenField2"/>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var btnName = $("#CPMain_ctl00_btnPromo").attr("value");
+            if (btnName == "Clear") {
+                $("#check1").prop('checked', true);
+            }
+            if ($("#CPMain_ctl00_hf_addlocation").val() == "") {
+                //initializeMaps();
+                intializeGeoCodeMapbox();
+            } else {
+                //initializeMapsLocation();
+                intializeMapbox();
+            }
+            $(".popoverpartial a").popover({
+                html: true,
+                placement: 'bottom',
+                title: 'payment schedule' + "<button type='button' class='close' id='close'>&times;</button>"
+            });
+            var optPreview = $("#CPMain_ctl00_hfstatus").val();
+            if (optPreview == 35) {
+                $('#overlay').show();
+            } else {
+                $('#overlay').hide();
+            }
+
+            $("td span").addClass("tdCategory");
+            var dateSelect = $("#CPMain_ctl00_ddlEventDate").val()
+            if (dateSelect == 0) {
+                $('#CPMain_ctl00_rpCategory_htAvailable').css("visibility", 'hidden');
+                $('#hrpsaleend').css("visibility", 'hidden');
+                $(".spint").removeAttr("style");
+                $(".QuantityAdd").css('visibility', 'visible');
+                $(".QuantityAdd").prop("disabled", true);
+                $('#CPMain_ctl00_rpDonation_DonationAmount_0').val("");
+                $('#CPMain_ctl00_rpDonation_DonationAmount_0').attr("disabled", "disabled");
+                $('#CPMain_ctl00_rpDonation_lblmobEndDate_0').attr("style", 'display:none');
+                $('#CPMain_ctl00_rpDonation_lblEndDate_0').attr("style", 'display:none');
+                $(".tdCategory").attr("style", 'display:none');
+                $('.CategoryPriceAdd').removeAttr("style");
+                $("#CPMain_ctl00_btnAddOrder").prop("disabled", true);
+
+                $("#CPMain_ctl00_UC_HeaderTitles_lbl_hash").css("display", "block");
+            }
+            if ($("#CPMain_ctl00_hdnCustomdomainSecure").val() == "true" && window.location.protocol == "https:") {
+                $("#form1").attr("action", $("#form1").attr("action"));
+            } else if (window.location.protocol == "https:") {
+                $("#form1").attr("action", "https://" + $("#form1").attr("action"));
+            } else {
+                $("#form1").attr("action", "http://" + $("#form1").attr("action"));
+            }
+
+        });
+
+        $(document).on('click', '#close', function (e) {
+            $(".popoverpartial a").popover('hide');
+        });
+
+
+    </script>
+
+
+    <script type="text/javascript">
+
+
+        $(document).ready(function () {
+
+
+            $(".btncount").mouseover(function () {
+                j = $(".btncount").index(this);
+                var $btn2 = $("#webpagelink_" + j)
+                $btn2.popover('show');
+
+            });
+            $(".btncount").mouseout(function () {
+                j = $(".btncount").index(this);
+                var $btn2 = $("#webpagelink_" + j)
+                $btn2.popover('hide');
+            });
+        });
+        //GrpDiscountDesc
+        if ($("#CPMain_ctl00_hfDiscountMoretickets").val() != "") {
+            for (var s = 0; s < $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|').length; s++) {
+                var j = 0;
+                var iquantity = 0;
+                var discountprice = $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[2].split(':')[0] == "price" ? $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[2].split(':')[1] : "0";
+                var discountCategory = $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[0];
+                var discountCategoryList = discountCategory.split('|');
+                var discountmoreticket = $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[1];
+                var discountpercentage = $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[2].split(':')[0] == "percentage" ? $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[2].split(':')[1] : "0";
+                $(".QuantityAdd").each(function () {
+                    if (!isNaN($(this).val()) && $(this).val() != "") {
+                        j = $(".QuantityAdd").index(this);
+                        iquantity = parseInt($(this).val());
+                        var CategoryPrice = parseFloat($("#CPMain_ctl00_rpCategory_lblCategoryPrice_" + j).html().replace($("#CPMain_ctl00_hfCurrencySymbol").val(), "").replace(",", ""));
+                        var hfcid = parseFloat($("#CPMain_ctl00_rpCategory_hfCategoryID_" + j).val());
+                        if (!isNaN(CategoryPrice)) {
+                            for (var i = 0; i < discountCategoryList.length; i++) {
+                                if (hfcid == discountCategoryList[i]) {
+                                    if (parseFloat(discountprice) > 0) {
+                                        $("#CPMain_ctl00_rpCategory_lblsavetag_" + j).html("Get a " + $("#CPMain_ctl00_hfCurrencySymbol").val() + "" + discountprice + " discount when you purchase " + discountmoreticket + " or more tickets");
+                                    } else {
+                                        $("#CPMain_ctl00_rpCategory_lblsavetag_" + j).html("Get a " + discountpercentage + "% discount when you purchase " + discountmoreticket + " or more tickets");
+                                        calculatedprice = parseFloat(CategoryPrice * discountmoreticket) * parseFloat(discountpercentage) / 100;
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        function CategoryInvitecode(id) {
+            var txtCatgoryInvite = $("#" + id).val();
+            var sp = id.split('_');
+            var hfCategoryInvite = $("#" + sp[0] + "_" + sp[1] + "_" + sp[2] + "_hfCategoryInvite_" + sp[4]).val();
+            $.post('/admin/UserDiscountresponse.aspx?CategoryInvitecode=' + txtCatgoryInvite + '&validateInvite=' + hfCategoryInvite, function (data) {
+                var result = data;
+                if (true == result) {
+                    $("#" + sp[0] + "_" + sp[1] + "_" + sp[2] + "_ddlQuantity_" + sp[4]).removeClass("hide");
+                    $("#" + sp[0] + "_" + sp[1] + "_" + sp[2] + "_divMobQty_" + sp[4]).removeClass("hide");
+                    $("#" + id).addClass("hide");
+                } else {
+                    swal("Please enter a valid unlock code");
+                }
+            });
+        }
+
+        function ValidateCatInvite() {
+            var i = 1;
+            var validate = "true";
+
+            $(".CategoryInviteAppender .form-group").each(function () {
+                var txtCatgoryInvite = $("#txtCatInvite_" + i).val();
+                var hfCategoryInvite = $("#hfcatinvite_" + i).val();
+
+                if (txtCatgoryInvite == "") {
+                    $(".validatemessage").html("Please enter a valid unlock code");
+                } else {
+
+                    $(".validatemessage").html("The unlock code you entered does not match our records. Please try again or check with this event's organizer.");
+                }
+
+
+                if (txtCatgoryInvite == CryptoJS.AES.decrypt(hfCategoryInvite, "/").toString(CryptoJS.enc.Utf8)) {
+                    $(this).addClass("hide");
+                } else {
+                    validate = "false";
+                }
+                i++;
+            });
+            if ("false" == validate) {
+                $(".validatemessage").addClass("show");
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        $("#CPMain_ctl00_btnAddOrder").click(function () {
+            if ("" != $("#CPMain_ctl00_hfReservSeatbool").val()) {
+                $('<input>').attr('type', 'hidden').attr('name', 'ReservSeats').attr('value', selectedobjectData).appendTo('form');
+
+            }
+            var i = 1;
+            var isNotInviteCode = true;
+            var jj = 1;
+            var pp = 1;
+            $(".CategoryInviteAppender").empty();
+            $(".QuantityAdd").each(function () {
+                if (!isNaN($(this).val()) && $(this).val() != "") {
+                    var j = $(".QuantityAdd").index(this);
+                    var iquantity = parseInt($(this).val());
+                    if (undefined != $(this).closest(".preapproval").html() && "" != $(this).closest(".preapproval").html() && iquantity > 0) {
+                        jj++;
+                    }
+                    if (undefined == $(this).closest(".preapproval").html() && iquantity > 0) {
+                        pp++;
+                    }
+                    if ("" != $("#CPMain_ctl00_rpCategory_hfCategoryInvite_" + j).val() && iquantity > 0) {
+                        var sp = $("#CPMain_ctl00_rpCategory_hfCategoryInvite_" + j).val().split('|');
+                        var Invitehtml = "<label class=\"alert alert-danger validatemessage hide\">Please enter a valid unlock code</label>" + "<label class=\"alert\">This event organizer requires you to enter an unlock code to allow you to proceed with the selected ticket/registration type. Please enter this code below</label>" + "<div class=\"form-group\"><label class=\"col-sm-8\">" + sp[1] + "</label><div class=\"col-sm-4\"><input type=\"text\" id=\"txtCatInvite_" + i + "\" class=\"form-control\" /><input type=\"hidden\" id=\"hfcatinvite_" + i + "\" value=\"" + sp[0] + "\"/></div></div>";
+                        $(".CategoryInviteAppender").append(Invitehtml);
+                        isNotInviteCode = false;
+                        i++;
+                    }
+                }
+            });
+            if (!isNotInviteCode) {
+                if (1 == jj || false == (jj > 1 && pp > 1))
+                    $("#divCategoryInvite").modal("show");
+                else {
+                    swal("Ticket / Registration types that require pre-approval cannot be purchased along with regular tickets in the same transaction. Please register for these separately.");
+                }
+                return false;
+            }
+            return true;
+        });
+        $(".QuantityAdd").each(function () {
+            if (!isNaN($(this).val()) && $(this).val() != "") {
+                var j = $(".QuantityAdd").index(this);
+                var iquantity = parseInt($(this).val());
+                if (undefined != $("#CPMain_ctl00_rpCategory_hfCategoryInvite_" + j).val() && "" != $("#CPMain_ctl00_rpCategory_hfCategoryInvite_" + j).val()) {
+                    var sp = $("#CPMain_ctl00_rpCategory_hfCategoryInvite_" + j).val().split('|');
+                    if (sp[0].indexOf("=") >= 0) {
+                    } else {
+                        var data = "";
+                        var data = CryptoJS.AES.encrypt(sp[0], "/");
+                        $("#CPMain_ctl00_rpCategory_hfCategoryInvite_" + j).val(data + "|" + sp[1]);
+                    }
+
+                }
+            }
+
+        });
+
+
+        /* facebook command starts  */
+
+        /* facebook command starts  */
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=215909627843";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+
+        $(document).ready(function () {
+
+            if ("2" == $("#CPMain_ctl00_hdn_ShowDiscussion").val()) {
+
+                $("#discussion").css("visibility", "visible");
+                $('#div_facebook').show();
+                $('#div_desqus').hide();
+                $("#div_desqus").remove();
+                var facebookwidth = 0;
+                facebookwidth = parseInt($("#div_facebook").width());
+                $("#div_facebook").append("<div class=\"fb-comments\" data-href=\"" + document.URL + "\" data-colorscheme=\"light\" data-width=\"" + facebookwidth + "\"></div>");
+            } else if ("1" == $("#CPMain_ctl00_hdn_ShowDiscussion").val()) {
+
+                $("#discussion").css("visibility", "visible");
+                $('#div_desqus').show();
+                $('#div_facebook').hide();
+            } else {
+                $("#eventcomments").hide();
+                $("#licomment").hide();
+
+                //$("#comments").hide();
+                //$("#topcomments").hide();
+            }
+
+            $(window).resize(function () {
+                setTimeout(function () {
+                    if ("2" == $("#CPMain_ctl00_hdn_ShowDiscussion").val()) {
+                        var facebookwidth = 0;
+                        facebookwidth = parseInt($("#div_facebook").width());
+                        $(".fb_ltr").attr("src", $(".fb_ltr").attr("src") + "&width=" + facebookwidth);
+                    }
+                }, 3000);
+            });
+
+
+            $('.event-info .info-content img').each(function () {
+                var curSrc = $(this).attr('src');
+                $(this).attr('src', curSrc.replace('../', '/'));
+
+            });
+
+
+        });
+
+
+        window.twttr = (function (d, s, id) {
+            var t, js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+            return window.twttr || (t = {
+                _e: [], ready: function (f) {
+                    t._e.push(f)
+                }
+            });
+        }(document, "script", "twitter-wjs"));
+
+        /* facebook command starts  */
+
+
+
+        /* desqus command starts  */
+
+        var disqus_shortname = 'eventzilla';
+        var disqus_identifier = gupevent('Eventid');
+        //var disqus_url = "http://www.eventzilla.net?web/eventid=" + disqus_identifier;
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+
+        function gupevent(name, string) {
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + name + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(string);
+            if (results == null)
+                return "";
+            else
+                return results[1];
+        }
+
+        //<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        // Google Analytics
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-4781727-4']);
+        _gaq.push(['_trackPageview']);
+        //_gaq.push(['b._setAccount', '']);
+        //_gaq.push(['b._trackPageview']);
+
+        //Google Analytcs custom js Centralized Tracking events
+
+        if ($('#hdnGaEzRegistrations').val() != "") {
+            var sGaTrack = $('#hdnGaEzRegistrations').val().split("+");
+            var oGaTrackId = sGaTrack[0];
+            var eventTitle = sGaTrack[1];
+            googleAnalyticsTrackEvents(location.pathname, oGaTrackId,
+                'Eventzilla_Registration',
+                'Viewed_EventPage',
+                eventTitle);
+        }
+
+        // Waitlist Initialized
+        function GaRegCheckOut() {
+            if ($('#hdnGaEzRegistrations').val() != "") {
+                var sGaTrack = $('#hdnGaEzRegistrations').val().split("+");
+                var oGaTrackId = sGaTrack[0];
+                var eventTitle = sGaTrack[1];
+                googleAnalyticsTrackEvents(location.pathname, oGaTrackId,
+                    'Eventzilla_Registration',
+                    'Waitlist_Initialized',
+                    eventTitle);
+            }
+        }
+
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+        })();
+
+        $(document).ready(function () {
+            if ($("#CPMain_ctl00_hfTwitterTags").val() !== "") {
+
+                var twitter = $("#CPMain_ctl00_hfTwitterTags").val();
+
+                if (twitter.indexOf('#') == -1) {
+                    var sp = $("#CPMain_ctl00_hfTwitterTags").val().replace("", "#").split(',');
+                } else {
+
+                    var sp = $("#CPMain_ctl00_hfTwitterTags").val().split(',');
+                }
+
+
+                for (var i = 0; i < sp.length; i++) {
+                    $("#twitteslinks").append("<a class=\"twites\" target=\"_blank\" href=\"https://twitter.com/hashtag/" + sp[i].replace("#", "") + "\">" + sp[i] + "</a>");
+                }
+            }
+            $("#regtitle").css("font-family", $("#CPMain_ctl00_lblEventTitle").css("font-family"));
+            $("#infotitle").css("font-family", $("#regtitle").css("font-family"));
+            $("#infolocation").css("font-family", $("#regtitle").css("font-family"));
+            $("#infoabout").css("font-family", $("#regtitle").css("font-family"));
+            $("#infosponsors").css("font-family", $("#regtitle").css("font-family"));
+            $("#infocomments").css("font-family", $("#regtitle").css("font-family"));
+
+            $("#CPMain_ctl00_ddlEventDate").change(function () {
+                if ($(this).val() != "0") {
+                    var sp = $(this).val().split('/');
+                    var dateid = sp[sp.length - 1];
+                    var loc = window.location;
+                    var pa = loc.pathname.split('-');
+                    var eventid = pa[pa.length - 1];
+                    var promoapply = "";
+                    if (getUrlVars()["promo"] != undefined && "" != $("#CPMain_ctl00_txtPromoCode").val()) {
+                        var key = CryptoJS.enc.Utf8.parse('8080808080808080');
+                        var iv = CryptoJS.enc.Utf8.parse('8080808080808080');
+                        var promocode = CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse($("#CPMain_ctl00_txtPromoCode").val()), key,
+                            {
+                                keySize: 128 / 8,
+                                iv: iv,
+                                mode: CryptoJS.mode.CBC,
+                                padding: CryptoJS.pad.Pkcs7
+                            });
+                        promoapply = "&promo=" + getUrlVars()["promo"] + "&promocode=" + promocode;
+                    }
+                    if ("/web/event" == eventid) {
+                        eventid = guparam("eventid");
+                        window.location.href = "http://" + window.location.host + "/web/event?eventid=" + eventid + "&dateid=" + dateid + promoapply;
+                    } else if ("/e" == eventid) {
+                        if ("" == eventid)
+                            eventid = guparam("eventid");
+                        if ("www.eventzilla.net" != window.location.host) {
+                            window.location.href = "http://" + window.location.host + loc.pathname + "?resp=on" + "&dateid=" + dateid + promoapply;
+                        } else {
+                            window.location.href = "http://" + window.location.host + loc.pathname + "?resp=on" + "&dateid=" + dateid + promoapply;
+                        }
+
+                    } else {
+                        if ("" == eventid)
+                            eventid = guparam("eventid");
+
+                        window.location.href = "http://" + window.location.host + loc.pathname + "?resp=on" + "&dateid=" + dateid + promoapply;
+                    }
+                } else {
+                    $("select.QuantityAdd").attr("disabled", "disabled");
+                }
+            });
+
+
+            $("#CPMain_ctl00_btnPromo").click(function () {
+                return false;
+            });
+
+            $(".event-info .info-content img").each(function () {
+                if ($(this).attr("src").indexOf("/files/temp/") != -1 && $(this).attr("src").indexOf("www.eventzilla.net") == -1) {
+                    $(this).attr("src", "https://www.eventzilla.net" + $(this).attr("src"));
+                }
+            });
+        });
+
+        function guparam(name) {
+            var name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + name + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(window.location.href);
+            if (results == null)
+                return "";
+            else
+                return results[1];
+        }
+
+        function getUrlVars() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+
+        function checkDiscount() {
+            var btn = $("#CPMain_ctl00_btnPromo").val();
+            if ("CLEAR" != btn && "CLAIRE" != btn && "CLARO" != btn && "KLAR" != btn) {
+                var value = $("#CPMain_ctl00_txtPromoCode").val();
+                var headers = {};
+                // other headers omitted
+                var key = CryptoJS.enc.Utf8.parse('8080808080808080');
+                var iv = CryptoJS.enc.Utf8.parse('8080808080808080');
+
+                var loc = window.location;
+
+                var pa = "";
+                var eventid = "";
+                if (loc.href.indexOf("=") > 0) {
+
+                    if (getUrlVars()["dateid"] != undefined) {
+
+                        if (loc.href.indexOf("=") > 0) {
+                            pa = loc.href.split("=");
+                            eventid = pa[pa.length - 2];
+                            if (eventid.indexOf("&") > 0) {
+                                var g = eventid.split("&");
+                                eventid = g[0];
+                            }
+                        }
+                        if (loc.href.indexOf("=") > 0 && loc.href.indexOf("resp=on") > 0) {
+                            pa = loc.href.split("=");
+                            eventid = pa[pa.length - 2];
+                        }
+                        if (loc.href.indexOf("-") > 0) {
+                            pa = loc.href.split("-");
+                            var g = pa[pa.length - 1];
+                            var h = g.split("?");
+                            pa = h[0];
+                            eventid = pa;
+                        }
+                        if (loc.href.indexOf("manual-patient-handling.eventzilla.net") > 0) {
+                            pa = loc.href.split("=");
+                            eventid = pa[pa.length - 2];
+                            if (eventid.indexOf("&") > 0) {
+                                var g = eventid.split("&");
+                                eventid = g[0];
+                            }
+
+                        }
+                    } else {
+                        if (loc.href.indexOf("=") > 0) {
+                            pa = loc.href.split("=");
+                            eventid = pa[pa.length - 1];
+                        } else {
+                            pa = loc.href.split("-");
+                            eventid = pa[pa.length - 1];
+                        }
+                        if (loc.href.indexOf("-") > 0 && loc.href.indexOf("&err") > 0) {
+                            pa = loc.href.split("-");
+                            var g = pa[pa.length - 1];
+                            var h = g.split("?");
+                            pa = h[0];
+                            eventid = pa;
+                        }
+                        if (loc.href.indexOf("=") > 0 && loc.href.indexOf("&err") > 0 && loc.href.indexOf("?") > 0) {
+                            pa = loc.href.split("=");
+                            var g = pa[pa.length - 1];
+                            var h = g.split("&");
+                            pa = h[0];
+                            eventid = pa;
+                        }
+                    }
+
+                } else {
+                    pa = loc.pathname.split('-');
+                    eventid = pa[pa.length - 1];
+                }
+
+
+                if ("" == eventid) {
+                    eventid = guparam("eventid");
+                }
+                var encryptID = CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(eventid), key,
+                    {
+                        keySize: 128 / 8,
+                        iv: iv,
+                        mode: CryptoJS.mode.CBC,
+                        padding: CryptoJS.pad.Pkcs7
+                    });
+                headers['encryptID'] = encryptID;
+
+                $.ajax({
+                    cache: false,
+                    dataType: 'json',
+                    type: 'POST',
+                    headers: headers,
+                    contentType: 'application/json; charset=utf-8',
+                    url: 'https://www.eventzilla.net/web/webcall.aspx?dis_code=' + value + "&callfrom=sales&EventID=" + eventid,
+                    error: function (rep) {
+                        if (200 == parseInt(rep.status)) {
+                            if ("1" == rep.responseText.split('(')[0] || "2" == rep.responseText.split('(')[0]) {
+                                var sp = rep.responseText.split('(');
+                                //$("#CPMain_ctl00_hfPromoPrice").val(sp[1].split(',')[1]);
+                                //$("#CPMain_ctl00_hfIsEachTicket").val(sp[2].split(',')[1]);
+                                //$("#CPMain_ctl00_hfPromoPercentage").val(sp[3].split(',')[1]);
+                                //$("#CPMain_ctl00_hfpromoticket").val(sp[5].split(',')[1]);
+                                //$("#CPMain_ctl00_divDiscount").show();
+                                //$("#CPMain_ctl00_divsubtot").show();
+                                $("#CPMain_ctl00_divdisApply").show();
+                                $("#CPMain_ctl00_lblErrorMessage").html("<div class=\"alert alert-success\">" + sp[4].split(',')[1] + "</div>");
+                                $("#CPMain_ctl00_btnPromo").val(sp[6].split(',')[1]);
+                                //QuantityAdd($(".QuantityAdd").index(this), "pageload");
+                                //ReservseatsFeeCalc(FeeData, selectedobjectData, CategoryobjectData);
+                                //DiscountMoreTickets();
+                                $("#divTotalFee").hide();
+                                $(".gtotal").addClass("hide");
+                                $("#CPMain_ctl00_divsubtot").hide();
+                            } else if ("3" == rep.responseText.split('(')[0]) {
+                                $("#CPMain_ctl00_hfPromoPrice").val("");
+                                $("#CPMain_ctl00_hfIsEachTicket").val("");
+                                $("#CPMain_ctl00_hfPromoPercentage").val("");
+                                var sp = rep.responseText.split('(');
+                                $("#CPMain_ctl00_lblErrorMessage").html("<div class=\"alert alert-danger\">" + sp[1].split(',')[1] + sp[1].split(',')[2] + "</div>");
+                                $("#divTotalFee").show();
+                                $(".gtotal").removeClass("");
+                                $("#CPMain_ctl00_divsubtot").show();
+                            } else if ("4" == rep.responseText.split('(')[0]) {
+                                var sp = rep.responseText.split('(');
+                                //$("#CPMain_ctl00_hfPromoPrice").val(sp[1].split(',')[1]);
+                                //$("#CPMain_ctl00_hfIsEachTicket").val(sp[2].split(',')[1]);
+                                //$("#CPMain_ctl00_hfPromoPercentage").val(sp[3].split(',')[1]);
+                                //$("#CPMain_ctl00_divDiscount").show();
+                                //$("#CPMain_ctl00_divsubtot").show();
+                                $("#CPMain_ctl00_divdisApply").show();
+                                $("#CPMain_ctl00_lblErrorMessage").html("<div class=\"alert alert-success\">" + sp[4].split(',')[1] + "</div>");
+                                //$("#CPMain_ctl00_hfpromocid").val(sp[5].split(',')[1]);
+                                //$("#CPMain_ctl00_hfpromoticket").val(sp[6].split(',')[1]);
+                                $("#CPMain_ctl00_btnPromo").val(sp[7].split(',')[1]);
+                                //QuantityAdd($(".QuantityAdd").index(this), "pageload");
+                                //DiscountMoreTickets();
+                                //ReservseatsFeeCalc(FeeData, selectedobjectData, CategoryobjectData);
+                                $("#divTotalFee").hide();
+                                $(".gtotal").addClass("hide");
+                                $("#CPMain_ctl00_divsubtot").hide();
+                            } else {
+                                $("#CPMain_ctl00_hfPromoPrice").val("");
+                                $("#CPMain_ctl00_hfIsEachTicket").val("");
+                                $("#CPMain_ctl00_hfPromoPercentage").val("");
+                                var sp = rep.responseText.split('(');
+                                $("#CPMain_ctl00_lblErrorMessage").html("<div class=\"alert alert-danger\">" + sp[1].split(',')[1] + "</div>");
+                                $("#CPMain_ctl00_txtPromoCode").val("");
+                                $("#divTotalFee").show();
+                                $(".gtotal").removeClass("hide");
+                                $("#CPMain_ctl00_divsubtot").show();
+                            }
+                            $('html, body').animate({
+                                'scrollTop': $("#regtitle").position().top
+                            });
+                        }
+                    },
+                });
+            } else {
+                var value = "";
+                value = "CLAIRE" == btn ? "APPLIQUER" : "CLARO" == btn ? "APLICAR" : "KLAR" == btn ? "BEWERBEN" : "APPLY";
+                $("#CPMain_ctl00_btnPromo").val(value);
+                $("#CPMain_ctl00_txtPromoCode").val("");
+                $("#CPMain_ctl00_hfPromoPrice").val("");
+                $("#CPMain_ctl00_hfIsEachTicket").val("");
+                $("#CPMain_ctl00_hfPromoPercentage").val("");
+                $("#CPMain_ctl00_hfpromocid").val("");
+                $("#CPMain_ctl00_hfpromoticket").val("");
+                $("#divTotalFee").show();
+                $(".gtotal").removeClass("hide");
+                //QuantityAdd($(".QuantityAdd").index(this), "pageload");
+                //DiscountMoreTickets();
+                //ReservseatsFeeCalc(FeeData, selectedobjectData, CategoryobjectData);
+                return false;
+
+
+            }
+        }
+
+
+    </script>
+
+    <script>
+
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://eventzilla-1.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+    <script>
+        if ("" != $("#CPMain_ctl00_hfReservSeatbool").val()) {
+            $(".reserve-mdiv").parent("section").show();
+            $(".reserve-seat-total").append($(".costsummary"));
+            $(".register-table").hide();
+            $("#regtitle").hide();
+            $(".costsummary").removeClass("col-md-5").removeClass("col-sm-7").addClass("col-md-12").addClass("col-sm-12");
+            if (undefined != $("#CPMain_ctl00_divDiscount").val()) {
+                $("#divReservDiscount").append($("#CPMain_ctl00_divDiscount"));
+                $("#divReservDiscount").append($("#CPMain_ctl00_promocode"));
+            }
+            $(".reserve-title .event-date").append($("#CPMain_ctl00_ddlEventDate"));
+            $(".reserve-left").prepend($("#CPMain_ctl00_lblErrorMessage"));
+        } else {
+            $(".reserve-mdiv").parent("section").hide();
+        }
+
+        function ReservseatsFeeCalc(FeeData, selectedobjectData, CategoryobjectData) {
+            var TotalFee = 0;
+            var TotalPrice = 0;
+            var subtotal = 0;
+            var Discount = 0;
+            var promocid = $("#CPMain_ctl00_hfpromocid").val();
+            var words = promocid.split('|');
+            var len = words.length;
+            var CalculatedFee = 0;
+            var p = "";
+            $(".spanReservKey").html("").hide();
+            $(".spanPriceReservKey").html("0").hide();
+            $(".spanPriceReservKey").parent(".total-price").hide();
+            $(".spanReservKey").parent("div").hide();
+            if (selectedobjectData.length > 0) {
+                var returndata = GroupbyCategory(CategoryobjectData);
+                for (var i = 0; i < selectedobjectData.length; i++) {
+                    //ReservTbl
+                    var reservKey = selectedobjectData[i].split('|')[1];
+                    // $("#divReservKey" + reservKey).html("");
+                    var ObjectID = selectedobjectData[i].split('|')[0];
+                    var Feesp = FeeData.split(',');
+                    for (var f = 0; f < Feesp.length; f++) {
+                        if (Feesp[f].split('|')[0] == reservKey && parseFloat(Feesp[f].split('|')[1]) > 0) {
+                            subtotal += parseFloat(Feesp[f].split('|')[2]);
+                            if ("GeneralAdmissionArea" == selectedobjectData[i].split('|')[2]) {
+                                if ("" == $("#spanReservKey" + reservKey).html()) {
+                                    $("#spanReservKey" + reservKey).html("0");
+                                }
+                                $("#spanReservKey" + reservKey).html(parseInt($("#spanReservKey" + reservKey).html()) + 1).show().parent("div").show();
+                                $("#spanPriceReservKey" + reservKey).parent(".total-price").show();
+                                $("#spanPriceReservKey" + reservKey).show();
+                                $("#spanReservObjecttype" + reservKey).html(selectedobjectData[i].split('|')[2] + " : ").show();
+                            }
+                            Pricetotal = parseFloat(Feesp[f].split('|')[2]) + parseFloat($("#spanPriceReservKey" + reservKey).html());
+
+                            $("#spanPriceReservKey" + reservKey).html(Pricetotal.toFixed(2));
+                            if ($("#CPMain_ctl00_hfPromoPrice").val() != "" && $("#CPMain_ctl00_hfPromoPrice").val() != "0" && $("#CPMain_ctl00_hfpromoticket").val() == "False") {
+
+                                TotalFee += parseFloat(Feesp[f].split('|')[1]);
+                                TotalPrice += parseFloat(Feesp[f].split('|')[2]) + parseFloat(Feesp[f].split('|')[1]);
+                                if ($("#CPMain_ctl00_hfIsEachTicket").val() == "True")
+                                    Discount += parseFloat($("#CPMain_ctl00_hfPromoPrice").val());
+                                else
+                                    Discount = parseFloat($("#CPMain_ctl00_hfPromoPrice").val());
+
+                            } else if ($("#CPMain_ctl00_hfPromoPercentage").val() != "" && $("#CPMain_ctl00_hfpromoticket").val() == "False") {
+                                TotalFee += parseFloat(Feesp[f].split('|')[1]);
+                                TotalPrice += parseFloat(Feesp[f].split('|')[1]) + parseFloat(Feesp[f].split('|')[2]);
+                                if ($("#CPMain_ctl00_hfIsEachTicket").val() == "True")
+                                    Discount += (parseFloat(Feesp[f].split('|')[2]) * parseFloat($("#CPMain_ctl00_hfPromoPercentage").val())) / 100;
+                                else
+                                    Discount += parseFloat(Feesp[f].split('|')[2]) - (parseFloat(Feesp[f].split('|')[2]) * parseFloat($("#CPMain_ctl00_hfPromoPercentage").val()) / 100);
+                            } else if ($("#CPMain_ctl00_hfPromoPrice").val() != "" && $("#CPMain_ctl00_hfPromoPrice").val() != "0" && $("#CPMain_ctl00_hfpromoticket").val() == "True" && promocid.indexOf(Feesp[f].split('|')[3]) > -1) {
+                                TotalFee += parseFloat(Feesp[f].split('|')[1]);
+                                TotalPrice += parseFloat(Feesp[f].split('|')[2]) + parseFloat(Feesp[f].split('|')[1]);
+                                if ($("#CPMain_ctl00_hfIsEachTicket").val() == "True")
+                                    Discount += parseFloat($("#CPMain_ctl00_hfPromoPrice").val());
+                                else
+                                    Discount = parseFloat($("#CPMain_ctl00_hfPromoPrice").val());
+
+                            } else if ($("#CPMain_ctl00_hfPromoPercentage").val() != "" && $("#CPMain_ctl00_hfpromoticket").val() == "True" && promocid.indexOf(Feesp[f].split('|')[3]) > -1) {
+                                TotalFee += parseFloat(Feesp[f].split('|')[1]);
+                                TotalPrice += parseFloat(Feesp[f].split('|')[1]) + parseFloat(Feesp[f].split('|')[2]);
+                                if ($("#CPMain_ctl00_hfIsEachTicket").val() == "True")
+                                    Discount += (parseFloat(Feesp[f].split('|')[2]) * parseFloat($("#CPMain_ctl00_hfPromoPercentage").val())) / 100;
+                                else
+                                    Discount += parseFloat(Feesp[f].split('|')[2]) - (parseFloat(Feesp[f].split('|')[2]) * parseFloat($("#CPMain_ctl00_hfPromoPercentage").val()) / 100);
+                            } else {
+                                TotalFee += parseFloat(Feesp[f].split('|')[1]);
+                                TotalPrice += parseFloat(Feesp[f].split('|')[2]) + parseFloat(Feesp[f].split('|')[1]);
+
+                            }
+
+                        }
+                    }
+                    if ("GeneralAdmissionArea" != selectedobjectData[i].split('|')[2]) {
+                        $("#spanReservKey" + reservKey).append(ObjectID + ",").show().parent("div").show();
+                        $("#spanReservObjecttype" + reservKey).html(selectedobjectData[i].split('|')[2] + " :").show();
+                        $("#spanPriceReservKey" + reservKey).show();
+                        $("#spanPriceReservKey" + reservKey).parent(".total-price").show();
+                    }
+
+                }
+                var GroupDiscountAmount = GroupDiscount();
+                TotalPrice = TotalPrice - Discount - GroupDiscountAmount;
+                CalculatedFee = TotalFee;
+                if (parseFloat(TotalPrice).toFixed(2) > 0 && $("#CPMain_ctl00_hfEventZillaPayment").val() != "") {
+                    var eventzillapayment = $("#CPMain_ctl00_hfEventZillaPayment").val().split('|');
+                    CalculatedFee = parseFloat((parseFloat(TotalPrice - TotalFee).toFixed(2) * eventzillapayment[0] / 100) + TotalFee + parseFloat(eventzillapayment[1]));
+                    if (3 == eventzillapayment.length && "i" == $("#CPMain_ctl00_hfConvenienceFee").val()) {
+                        CalculatedFee += parseFloat(parseFloat((parseFloat(TotalPrice - TotalFee).toFixed(2) * eventzillapayment[0] / 100)) * 18 / 100);
+                    }
+                }
+
+
+                $("#CPMain_ctl00_btnAddOrder").removeAttr("disabled");
+            } else {
+                $("#CPMain_ctl00_btnAddOrder").attr("disabled", "disabled");
+            }
+            if ("e" == $("#CPMain_ctl00_hfConvenienceFee").val()) {
+                CalculatedFee = 0;
+            }
+            console.log("calc " + CalculatedFee);
+            console.log("total " + TotalPrice);
+            console.log("Fee " + TotalFee);
+            $(".totalfeecostlabel").html(parseFloat(CalculatedFee + TotalPrice - TotalFee).toFixed(2));
+            $("#spFee").html(CalculatedFee.toFixed(2));
+            $(".disfeecostlabel").html((Discount + GroupDiscountAmount).toFixed(2));
+            $(".subfeecostlabel").html(subtotal.toFixed(2));
+
+        }
+
+        function GroupDiscount() {
+            if ($("#CPMain_ctl00_hfDiscountMoretickets").val() != "") {
+
+                for (var s = 0; s < $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|').length; s++) {
+                    var iquantity = 0;
+                    var CategoryPrice = 0;
+                    for (var p = 0; p < selectedobjectData.length; p++) {
+
+                        for (var c = 0; c < FeeData.split(',').length; c++) {
+                            if (selectedobjectData[p].split('|')[1] == FeeData.split(',')[c].split('|')[0] && FeeData.split(',')[c].split('|')[3] == $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[0]) {
+                                iquantity += 1;
+                                CategoryPrice = FeeData.split(',')[c].split('|')[2];
+                            }
+                        }
+                    }
+                    var j = 0;
+                    var hfcid = $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[0];
+                    var discountprice = $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[2].split(':')[0] == "price" ? $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[2].split(':')[1] : "0";
+                    var discountCategory = $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[0];
+                    var discountCategoryList = discountCategory.split('|');
+                    var discountmoreticket = $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[1];
+                    var discountpercentage = $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[2].split(':')[0] == "percentage" ? $("#CPMain_ctl00_hfDiscountMoretickets").val().split('|')[s].split(',')[2].split(':')[1] : "0";
+                    var calculatedprice = 0;
+                    if (!isNaN(CategoryPrice)) {
+                        for (var i = 0; i < discountCategoryList.length; i++) {
+                            if (iquantity >= discountmoreticket && hfcid == discountCategoryList[i]) {
+                                if (parseFloat(discountprice) > 0) {
+
+                                    return calculatedprice = parseFloat(calculatedprice) + parseFloat(discountprice);
+                                } else {
+                                    return calculatedprice = parseFloat(parseFloat(CategoryPrice * iquantity) * parseFloat(discountpercentage)) / 100;
+                                }
+                            }
+                        }
+                    }
+                    return 0;
+                }
+            }
+            return 0;
+        }
+
+        function GroupbyCategory(CategoryobjectData) {
+            var items = {}, base, key;
+            $.each(CategoryobjectData, function (index, val) {
+                key = val[0];
+                if (!items[key]) {
+                    items[key] = 0;
+                }
+                items[key] += val[1];
+            });
+
+            var outputArr = [];
+            $.each(items, function (key, val) {
+                outputArr.push([key, val]);
+            });
+            return outputArr;
+        }
+
+        $(document).ready(function () {
+            var t = location.href;
+            if (t.indexOf("2138989398") > 0) {
+                if ($('.tempspace').text() == "ORGANIZER") {
+                    $('.tempspace').text("ORGANISER");
+                }
+                ;
+
+                if ($('#CPMain_ctl00_infoabout').text().trim() == "About the Organizer") {
+                    $('#CPMain_ctl00_infoabout').text("About the Organiser");
+                }
+                ;
+
+                if ($('#triggerContact').text().trim() == "CONTACT ORGANIZER") {
+                    $('#triggerContact').text("CONTACT ORGANISER");
+                    $('.popup-title').text("CONTACT ORGANISER");
+                }
+
+                if (t.indexOf("2138962579") > 0) {
+                    $("#CPMain_ctl00_hlfburl").attr('href', 'https://www.facebook.com/groups/svhs1998/about/');
+                }
+            }
+
+            if (t.indexOf("2138962579") > 0) {
+                $("#CPMain_ctl00_hlfburl").attr('href', 'https://www.facebook.com/groups/svhs1998/about/');
+            }
+
+
+            if ($("#parentHorizontalTab").text().trim() == "") {
+                $("#CPMain_ctl00_lischedule").attr("style", "display:none");
+                $("#CPMain_ctl00_eventschedule").attr("style", "display:none");
+            }
+
+            if ($("#hfCustomEventLabel").val() != "" && $("#hfCustomEventLabel") != 'undefined') {
+                var obj = jQuery.parseJSON($("#hfCustomEventLabel").val());
+                $(".customlabelregisternow").text(obj.Registernow);
+                $(".customlabeleventinfo").text(obj.Eventinformations);
+                $(".customlabelregistration").text(obj.Registration);
+                $(".customlabelabtevents").text(obj.Abouttheevent);
+                $(".customlabeleventloc").text(obj.Eventlocations);
+                $(".customlabelabttheorg").text(obj.Abouttheorganizer);
+                $(".customlabelspeakers").text(obj.Eventspeakers);
+                $(".customlabelschedules").text(obj.Eventsessions);
+                $(".customlabelsponsors").text(obj.Eventsponsors);
+                $("#CPMain_ctl00_btnAddOrder").val(obj.Registernow);
+                $(".customlabelcontact").text(obj.ContactOrganizer)
+                $(".customlabelsoldout").text(obj.Soldout)
+                $(".customlabelnotonsale").text(obj.Notonsaleyet)
+                $(".customlabelsaleended").text(obj.Saleended)
+                $(".customlabelabstract").text(obj.AbstractManagement)
+            }
+        });
+
+
+        // Countdown Timer Table Start
+
+        var countDownDate = new Date($("#CPMain_ctl00_hdncountdown").val()).getTime();
+        //  if (countDownDate != "-2201189400000") {
+        var x = setInterval(function () {
+            var offset = $("#CPMain_ctl00_hdnutcoffsetcountdown").val();
+            var newoffset = offset.replace(/:/g, ".");
+            d = new Date();
+            utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+            now = new Date(utc + (3600000 * newoffset)).getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("pcountdown").innerHTML = days + "<span>Days</span>";
+            document.getElementById("pcountdownh").innerHTML = hours + "<span>hours</span>";
+            document.getElementById("pcountdownm").innerHTML = minutes + "<span>minutes</span>";
+            document.getElementById("pcountdowns").innerHTML = seconds + "<span>seconds</span>";
+            if (distance < 0) {
+                clearInterval(x);
+                //  document.getElementById("pcountdown").innerHTML = "Event Started";
+                $("#CPMain_ctl00_divcountdown").addClass("hide");
+            }
+        }, 1000);
+        // }
+        //  else { $("#CPMain_ctl00_divcountdown").addClass("hide"); }
+
+        //Waitlist Discount:
+        $('.wait-btn').click(function () {
+
+            if ($("#CPMain_ctl00_txtPromoCode").val() != "") {
+                var key = CryptoJS.enc.Utf8.parse('8080808080808080');
+                var iv = CryptoJS.enc.Utf8.parse('8080808080808080');
+                var promocode = CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse($("#CPMain_ctl00_txtPromoCode").val()), key,
+                    {
+                        keySize: 128 / 8,
+                        iv: iv,
+                        mode: CryptoJS.mode.CBC,
+                        padding: CryptoJS.pad.Pkcs7
+                    });
+                $(this).attr('href', function () {
+                    return this.href + '&Discount=' + promocode + '';
+                });
+            }
+
+        });
+
+    </script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script>
+        function onSubmit(token) {
+            //__doPostBack('__Page', 'ContactOrganizer');
+            $("#form1").attr("action", $("#form1").attr("action"));
+            $("#form1").submit();
+        }
+
+
+        $("#CPMain_ctl00_txtYourName").keyup(function () {
+            if ($("#CPMain_ctl00_txtYourName").val() != "") {
+                $("#spReqlblUsrName").addClass("hide");
+            }
+        });
+        $("#CPMain_ctl00_txtEmailAddress").keyup(function () {
+            if ($("#CPMain_ctl00_txtEmailAddress").val() != "") {
+                $("#spReqlblOrgMail").addClass("hide");
+            }
+        });
+        $("#CPMain_ctl00_txtSubject").keyup(function () {
+            if ($("#CPMain_ctl00_txtSubject").val() != "") {
+                $("#spReqlblSubject").addClass("hide");
+            }
+        });
+        $("#CPMain_ctl00_txtSendmessage").keyup(function () {
+            if ($("#CPMain_ctl00_txtSendmessage").val() != "") {
+                $("#spReqenquiry").addClass("hide");
+            }
+        });
+
+        function validate(event) {
+            event.preventDefault();
+            if ($("#CPMain_ctl00_txtYourName").val() == "") {
+                $("#spReqlblUsrName").removeClass("hide");
+            } else {
+                $("#spReqlblUsrName").addClass("hide");
+            }
+            if ($("#CPMain_ctl00_txtEmailAddress").val() == "") {
+                $("#spReqlblOrgMail").removeClass("hide");
+            } else {
+                $("#spReqlblOrgMail").addClass("hide");
+            }
+            if ($("#CPMain_ctl00_txtSubject").val() == "") {
+                $("#spReqlblSubject").removeClass("hide");
+            } else {
+                $("#spReqlblSubject").addClass("hide");
+            }
+            if ($("#CPMain_ctl00_txtSendmessage").val() == "") {
+                $("#spReqenquiry").removeClass("hide");
+            } else {
+                $("#spReqenquiry").addClass("hide");
+            }
+
+
+            if ($("#CPMain_ctl00_txtYourName").val() != "" &&
+                $("#CPMain_ctl00_txtEmailAddress").val() != "" &&
+                $("#CPMain_ctl00_txtSubject").val() != "" &&
+                $("#CPMain_ctl00_txtSendmessage").val() != "") {
+                if (isValidEmailAddress($("#CPMain_ctl00_txtEmailAddress").val()) == true) {
+                    $("#spRegularlblOrgMail").addClass("hide");
+                    grecaptcha.execute();
+
+                } else {
+                    $("#spRegularlblOrgMail").removeClass("hide");
+                }
+            }
+        }
+
+        function RecaptchaOnloadPageClick() {
+            var element = document.getElementById('CPMain_ctl00_btnSendMessage');
+            element.onclick = validate;
+        }
+
+        RecaptchaOnloadPageClick();
+
+        $('[data-fancybox="images"]').fancybox({
+            loop: true,
+            transitionDuration: 100,
+            animationDuration: 1000,
+            animationEffect: "fade",
+            buttons: [
+                'slideShow',
+                'fullScreen',
+                'thumbs',
+                'zoom',
+                'close'
+            ],
+            slideShow: {
+                autoStart: false,
+                speed: 1000,
+            },
+            thumbs: {
+                autoStart: true,
+                axis: 'x'
+            },
+        });
+
+
+    </script>
+
+
+    <input type="hidden" name="ctl00$lt_docTitle" id="lt_docTitle"/>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+
+            if ("true" == $("#lt_docTitle").val()) {
+                var tit = document.title;
+                document.title = tit.replace(" - Powered by Eventzilla", "");
+                $(".evbrand").addClass("hide");
+            } else {
+                $(".evbrand").removeClass("hide");
+            }
+
+            var t = location.href;
+            if (t.indexOf("m4x4axjtrailerfund") > 0) {
+                $('.bg-img').addClass("image-full");
+            }
+
+            $("#a_reportabuselink").attr('href', 'mailto:help@eventzilla.net?subject=Abuse Report&body=' + $("#hdn_eventurlforabuse").val() + '');
+        });
+
+
+    </script>
+</form>
+
+</body>
+</html>

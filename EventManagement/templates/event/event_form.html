@@ -1,0 +1,29 @@
+
+{% extends 'event/eventAdminBase.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+<h3>Add a New Event</h3><br><br>
+
+
+<form action="" method="post">
+    {% csrf_token %}
+
+
+    <div class="form-group">
+        <div class="col-sm-offset-0 col-sm-20">
+              {{ form | crispy}}
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </div>
+</form>
+
+{% if error_message %}
+<p><strong><small>{{ error_message }}</small></strong></p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,521 @@
+﻿<!DOCTYPE html>
+
+{% load static %}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta content="" name="description"/>
+    <meta content="webthemez" name="author"/>
+    <title>Bootstrap Admin Theme : Master - WebThemez</title>
+    <!-- Bootstrap Styles-->
+    <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet"/>
+    <!-- FontAwesome Styles-->
+    <link href="{% static 'assets/css/font-awesome.css' %}" rel="stylesheet"/>
+
+    <link href="{% static 'assets/css/select2.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/checkbox3.min.css' %}" rel="stylesheet">
+    <!-- Custom Styles-->
+    <link href="{% static 'assets/css/custom-styles.css' %}" rel="stylesheet"/>
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+</head>
+<body>
+<div id="wrapper">
+    <nav class="navbar navbar-default top-navbar" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'dashboard' %}"><strong><i class="icon fa fa-plane"></i> Manage
+                Event</strong></a>
+            <div id="sideNav" href="">
+                <i class="fa fa-bars icon"></i>
+            </div>
+        </div>
+
+        <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                    <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-messages">
+                    <li>
+                        <a href="#">
+                            <div>
+                                <strong>John Doe</strong>
+                                <span class="pull-right text-muted">
+                                        <em>Today</em>
+                                    </span>
+                            </div>
+                            <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <strong>John Smith</strong>
+                                <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                            </div>
+                            <div>Lorem Ipsum has been the industry's standard dummy text ever since an kwilnw...</div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <strong>John Smith</strong>
+                                <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                            </div>
+                            <div>Lorem Ipsum has been the industry's standard dummy text ever since the...</div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a class="text-center" href="#">
+                            <strong>Read All Messages</strong>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-messages -->
+            </li>
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                    <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-tasks">
+                    <li>
+                        <a href="#">
+                            <div>
+                                <p>
+                                    <strong>Task 1</strong>
+                                    <span class="pull-right text-muted">60% Complete</span>
+                                </p>
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        <span class="sr-only">60% Complete (success)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <p>
+                                    <strong>Task 2</strong>
+                                    <span class="pull-right text-muted">28% Complete</span>
+                                </p>
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="28"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 28%">
+                                        <span class="sr-only">28% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <p>
+                                    <strong>Task 3</strong>
+                                    <span class="pull-right text-muted">60% Complete</span>
+                                </p>
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        <span class="sr-only">60% Complete (warning)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <p>
+                                    <strong>Task 4</strong>
+                                    <span class="pull-right text-muted">85% Complete</span>
+                                </p>
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="85"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                                        <span class="sr-only">85% Complete (danger)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a class="text-center" href="#">
+                            <strong>See All Tasks</strong>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-tasks -->
+            </li>
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                    <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-alerts">
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fa fa-comment fa-fw"></i> New Comment
+                                <span class="pull-right text-muted small">4 min</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                <span class="pull-right text-muted small">12 min</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                <span class="pull-right text-muted small">4 min</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fa fa-tasks fa-fw"></i> New Task
+                                <span class="pull-right text-muted small">4 min</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                <span class="pull-right text-muted small">4 min</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a class="text-center" href="#">
+                            <strong>See All Alerts</strong>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-alerts -->
+            </li>
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+    </nav>
+    <!--/. NAV TOP  -->
+    <nav class="navbar-default navbar-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+
+                <li>
+                    <a href="{% url 'dashboard' %}"><i class="fa fa-dashboard"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="{% url 'profile' %}"><i class="fa fa-desktop"></i> Profile </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'createEvent' %}"><i class="fa fa-edit"></i> Create an Event </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+    <!-- /. NAV SIDE  -->
+    <div id="page-wrapper">
+        <div class="header">
+            <h1 class="page-header">
+                Create Your Event
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li class="active">Create Your Event</li>
+            </ol>
+
+        </div>
+
+        <div id="page-inner">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="card-title">
+                                <div class="title"><h4>PICK A COVER IMAGE FOR YOUR EVENT OR UPLOAD YOUR OWN</h4></div>
+                            </div>
+                        </div>
+
+
+                        <div class="panel-body">
+
+                            <div class="form-group">
+                                <label for="uploadCover"><h4>File input</h4></label>
+                                <input type="file" id="uploadCover">
+                                <p class="help-block">(Only JPG, PNG file formats allowed. File size limit 2MB. Image
+                                    width 1500px X 500px).</p>
+                            </div>
+
+
+                            <label for="radio-logo1"><h4>UPLOAD A LOGO FOR YOUR EVENT (OPTIONAL):</h4></label>
+
+                            <div>
+                                <div class="radio3 radio-check radio-inline">
+
+                                    <input type="radio" id="radio-logo1" name="radio2" onclick="uploadLogo()"
+                                           value="option1">
+                                    <label for="radio-logo1">
+                                        No Logo Required
+                                    </label>
+                                </div>
+                                <div class="radio3 radio-check radio-success radio-inline">
+                                    <input type="radio" id="radio-logo2" name="radio2" value="option2"
+                                           onclick="uploadLogo()">
+                                    <label for="radio-logo2">
+                                        Upload a Logo
+                                    </label>
+
+                                </div>
+                            </div>
+                            <!-- <label for="uploadLogoOption">File input</label>
+                            --> <input type="file" id="uploadLogoOption" style="display:none">
+
+                            <label for="radio-3"><h4>EVENT TYPE:</h4></label>
+                            <div>
+                                <div class="radio3 radio-check radio-inline">
+                                    <input type="radio" id="radio-3" name="radio3" value="registration">
+                                    <label for="radio-3">
+                                        Registration
+                                    </label>
+                                </div>
+                                <div class="radio3 radio-check radio-inline">
+                                    <input type="radio" id="radio-4" name="radio3" value="buy tickets">
+                                    <label for="radio-4">
+                                        Buy Tickets
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+
+                            <h4>
+                                <img src="https://d2poexpdc5y9vj.cloudfront.net/webapp/2.0/img/nt-box-event.png"/>
+                                Event title and description</h4>
+                            <span class="help">Fields marked <span class="red">*</span> are Required</span>
+
+
+                        </div>
+
+
+                        <div class="panel-body">
+
+
+                            <div class="form-group">
+
+                                <label class="form-label">
+                                    Event Name <span class="red">*</span>:
+                                    <span class="help">Title of your event (ex: Tech conference 2020)</span>
+                                </label>
+
+                                <form method="POST" action="{% url 'event_success' %}" enctype="multipart/form-data">
+                               {% csrf_token %}
+                                    <input type="text" class="form-control" placeholder="Text input">
+                                    <button type="submit" value="">Submit</button>
+                                </form>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label class="form-label">
+                                    <h>Select Category</h>
+                                    <span class="red">*</span>:
+                                    <span class="help">: You can select up to 3 categories to feature your event.</span>
+                                </label>
+
+                                <div class="controls listbox">
+                                    <select size="4" name="ctl00$ContentPlaceHolder1$UC_CreateEvent$lsbCategory"
+                                            multiple="multiple"
+                                            id="ctl00_ContentPlaceHolder1_UC_CreateEvent_lsbCategory"
+                                            style="width:100%;">
+                                        <option value="1">Business</option>
+                                        <option value="2">Classes</option>
+                                        <option value="3">Conferences</option>
+                                        <option value="4">Conventions</option>
+                                        <option value="5">Networking</option>
+                                        <option value="6">Social Events</option>
+                                        <option value="7">Fundraisers</option>
+                                        <option value="8">Performing Arts</option>
+                                        <option value="10">Movies</option>
+                                        <option value="11">Music</option>
+                                        <option value="12">Sports</option>
+                                        <option value="14">Other Events</option>
+
+                                    </select>
+                                </div>
+                                <span id="ctl00_ContentPlaceHolder1_UC_CreateEvent_RequiredFieldValidator2"
+                                      class="error" style="display:none;">Please select at least one category</span>
+
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+
+                            <select class="custom-select">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+
+                            <select class="mdb-select md-form colorful-select dropdown-danger" multiple>
+                                <option value="" disabled selected>Choose your country</option>
+                                <option value="1">USA</option>
+                                <option value="2">Germany</option>
+                                <option value="3">France</option>
+                                <option value="3">Poland</option>
+                                <option value="3">Japan</option>
+                            </select>
+
+                            <label class="mdb-main-label">Event Time</label>
+                            <button class="btn-save btn btn-danger btn-sm">Save</button>
+
+                            <label class="mdb-main-label">Label example</label>
+                            <button class="btn-save btn btn-primary btn-sm">Save</button>
+                            <span id="" class="error"
+                                  style="display:none;">Please select at least one category</span>
+                        </div>
+
+                        <select id="multiselect" multiple="multiple">
+                            <option value="http://ipv4.download.thinkbroadband.com/5MB.zip">Option 1</option>
+                            <option value="http://ipv4.download.thinkbroadband.com/10MB.zip">Option 2</option>
+                            <option value="http://ipv4.download.thinkbroadband.com/20MB.zip">Option 3</option>
+                            <option value="http://ipv4.download.thinkbroadband.com/50MB.zip">Option 4</option>
+                        </select>
+                        <input type="submit" onclick="getSelectedValues()" class="btn btn-primary" value="Download">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- /. PAGE INNER  -->
+</div>
+<!-- /. PAGE WRAPPER  -->
+</div>
+<!-- /. WRAPPER  -->
+<!-- JS Scripts-->
+<!-- jQuery Js -->
+<script src="{% static 'assets/js/jquery-1.10.2.js' %}"></script>
+<!-- Bootstrap Js -->
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<!-- Metis Menu Js -->
+<script src="{% static 'assets/js/jquery.metisMenu.js' %}"></script>
+<script src="{% static 'assets/js/select2.full.min.js' %}"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".selectbox").select2();
+    });
+</script>
+<!-- Custom Js -->
+<script src="{% static 'assets/js/custom-scripts.js' %}"></script>
+<script>
+    function uploadLogo() {
+        var radiobutton = document.getElementById("radio-logo2");
+        var uploadLogoOption = document.getElementById("uploadLogoOption");
+
+        uploadLogoOption.style.display = "none";
+        if (radiobutton.checked == true) {
+            uploadLogoOption.style.display = "block";
+        } else {
+            uploadLogoOption.style.display = "none";
+
+        }
+
+    }
+
+    // Material Select Initialization
+    $(document).ready(function () {
+        $('.mdb-select').materialSelect();
+    });
+
+    $(document).ready(function () {
+        $('#multiselect').multiselect({
+            buttonWidth: '160px',
+            includeSelectAllOption: true,
+            nonSelectedText: 'Select an Option'
+        });
+    });
+
+    function getSelectedValues() {
+        var selectedVal = $("#multiselect").val();
+        for (var i = 0; i < selectedVal.length; i++) {
+            function innerFunc(i) {
+                setTimeout(function () {
+                    location.href = selectedVal[i];
+                }, i * 2000);
+            }
+
+            innerFunc(i);
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

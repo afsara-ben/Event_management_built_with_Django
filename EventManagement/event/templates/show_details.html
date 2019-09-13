@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% extends 'event/eventAdminBase.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+<html lang="en">
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>All Events</title>
+    <center> <h>All Scheduled Events</h> </center>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+{% if event %}
+<table class= "table table-dark table-bordered" id="table" data-toggle="table" data-sortable="true" data-height="460" data-pagination="true" data-search="true">
+    <thead>
+  <tr>
+    <th data-field="EventName" data-sortable="true" scope="col">Event Name</th>
+    <th data-field="EventVenue" data-sortable="true" scope="col">Event Venue</th>
+    <th data-field="EventDescription" data-sortable="true" scope="col">Event Description</th>
+    <th data-field="EventTime" data-sortable="true" scope="col">Event Time</th>
+    <th data-field="EventDate" data-sortable="true" scope="col">Event Date</th>
+   <th data-field="EventCreator" data-sortable="true" scope="col">Event Creator</th>
+      <th data-field="security" data-sortable="true" scope="col">Security </th>
+  </tr>
+    </thead>
+{% for i in event %}
+
+    <tr>
+        <td>{{ i.event_name }}</td>
+        <td>{{ i.event_venue }}</td>
+        <td>{{ i.event_description }}</td>
+        <td>{{ i.event_time }}</td>
+        <td>{{ i.event_date }}</td>
+        <td>{{ i.event_username }}</td>
+        <td> {{ i.is_secured }}</td>
+    </tr>
+
+{% endfor %}
+    </table>
+
+{% else %}
+<h1>No event entries found on the database.</h1>
+
+{% endif %}
+
+
+</body>
+
+{% endblock %}
+
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+{% extends 'base2.html' %}
+{% load static %}
+<html lang="en">
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>My Request</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        body  {
+        background-image: linear-gradient(#fffddf, #b3a9ff);
+
+        }
+     </style>
+
+
+</head>
+<body>
+<div class="container"><h2></h2></div>
+<div id="exTab4" class="container">
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a href="#1b" data-toggle="tab">Basic Information</a>
+        </li>
+        <li>
+            <a href="#2b" data-toggle="tab">Services</a>
+        </li>
+        <li>
+            <a href="#3b" data-toggle="tab">Reviews</a>
+        </li>
+        <li>
+            <a href="#4b" data-toggle="tab">Works</a>
+        </li>
+        <li>
+            <a href="#5b" data-toggle="tab">Images</a>
+        </li>
+        <li>
+            <a href="#6b" data-toggle="tab">Billings</a>
+        </li>
+        <li>
+            <a href="#7b" data-toggle="tab">Requests</a>
+        </li>
+    </ul>
+
+    <div class="tab-content clearfix">
+        <div class="tab-pane active" id="1b">
+            <!--<a href="{% url 'edit_post' %}">
+                <button type="button" class="btn btn-default" style="float: right;">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    Edit
+                </button>
+            </a>-->
+            <h1>Your Basic Information</h1>
+            <form method = "post" enctype="multipart/form-data">
+            {% csrf_token %}
+                <div class="container-fluid" >
+                <div class="row">
+                    <div class="w3-container w3-hover-light-blue col-lg-4">
+                    <div class="modal-body">
+                        <p><font color="black">Which service do you provide?</font></p>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_service" value="Food and catering"><font color="black">Food and catering</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_service" value="Photography and video of the event"><font color="black">Photography and video of the event</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_service" value="Electronics and decorations"><font color="black">Electronics and decorations</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_service" value="Stage and hall decoration"><font color="black">Stage and hall decoration</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_service" value="Promotion of the event"><font color="black">Promotion of the event</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_service" value="Music, dance and entertainment"><font color="black">Music, dance and entertainment</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_service" value="Makeover service"><font color="black">Makeover service</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_service" value="Hosting service"><font color="black">Hosting service</font></label>
+                        </div>
+                    </div>
+                    </div>
+
+              <div class="w3-container w3-hover-light-blue col-lg-4">
+
+                    <div class="modal-body">
+                        <p><font color="black">Which industries are you experienced in?</font></p>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_specialty" value="Wedding"><font color="black">Wedding</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_specialty" value="Birthday"><font color="black">Birthday</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_specialty" value="Office party"><font color="black">Office party</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_specialty" value="PR event"><font color="black">PR event</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_specialty" value="Branding and Positioning"><font color="black">Branding and Positioning</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_specialty" value="Anniversary celebration"><font color="black">Anniversary celebration</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_specialty" value="Office party"><font color="black">Office party</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_specialty" value="Bridal Shower"><font color="black">Bridal Shower</font></label>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="w3-container w3-hover-light-blue col-lg-4">
+
+                    <div class="modal-body">
+                        <p><font color="black">What area do you want to receive opportunities in?</font></p>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_interest" value="Wedding"><font color="black">Wedding</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_interest" value="Birthday"><font color="black">Birthday</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_interest" value="Office party"><font color="black">Office party</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_interest" value="PR event"><font color="black">PR event</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_interest" value="Branding and Positioning"><font color="black">Branding and Positioning</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_interest" value="Anniversary celebration"><font color="black">Anniversary celebration</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_interest" value="Office party"><font color="black">Office party</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_interest" value="Bridal Shower"><font color="black">Bridal Shower</font></label>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="row" >
+                    <div class="w3-container w3-hover-light-blue col-lg-4">
+                    <div class="modal-body">
+                        <p><font color="black">Do you work remotely with your clients?</font></p>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_remote_work" value="yes"><font color="black">Yes, I'm used to work remotely with my clients.</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_remote_work" value="no"><font color="black">No, I need to meet my clients physically.</font></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-container w3-hover-light-blue col-lg-4">
+                    <div class="modal-body">
+                        <p><font color="black">What is the comfortable budget range you need to work with?</font></p>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_event_budget" value="Tk. 1000-5000"><font color="black">Tk. 1000-5000</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_event_budget" value="Tk. 5000-10000"><font color="black">Tk. 5000-10000</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_event_budget" value="Tk. 10000-20000"><font color="black">Tk. 10000-20000</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_event_budget" value="Tk. 20000-50000"><font color="black">Tk. 20000-50000</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_event_budget" value="Tk. 1-2 Lakh"><font color="black">Tk. 1-2 Lakh</font></label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="vendor_event_budget" value="Tk. 2-5 Lakh"><font color="black">Tk. 2-5 Lakh</font></label>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+                <button type="submit" class="btn btn-success" value="" style="float: right;">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                        Save
+                </button>
+                <br><br><br>
+            </form>
+        </div>
+        <div class="tab-pane" id="2b">
+            <h3>will show matched results .........</h3>
+
+        </div>
+        <div class="tab-pane" id="3b">
+            <h3>Reviews from clients</h3>
+            {% for review in reviews %}
+                {% if review.is_favorite == 5 %}
+
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+
+    {% elif review.is_favorite == 4 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+
+     {% elif review.is_favorite == 3 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+     {% elif review.is_favorite == 2 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+     {% elif review.is_favorite == 1 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+    {% endif %}
+                <br>
+                <a href="{{ review.customer_email }}">{{ review.customer_email }}</a><br>
+
+
+                 <p>{{ review.customer_name }} : </p>
+                            <p align="right">{{ review.date }}</p>
+                {% if review.review %}
+                    <textarea name="paragraph_text" cols="50" rows="5" disabled>{{ review.review }}</textarea>
+                {% endif %}
+                <br>
+
+
+
+            {% endfor %}
+
+        </div>
+        <div class="tab-pane" id="4b">
+            <h3>will show matched results .........</h3>
+
+        </div>
+        <div class="tab-pane" id="5b">
+            <div class="media">
+                <p>Company Logo</p>
+            <img class="rounded-circle account-img" width="200" height="200" src="/media/{{ logo.image_file }}" />
+            </div>
+            <h4>Design works</h4>
+            <a href="/vendor/image_upload/vendordesign">
+                <button type="button" class="btn btn-default" style="float: left;">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    Add Design works
+                </button>
+            </a>
+            {% for design in designs %}
+            <div class="media">
+                <img class="rounded-circle account-img" width="200" height="200" src="/media/{{ design.image_file }}" />
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="tab-pane" id="6b">
+            <h3>Payment history</h3>
+            {% for payment in payments %}
+            {% if payment.agent_name == user.username %}
+            {% if payment.admin_agency_pay_status == "paid" %}
+                <p align="right">{{ payment.date_added }}</p>
+            <p>{{ payment.agency_name }}</p>
+            <p>{{ payment.agency_address }}</p>
+            <p>amount : {{ payment.admin_agency_amount }} with VAT {{ payment.agency_vat_number }}</p>
+            <label>Credit card info:</label>
+            <p>card number : {{ payment.agency_card_number }}</p>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="tab-pane" id="7b">
+            <h3>Requests from clients</h3>
+            {% for request in requests %}
+            {% if vendor_company.vendor_company_name == request.agency_name %}
+            {% if request.email_content %}
+            <p>Client name : {{ request.client_name }}</p>
+            <p align="right">{{ request.date_added }}</p>
+            <p>Client email Id : {{ request.client_email }}</p>
+            <level>Email subject : {{ request.email_subject }}</level>
+            <br>
+            <p>Email Content : {{ request.email_content }}</p>
+            <br><br>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+
+        </div>
+    </div>
+
+</div>
+</body>
+{% endblock %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</html>

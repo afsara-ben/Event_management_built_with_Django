@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>My Blog</title>
+    </head>
+    <body>
+        {% for post in posts %}
+        <h1>{{ post.image_name }} uploaded by {{ post.uploader }}</h1>
+        <div class="media">
+         <img class="rounded-circle account-img"  src="/media/{{ post.image_file }}" />
+            <div class="media-body">
+                <h2 class="account-heading">{{ user.username }}</h2>
+                <p class="text-secondary">{{ user.email }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </body>
+</html>

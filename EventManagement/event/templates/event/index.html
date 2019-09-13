@@ -1,0 +1,298 @@
+{% extends 'event/eventAdminBase.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+    .slidecontainer {
+        width: 100%;
+    }
+
+    .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 25px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+
+    .slider:hover {
+        opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background: #4CAF50;
+        cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        background: #4CAF50;
+        cursor: pointer;
+    }
+</style>
+
+
+<p>My list of events</p>
+<small>Basic info</small>
+
+{% if event_list %}
+
+
+{% for events in event_list %}
+
+
+<left id="accordion">
+
+
+    <div class="card">
+
+        <div class="card-header" id="heading{{ events.id }}">
+            <h5 class="mb-0">
+
+                <button class="btn btn-outline-info" data-toggle="collapse"
+                        data-target="#collapse{{ events.id }}" aria-expanded="false"
+                        aria-controls="collapseOne"
+                        style="height:50px;width:400px" align="left">
+                    Event Name :{{ events.event_name }}
+                </button>
+                <form action="{% url 'event:event-delete' events.id %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <!--for creating space-->
+
+                    <button type="submit" class="btn btn-default btn-sm">Delete</button>
+                </form>
+                <!-- <form action="{% url 'event:event-update' events.id %}" method="post" style="display: inline;">
+                     {% csrf_token %}
+                     <button type="submit" class="btn btn-default btn-sm">Update</button>
+                 </form>-->
+
+                &nbsp &nbsp &nbsp <!--for creating space-->
+                <button data-toggle="collapse"
+                        data-target="#collapse__{{ events.id }}" aria-expanded="false"
+                        aria-controls="collapseOne"
+                        class="btn btn-default btn-sm ">
+                    Edit Details
+                </button>
+
+                &nbsp &nbsp &nbsp <!--for creating space-->
+
+                <label><a class="btn-link" href="/event/detail/?sku={{ events.event_name }}">Visit
+                    {{ events.event_name }}</a></label>
+
+            </h5>
+        </div>
+
+        <div id="collapse{{ events.id }}" class="collapse " aria-labelledby="heading{{ events.id }}"
+             data-parent="#accordion">
+            <div class="card-body">
+
+                <ul>
+
+                    <table>
+
+                        <tr>
+                            <td>Event Name</td>
+                            <td>{{ events.event_name }}</td>
+                        </tr>
+                        <tr>
+                            <td>Client</td>
+                            <td>{{ events.event_client }}</td>
+                        </tr>
+
+                        <tr>
+                            <td> Venue:</td>
+                            <td> {{ events.event_venue }}</td>
+                        </tr>
+
+                        <tr>
+                            <td> Type</td>
+                            <td>{{ events.event_type }}</td>
+
+                        </tr>
+
+                        <tr>
+                            <td> Event Budget</td>
+                            <td> {{ events.event_budget }}</td>
+                        </tr>
+
+                        <tr>
+                            <td> Number of guests</td>
+                            <td>{{ events.event_guest_number }}</td>
+
+                        </tr>
+                        <tr>
+                            <td> Event Date</td>
+                            <td>{{ events.event_date }}</td>
+                        </tr>
+
+                        <tr>
+                            <td> Event Time</td>
+                            <td>{{ events.event_time }}</td>
+                        </tr>
+                        <tr>
+                            <td> Is it being arranged remotely?</td>
+                            <td> {{ events.event_remote_arrange }}</td>
+                        </tr>
+
+                        <tr>
+                            <td> Event size</td>
+                            <td> {{ events.event_size }}</td>
+                        </tr>
+
+                        <tr>
+                            <td> Event description</td>
+                            <td>{{ events.event_description }}</td>
+                        </tr>
+
+                        <tr>
+                            <td> Username</td>
+                            <td>{{ events.event_username }}</td>
+                        </tr>
+                        <tr>
+                            <td> Stuffs</td>
+                            <td> {{ events.stuff }}</td>
+                        </tr>
+                        <tr>
+
+                            <td> Security </td>
+                            <td>{{ events.is_secured }}</td>
+<!--                            <td> Security</td>-->
+<!--                            {% if events.is_secured == false %}-->
+<!--                            <td> Private </td>-->
+<!--                            {% else %}-->
+<!--                            <td> Public</td>-->
+<!--                            {% endif %}-->
+                        </tr>
+                    </table>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div id="collapse__{{ events.id }}" class="collapse " aria-labelledby="heading{{ events.id }}"
+             data-parent="#accordion">
+            <div class="card-body">
+
+                <form method="POST" action="{% url 'event:event_details' events.id %}">
+                    {% csrf_token %}
+                    <table>
+                        <tr>
+                            <th> Event Name</th>
+                            <td><input type="text" name="name" value={{ events.event_name }}>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Event Type</th>
+                            <td><input type="text" name="type" value={{ events.event_type }}></td>
+                        </tr>
+                        <tr>
+                            <th> Venue</th>
+                            <td><input type="text" name="venue" value={{ events.event_venue }}></td>
+                        </tr>
+
+                        <tr>
+                            <th>Client </th>
+                            <td><input type="text" name="event_client" value={{ events.event_client }}></td>
+                        </tr>
+
+
+                        <tr>
+                            <th>Guest Number</th>
+                            <td><input type="number" name="guest_number" value={{ events.event_guest_number }}></td>
+                        </tr>
+                        <tr>
+                            <th> Time</th>
+                            <td><input type="time" name="time" value={{ events.event_time }}></td>
+                        </tr>
+                        <tr>
+                            <th>Date</th>
+                            <td><input type="date" name="date" value={{ events.event_date }}></td>
+                        </tr>
+                        <tr>
+                            <th> Size of my company</th>
+                            <td><input type="text" name="size" value={{ events.event_size }}></td>
+                        </tr>
+
+                        <tr>
+                            <th> Description</th>
+                            <td><input type="text" name="description"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Budget</th>
+
+                            <th>
+                                <div class="slidecontainer">
+                                    <input type="range" name="budget" min="1000" max="1000000" value={{ events.event_budget }} class="slider"
+                                           id="myRange">
+                                    <p>Value: <span id="demo1"></span></p>
+                                </div>
+                            </th>
+
+                            <script>
+
+                                var slider = document.getElementById("myRange");
+                                var output = document.getElementById("demo1");
+                                output.innerHTML = slider.value;
+
+                                slider.oninput = function () {
+                                    output.innerHTML = this.value;
+                                }
+                            </script>
+                        </tr>
+                    </table>
+
+                    <div class="form-group" align="middle">
+                        <button class="btn btn-success" type="submit">submit</button>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+</left>
+{% endfor %}
+
+
+{% else %}
+<h1>No event entries found on the database.</h1>
+
+
+{% endif %}
+
+
+{% endblock %}

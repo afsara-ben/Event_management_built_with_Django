@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+
+{% extends 'base2.html' %}
+<!--{% load static %}-->
+<html lang="en">
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>My Request</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <!--    <link rel="stylesheet" href="{% static 'css/popup.css' %}">-->
+    <!--<link rel="stylesheet" href="{% static 'css/custom-checkbox.css' %}">-->
+</head>
+
+<body>
+
+<div class="container"><h2></h2></div>
+<div id="exTab4" class="container">
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a href="#1b" data-toggle="tab">Request event</a>
+        </li>
+        <li>
+            <a href="#2b" data-toggle="tab">Briefing</a>
+        </li>
+        <li>
+            <a href="#3b" data-toggle="tab">Results</a>
+        </li>
+        <li>
+            <a href="#4b" data-toggle="tab">Request history</a>
+        </li>
+        <li>
+            <a href="#5b" data-toggle="tab">Inbox</a>
+        </li>
+    </ul>
+
+    <div class="tab-content clearfix">
+        <div class="tab-pane active" id="1b">
+            <!-- Button trigger modal -->
+            <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                Give you event information
+            </button>-->
+            <!--starts here-->
+            <form method="POST" action="" enctype="multipart/forreateEventm-data">
+                {% csrf_token %}
+                <!-- Modal -->
+                <div class="container">
+                    <!--<div class="modal-dialog">-->
+
+                    <!-- Modal content-->
+                    <!--                        <div class="modal-content">-->
+                    <div class="modal-header">
+                        <h4 class="modal-title"><font color="black">Your Request 1</font></h4>
+                        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>-->
+                    </div>
+
+                    <div class="modal-body">
+
+                        <p id="checkid"></p>
+                        <p><font color="black">What service do you need?</font></p>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="service" value="Wedding"><font color="black">
+                                Wedding</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="service" value="Birthday"><font color="black">
+                                Birthday</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="service" value="Office party"><font
+                                    color="black"> Office
+                                party</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input class="form-check-input" type="checkbox" name="service" value="PR event"><font
+                                    color="black"> PR
+                                event</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input class="form-check-input" type="checkbox" name="service"
+                                          value="Branding and Positioning"><font
+                                    color="black"> Branding
+                                and Positioning</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="service" value="Anniversary celebration"><font
+                                    color="black"> Anniversary
+                                celebration</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="service" value="Office party"><font
+                                    color="black"> Office
+                                party</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="service" value="Bridal Shower"><font
+                                    color="black">Bridal
+                                Shower</font></label>
+                        </div>
+                    </div>
+
+
+                    <!--<div class="modal-footer">
+                        &lt;!&ndash;  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>&ndash;&gt;
+                        <button type="button" class="btn btn-default" id="btn1" data-toggle="modal"
+                                data-target="#myModal">Previous
+                        </button>
+                        <button type="submit" class="btn btn-default" id="btn2"
+                                data-toggle="modal" data-dismiss="modal"
+                                data-target="#myModal2">Next
+                        </button>
+                    </div>-->
+                    <!-- </div>-->
+                    <!-- </div>-->
+                    <!--</div>-->
+
+
+                    <!-- Modal 2 -->
+                    <!--<div class="modal fade" id="myModal2" role="dialog">
+                        <div class="modal-dialog">-->
+
+                    <!-- Modal content-->
+                    <!--                        <div class="container" id="myModal2">-->
+                    <div class="modal-header">
+                        <h4 class="modal-title"><font color="black">Your Request 2</font></h4>
+                        <!--                                <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+
+                    </div>
+                    <div class="modal-body">
+                        <p><font color="black">What budget range would you be comfortable with?</font></p>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="range" value="Tk. 1000-5000"><font
+                                    color="black">Tk.
+                                1000-5000</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="range" value="Tk. 5000-10000"><font
+                                    color="black">Tk.
+                                5000-10000</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="range" value="Tk. 10000-20000"><font
+                                    color="black">Tk.
+                                10000-20000</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="range" value="Tk. 20000-50000"><font
+                                    color="black">Tk.
+                                20000-50000</font></label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="range" value="Tk. 1-2 Lakh"><font color="black">Tk.
+                                1-2
+                                Lakh</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="range" value="Tk. 2-5 lakh"><font color="black">Tk.
+                                2-5
+                                lakh</font></label>
+                        </div>
+                    </div>
+
+                    <!-- Modal 3 -->
+                    <!--                <div class="modal fade" id="myModal3" role="dialog">
+                                        <div class="modal-dialog">-->
+
+                    <!-- Modal content-->
+                    <!--                        <div class="modal-content">-->
+
+                    <div class="modal-header">
+                        <h4 class="modal-title"><font color="black">Your Request 3</font></h4>
+                        <!--                                <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+
+                    </div>
+                    <div class="modal-body">
+                        <p><font color="black">Where should the agency be located?</font></p>
+
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="location" value="Dhaka"><font
+                                    color="black">Dhaka</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="location" value="Rajshahi"><font
+                                    color="black">Rajshahi</font></label>
+                        </div>
+                    </div>
+                    <!--<div class="modal-footer">
+                        &lt;!&ndash;  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>&ndash;&gt;
+                        <button type="button" class="btn btn-default" id="btn5" data-toggle="modal"
+                                data-target="#myModal2" data-dismiss="modal"
+                        >
+                            Previous
+                        </button>
+                        <button type="button" class="btn btn-default" id="btn6" data-toggle="modal"
+                                data-dismiss="modal"
+                                data-target="#myModal4">Next
+                        </button>
+
+                    </div>-->
+                    <!-- </div>-->
+                    <!--</div>
+                </div>-->
+
+
+                    <!-- Modal 4 -->
+                    <!--                <div class="modal fade" id="myModal4" role="dialog">
+                                        <div class="modal-dialog">-->
+
+                    <!-- Modal content-->
+                    <!--                        <div class="modal-content">-->
+                    <div class="modal-header">
+                        <h4 class="modal-title"><font color="black">Your Request 4</font></h4>
+                        <!--                                <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+
+                    </div>
+                    <div class="modal-body">
+                        <p><font color="black">Which language should the agency speak?</font></p>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="language" value="Bangla"><font
+                                    color="black">Bangla</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="language" value="English"><font
+                                    color="black">English</font></label>
+                        </div>
+                    </div>
+
+
+                    <!--                        </div>-->
+                    <!--</div>
+                </div>-->
+
+                    <!-- Modal 5 -->
+                    <!--                <div class="modal fade" id="myModal5" role="dialog">
+                                        <div class="modal-dialog">-->
+
+                    <!-- Modal content-->
+                    <!--                        <div class="modal-content">-->
+                    <div class="modal-header">
+                        <h4 class="modal-title"><font color="black">Your Request 5</font></h4>
+                        <!--                                <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+
+                    </div>
+                    <div class="modal-body">
+                        <p><font color="black">What is your goal behind the event?</font></p>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="goal"
+                                          value="Create the buzz with concept out of box"><font color="black">Create
+                                the buzz with
+                                concept out of box</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="goal" value="Thank my best customers"><font
+                                    color="black">Thank my best
+                                customers</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="goal" value="Celebrate an important event"><font
+                                    color="black">Celebrate an
+                                important event</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="goal" value="Launch a product"><font
+                                    color="black">Launch a
+                                product</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="goal"
+                                          value="Make people talk about our company"><font color="black">Make
+                                people talk
+                                about our company</font></label>
+                        </div>
+                    </div>
+
+
+                    <!-- Modal 6 -->
+                    <!--                <div class="modal fade" id="myModal6" role="dialog">
+                                        <div class="modal-dialog">-->
+
+                    <!-- Modal content-->
+                    <!--                        <div class="modal-content">-->
+                    <div class="modal-header">
+                        <h4 class="modal-title"><font color="black">Your Request 6</font></h4>
+                        <!--                                <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+
+                    </div>
+                    <div class="modal-body">
+                        <p><font color="black">What is your job?</font></p>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="job" value="Business Owner, CEo"><font
+                                    color="black">Business Owner,
+                                CEO</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="job"
+                                          value="Marketing Manager, Brand Manager"><font color="black">Marketing
+                                Manager,
+                                Brand Manager</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="job" value="Consultant"><font
+                                    color="black">Consultant</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="job" value="Marketing agency"><font
+                                    color="black">Marketing
+                                agency</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="job"
+                                          value="Sales representative, Business Developer"><font color="black">Sales
+                                Representative,
+                                Business Developer</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="job" value="Student"><font
+                                    color="black">Student</font></label>
+                        </div>
+                    </div>
+
+
+                    <!-- Modal 7 -->
+                    <!--                <div class="modal fade" id="myModal7" role="dialog">
+                                        <div class="modal-dialog">-->
+
+                    <!-- Modal content-->
+                    <!--                        <div class="modal-content">-->
+                    <div class="modal-header">
+                        <h4 class="modal-title"><font color="black">Your Request 7</font></h4>
+                        <!--                                <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+
+                    </div>
+                    <div class="modal-body">
+                        <p><font color="black">Which size of agency would you prefer ?</font></p>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="size" value="Small studio"><font color="black">Small
+                                Studio(1-10
+                                people)</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="size" value="Medium studio"><font color="black">Medium
+                                Studio(11-30
+                                people)</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="size" value="Big studio"><font color="black">Big
+                                Studio(31-100
+                                people)</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="size" value="Group"><font color="black">Group
+                                (101+
+                                people)</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="size" value="I do not care"><font color="black">I
+                                do not care</font></label>
+                        </div>
+                    </div>
+
+
+                    <!--<div class="modal-footer">
+
+                        &lt;!&ndash;                                <button type="submit"><font color="black">Close</font>
+                                                        </button>&ndash;&gt;
+                        <button type="button" class="btn btn-default" id="btn13" data-toggle="modal"
+                                data-target="#myModal6" data-dismiss="modal">
+                            Previous
+                        </button>
+                        <button type="button" class="btn btn-default" id="btn14" data-toggle="modal"
+                                data-dismiss="modal"
+                                data-target="#myModal8">Next
+                        </button>
+
+
+                    </div>-->
+
+                    <!--                        </div>-->
+                    <!--</div>
+                </div>-->
+                    <!-- Modal 8 -->
+                    <!--                <div class="modal fade" id="myModal8" role="dialog">
+                                        <div class="modal-dialog">-->
+
+                    <!-- Modal content-->
+                    <!--                        <div class="modal-content">-->
+                    <div class="modal-header">
+                        <h4 class="modal-title"><font color="black">Your Request 8</font></h4>
+                        <!--                                <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+
+                    </div>
+                    <div class="modal-body">
+                        <p><font color="black">Do you need any other service ?</font></p>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="otherservice"
+                                          value="Food and catering"><font color="black">Food and catering</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="otherservice"
+                                          value="Photography and video of the event"><font color="black">Photography and
+                                video of the event</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="otherservice"
+                                          value="Electronics and decorations"><font color="black">Electronics and
+                                decorations</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="otherservice"
+                                          value="Stage and hall decoration"><font color="black">Stage and hall
+                                decoration</font></label>
+                        </div>
+                        <div class="checform-check form-check-inlinekbox">
+                            <label><input type="checkbox" name="otherservice" value="Promotion of the event"><font
+                                    color="black">Promotion of the event</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="otherservice"
+                                          value="Music, dance and entertainment"><font color="black">Music, dance and
+                                entertainment</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="otherservice" value="Makeover service"><font
+                                    color="black">Makeover service</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="otherservice" value="Hosting service"><font
+                                    color="black">Hosting service</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="otherservice" value="No"><font
+                                    color="black">No</font></label>
+                        </div>
+                    </div>
+
+                    <div class="modal-header">
+                        <h4 class="modal-title"><font color="black">Your Request 9</font></h4>
+                        <!--                                <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+
+                    </div>
+                    <div class="modal-body">
+                        <p><font color="black">Do you want to work remotely with the agency ?</font></p>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="client_remote_work"
+                                          value="no"><font color="black">No, I want to work physically with the
+                                agency.</font></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label><input type="checkbox" name="client_remote_work"
+                                          value="yes"><font color="black">Yes, I can work with agency
+                                remotely.</font></label>
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-default" style="float: right;">Submit</button>
+                </div>
+                <br><br><br>
+            </form>
+        </div>
+
+
+        <div class="tab-pane" id="2b">
+            <div class="list-group">
+
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"></a>
+
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <p> What service do you need? </p>
+
+                    <label>{{ value.service }}</label>
+
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <p> What budget range would you be comfortable with? </p>
+
+                    <label>{{ value.range }}</label>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <p> Where should the agency be located?</p>
+
+                    <label>{{ value.location }}</label>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <p> Which language should the agency speak?</p>
+
+                    <label>{{ value.language }}</label>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <p>What is your goal behind the event? </p>
+
+                    <label>{{ value.goal }}</label>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <p> What is your job? </p>
+
+                    <label>{{ value.job }}</label>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <p>Which size of agency would you prefer ? </p>
+
+                    <label>{{ value.size }}</label>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <p>Do you need any other service ?</p>
+
+                    <label>{{ value.otherservice }}</label>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <p>Do you want to work remotely with the agency ?</p>
+
+                    <label>{{ value.client_remote_work }}</label>
+                </a>
+
+            </div>
+        </div>
+
+
+        <div class="tab-pane" id="3b">
+            <h3>**Showing matched results** </h3>
+            <!--            <label>{{ value.client_remote_work }}</label>-->
+            <table style="width:100%">
+                <tr>
+                    <th>Agency Name</th>
+                    <th>Match rate</th>
+                    <th>Ratings</th>
+                </tr>
+
+                {% for resultlist in result_list %}
+                {% if resultlist.agency_company_address %}
+                <tr>
+                    <td>
+
+                        <button class="btn btn-light" type="button" data-toggle="collapse"
+                                data-target="#collapseAll{{ resultlist.id }}" aria-expanded="false"
+                                aria-controls="collapseExample1"
+                                style="height:50px;width:500px">
+
+                                                <span class="text-xl-left" style="font-size: 17px;">  <p
+                                                        class="text-xl-left">{{ resultlist.agency_company_name }}</p></span>
+                        </button>
+
+                        <div class="collapse" id="collapseAll{{ resultlist.id }}"
+                             aria-labelledby="heading1{{ resultlist.id }}">
+                            <div class="card-body">
+
+
+                                Location : {{ resultlist.agency_company_address }} <br>
+                                Agent : {{ resultlist.agent_username }} <br>
+                                Past Works : {{ resultlist.agency_past_work }} <br>
+                                Enlisted service providers : {{ resultlist.agency_service_provider }} <br>
+                                Social Media : {{ resultlist.agency_social_media }}<br>
+                                Joined on : {{ resultlist.date_added }}<br>
+                                Go to {{ resultlist.agency_company_name }}'s page : <label><a class="btn-link"
+                                                                                              href="agency/?sku={{ resultlist.agency_company_name }}">{{
+                                resultlist.agency_company_name }}</a></label><br>
+
+
+                            </div>
+
+
+                        </div>
+
+                        </span>
+
+                        <!--<p>{{ forloop.counter|add:"70" }}</p>-->
+                        <!--<p>{{ count.0.1|add:"-10" }}</p>-->
+
+                    </td>
+                    <td>
+
+                        <!--<p>{{ forloop.counter|add:"70" }}</p>-->
+                        <p>{{ forloop.revcounter|add:"70" }}%</p><br>
+                        <!--<p>{{ countlist }}</p>-->
+
+                    </td>
+                    <td></td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </table>
+        </div>
+
+        <div class="tab-pane" id="4b">
+
+
+            <!-- jQuery library -->
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <!-- Bootstrap JS -->
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+            <script>
+                $(document).ready(function () {
+                    $("#myInput2").on("keyup", function () {
+                        var value = $(this).val().toLowerCase();
+                        $("#myTable2 tr").filter(function () {
+                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                        });
+                    });
+                });
+            </script>
+
+
+            <h3>Request History</h3>
+
+
+            <input class="form-control" id="myInput2" type="text" placeholder="Search by keyword..">
+            <br>
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Status</th>
+                    <th>Event Date</th>
+                </tr>
+                </thead>
+                {% for request in requests %}
+                {% if request.client_name == user.username %}
+                {% if request.request_type == "agency" %}
+                <ul class='nav'>
+                    <li>
+                        <!--                    <style>-->
+                        <!--                        .dropdown-menu {-->
+                        <!--                            width: 400px !important;-->
+                        <!--                            height: 500px !important;-->
+                        <!--                        }-->
+                        <!--                    </style>-->
+
+                        <tbody id="myTable2">
+                        <tr>
+                            <td>{{ request.service }}</td>
+                            <td> {{ request.request_status }}</td>
+                            <td>{{ request.date_added }}</td>
+                        </tr>
+
+                        <!--                <div class="dropdown">-->
+                        <!--                    {{ request.date_added }} <br> Event: {{ request.service }}-->
+                        <!--                        <br> Status: {{ request.request_status }}-->
+                        <!--                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Details</a>-->
+                        <!--                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">-->
+                        <!--                        <li><p>&nbsp;Q : Which language should the agency speak?</p></li>-->
+                        <!--                        <li><p>&nbsp;A : {{ request.language }}</p></li>-->
+                        <!--                        <li><p>&nbsp;Q : Would you work with the agency remotely?</p></li>-->
+                        <!--                        <li><p>&nbsp;A : {{ request.client_remote_work }}</p></li>-->
+                        <!--                        <li><p>&nbsp;Q : Which location should the agency be?</p></li>-->
+                        <!--                        <li><p>&nbsp;A : {{ request.location }}</p></li>-->
+                        <!--                        <li><p>&nbsp;Q : What budget range would you be comfortable with?</p></li>-->
+                        <!--                        <li><p>&nbsp;A : {{ request.range }}</p></li>-->
+                        <!--                        <li><p>&nbsp;Q : Which size of agency would you prefer ?</p></li>-->
+                        <!--                        <li><p>&nbsp;A : {{ request.size }}</p></li>-->
+                        <!--                        <li><p>&nbsp;Q : Would you need other services?</p></li>-->
+                        <!--                        <li><p>&nbsp;A : {{ request.otherservice }}</p></li>-->
+                        <!--                        <li><p>&nbsp;Q : What is the goal of the event?</p></li>-->
+                        <!--                        <li><p>&nbsp;A : {{ request.goal }}</p></li>-->
+                        <!--                        <li><p>&nbsp;Q : What is your job?</p></li>-->
+                        <!--                        <li><p>&nbsp;A : {{ request.job }}</p></li>-->
+                        <!--                    <li class="divider"></li>-->
+                        <!--                    </ul>-->
+                        <!--                </div>-->
+                    </li>
+                </ul>
+                <!--            <br><br><br>-->
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+
+                </tbody>
+            </table>
+            <!--<a href="/client/history/">
+                <button type="button" class="btn btn-default" style="float: left;">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    Show History
+                </button>
+            </a>-->
+            <!--            <table style="width:100%">
+                          <tr>
+                            <th>Accepted</th>
+                            <th>Pending</th>
+                            <th>Deleted</th>
+                          </tr>
+                          <tr>
+                            <td>
+                                {% for post in posts %}
+                                {% if post.request_status == "accepted" %}
+                                <p>{{ post.service }}</p>
+                                {% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>
+                                {% for post in posts %}
+                                {% if post.request_status == "pending" %}
+                                <p>{{ post.service }}</p>
+                                {% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>
+                                {% for post in posts %}
+                                {% if post.request_status == "deleted" %}
+                                <p>{{ post.service }}</p>
+                                {% endif %}
+                                {% endfor %}
+                            </td>
+                          </tr>
+                        </table>-->
+        </div>
+
+        <div class="tab-pane" id="5b">
+
+             <script>
+$(document).ready(function(){
+  $("#myInput3").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#mylist * ").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+            <div class="container">
+                 <input class="form-control" id="myInput3" type="text" placeholder="Search by keyword..">
+            <br>
+                <hr/>
+                <div class="row">
+
+                    <div class="col-sm-9 col-md-10">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#home" data-toggle="tab"><span
+                                    class="glyphicon glyphicon-inbox">
+                             </span>Recent</a></li>
+                            <li><a href="#profile" data-toggle="tab"><span class="glyphicon glyphicon-user"></span>
+                                All</a></li>
+                            </span></a></li>
+                        </ul>
+
+                         <div class="tab-content" id="tabcontent">
+
+                            <div class="tab-pane fade in active" id="home">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item" id="mylist">
+                                        {% for message1 in client_message %}
+                                        {% if message1.client_name == user.username or message1.agency_name == user.username %}
+
+                                        {% if message1.email_content %}
+                                         {% if message1.date_added|timesince <= "16400 min" %}
+
+                                        <span class="glyphicon glyphicon-star-empty">  </span><span
+                                            class="name_{{ message1.client_email}}" style="min-width: 120px;
+                                            display: inline-block;"> {{ message1.client_name }} </span> <span class="">
+
+                                            <button class="btn btn-light" type="button" data-toggle="collapse"
+                                                    data-target="#collapseAll{{ message1.id }}" aria-expanded="false"
+                                                    aria-controls="collapseExample1"
+                                                    style="height:50px;width:500px">
+
+                                                <span class="text-xl-left" style="font-size: 17px;">  <p
+                                                        class="text-xl-left">{{ message1.email_subject }}</p></span>
+                                          </button>
+
+                                        <div class="collapse" id="collapseAll{{ message1.id }}"
+                                             aria-labelledby="heading1{{ message1.id }}">
+                                          <div class="card-body">
+                                              <span class="text-muted" style="font-size: 13px;"> <p align="right"> To: {{ message1.agency_name }}  </p>   </span>
+
+                                           {{ message1.email_content }}
+                                          </div>
+
+
+                                        </div>
+
+                                       </span>
+                                        <!--  <span class="text-muted" style="font-size: 11px;">- Hi hello how r u ?</span>-->
+                                        <span
+                                                class="badge">{{ message1.date_added }}</span> <span
+                                            class="pull-right"></span></a><a
+                                        href="#" class="list-group-item">
+
+
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+
+                                </a>
+                                </div>
+                            </div>
+
+                             <div class="tab-pane fade in active" id="profile">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item">
+                                        {% for message in client_message %}
+                                        {% if message.client_name == user.username or message.agency_name == user.username %}
+
+                                        {% if message.email_content %}
+                                         {% if message.date_added %}
+
+                                        <span class="glyphicon glyphicon-star-empty">  </span><span
+                                            class="name3_{{ message.client_email}}" style="min-width: 120px;
+                                            display: inline-block;"> {{ message.client_name }} </span> <span class="">
+
+                                            <button class="btn btn-light" type="button" data-toggle="collapse"
+                                                    data-target="#collapseAll3{{ message.id }}" aria-expanded="false"
+                                                    aria-controls="collapseExample3"
+                                                    style="height:50px;width:500px">
+
+                                                <span class="text-xl-left" style="font-size: 17px;">  <p
+                                                        class="text-xl-left">{{ message.email_subject }}</p></span>
+                                          </button>
+
+                                        <div class="collapse" id="collapseAll3{{ message.id }}"
+                                             aria-labelledby="heading3{{ message.id }}">
+                                          <div class="card-body">
+                                              <span class="text-muted" style="font-size: 13px;"> <p align="right"> To: {{ message.agency_name }}  </p>   </span>
+
+                                           {{ message.email_content }}
+                                          </div>
+
+                                        </div>
+
+
+                                       </span>
+                                        <!--  <span class="text-muted" style="font-size: 11px;">- Hi hello how r u ?</span>-->
+                                        <span
+                                                class="badge">{{ message.date_added }}</span>
+
+                                        <span
+                                            class="pull-right"></span></a>
+
+                                    {% if message.agency_type == "agency" %}
+                                     <a href="/client/mymatch/agency/message?sku={{ message.agency_name }}">
+                                            <button type="submit" class="btn btn-default" name="sku" value="{{ message.agency_name }}"
+                                                    style="float: left;">
+                                                    Send Message
+                                            </button>
+                                            </a>
+                                    {% endif %}
+
+                                     {% if message.agency_type == "agencyclient" %}
+
+                                     <a href="/client/mymatch/agencyclient/message?sku={{ message.client_name }}">
+                                            <button type="submit" class="btn btn-default" name="sku" value="{{ message.client_name }}"
+                                                    style="float: left;">
+                                                    Send Message
+                                            </button>
+                                            </a>
+                                    {% endif %}
+
+
+                                    <a
+                                        href="#" class="list-group-item">
+
+
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+
+                                </a>
+                                </div>
+                            </div>
+                         </div>
+<!--                        <h3></h3><br><br><br>-->
+<!--                        {% for message in client_message %}-->
+<!--                        {% if message.client_name == user.username or message.agency_name == user.username %}-->
+<!--                        {% if message.agency_type == "agency" %}-->
+
+<!--                        <div class="container">-->
+<!--                            <p><b>Subject: {{ message.email_subject }}</b></p>-->
+<!--                            <p align="left">{{ message.date_added }}</p>-->
+<!--                            <p>From : {{ message.client_name }} < {{ message.client_email }} > </p>-->
+<!--                            <p>To : {{ message.agency_name }} < {{ message.agency_email }} > </p>-->
+<!--                            <p></p><br>-->
+<!--                            <textarea>{{ message.email_content }}</textarea><br><br><br>-->
+<!--                        </div>-->
+<!--                        {% endif %}-->
+
+<!--                        {% if message.agency_type == "agencyclient" %}-->
+
+<!--                        <div class="container">-->
+<!--                            <p><b>Subject: {{ message.email_subject }}</b></p>-->
+<!--                            <p align="left">{{ message.date_added }}</p>-->
+<!--                            <p>From : {{ message.agency_name }} < {{ message.agency_email }} > </p>-->
+<!--                            <p>To : {{ message.client_name }} < {{ message.client_email }} > </p>-->
+<!--                            <p></p><br>-->
+<!--                            <textarea>{{ message.email_content }}</textarea><br><br><br>-->
+<!--                        </div>-->
+<!--                        {% endif %}-->
+<!--                        {% endif %}-->
+<!--                        {% endfor %}-->
+                    </div>
+
+                </div>
+            </div>
+
+    </div>
+
+    </div>
+</div>
+</body>
+{% endblock %}
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</html>
+
+
+<!--funky checkbox button-->
+<!-- Modal -->
+<!--
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>What is your event type?.</p>
+                            <div class="funkyradio">
+
+                                <div class="funkyradio-primary">
+                                    <input type="checkbox" name="checkbox" id="checkbox2"/>
+                                    <label for="checkbox2">Second Option primary</label>
+                                </div>
+                                <div class="funkyradio-primary">
+                                    <input type="checkbox" name="checkbox" id="checkbox3"/>
+                                    <label for="checkbox3">Third Option success</label>
+                                </div>
+                                <div class="funkyradio-primary">
+                                    <input type="checkbox" name="checkbox" id="checkbox4"/>
+                                    <label for="checkbox4">Fourth Option danger</label>
+                                </div>
+                                <div class="funkyradio-primary">
+                                    <input type="checkbox" name="checkbox" id="checkbox5"/>
+                                    <label for="checkbox5">Fifth Option warning</label>
+                                </div>
+                                <div class="funkyradio-primary">
+                                    <input type="checkbox" name="checkbox" id="checkbox6"/>
+                                    <label for="checkbox6">Sixth Option info</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        &lt;!&ndash; Modal content&ndash;&gt;
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Your Request 1</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+
+                                <p id="checkid"></p>
+                                <p>What service do you need?.</p>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="service" value="Wedding">Wedding</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="service" value="Birthday">Birthday</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="service" value="Office party">Office
+                                        party</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="service" value="PR event">PR event</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="service" value="Branding and Positioning">Branding
+                                        and Positioning</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="service" value="Anniversary celebration">Anniversary
+                                        celebration</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="service" value="Office party">Office
+                                        party</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="service" value="Bridal Shower">Bridal
+                                        Shower</label>
+                                </div>
+
+                            </div>
+
+
+                            <div class="modal-footer">
+                                &lt;!&ndash;  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>&ndash;&gt;
+                                <button type="button" class="btn btn-default" id="btn1" data-toggle="modal"
+                                        data-target="#myModal">Previous
+                                </button>
+                                <button type="submit" class="btn btn-default" id="btn2"
+                                        data-toggle="modal" data-dismiss="modal"
+                                        data-target="#myModal2">Next
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+

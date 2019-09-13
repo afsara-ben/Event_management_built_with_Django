@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block content %}
+        <!--<a href="{% url 'edit_post' %}">
+            <button type="button" class="btn btn-default" style="float: right;">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                Edit
+            </button>
+        </a>-->
+        <h1>Your Billing Informations success</h1>
+<!--    <form method = "post" enctype="multipart/form-data">-->
+    {% csrf_token %}
+        <table style="width:100%">
+            <tr>
+                <td>
+                <label>First Name*</label>
+                <input type="text" name="agent_first_name" class="form-control" placeholder="first name"
+                       style="width:235px;" value="{{ value.agent_first_name }}">
+                </td>
+                <td>
+                <label>Last Name*</label>
+                <input type="text" name="agent_last_name" class="form-control" placeholder="last name"
+                       style="width:235px;" value="{{ value.agent_last_name }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br><br>
+                <label>Company Name*</label>
+                <input type="text" name="agency_name" class="form-control" placeholder="company name"
+                       style="width:235px;" value="{{ value.agency_name }}">
+                </td>
+                <td>
+                    <br><br>
+                <label>Country*</label>
+                <input type="text" name="agency_country" class="form-control" placeholder="country name"
+                       style="width:235px;" value="{{ value.agency_country }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br><br>
+                <label>Address*</label>
+                <input type="text" name="agency_address" class="form-control" placeholder="company main address"
+                       style="width:235px;" value="{{ value.agency_address }}">
+                </td>
+                <td>
+                    <br><br>
+                <label>Postal Code*</label>
+                <input type="text" name="agency_postal_code" class="form-control" placeholder="company address postal code"
+                       style="width:235px;" value="{{ value.agency_postal_code }}">
+                </td>
+                <td>
+                    <br><br>
+                <label>Division/City*</label>
+                <input type="text" name="agency_address_division" class="form-control" placeholder="company address division"
+                       style="width:235px;" value="{{ value.agency_address_division }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br><br>
+                <label>VAT number(%)</label>
+                <input type="text" name="agency_vat_number" class="form-control" placeholder="your VAT number"
+                       style="width:235px;" value="{{ value.agency_vat_number }}">
+                </td>
+                <td>
+                    <br><br>
+                <label>Billing email</label>
+                <input type="text" name="agency_billing_email" class="form-control" placeholder="your billing email address"
+                       style="width:235px;" value="{{ value.agency_billing_email }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br><br>
+                <label>Credit card number</label>
+                <input type="text" name="agency_card_number" class="form-control" placeholder="credit card number"
+                       style="width:235px;" value="{{ value.agency_card_number }}">
+                </td>
+                <td>
+                    <br><br>
+                <label>CVV</label>
+                <input type="text" name="agency_cvv_number" class="form-control" placeholder="your cvv"
+                       style="width:235px;" value="{{ value.agency_cvv_number }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br><br>
+                    <label>Expiration date</label>
+                <input type="text" name="agency_card_month" class="form-control" placeholder="month"
+                       style="width:235px;" value="{{ value.agency_card_month }}">
+                </td>
+                <td>
+                    <br><br>
+                <label></label>
+                <input type="text" name="agency_card_year" class="form-control" placeholder="year"
+                       style="width:235px;" value="{{ value.agency_card_year }}">
+                </td>
+            </tr>
+        </table>
+        <br>
+
+ <!--       {{ form.agency_annual_turnover }} checkbox diye range range kore dio match korte subidha hobe-->
+ <!--       {{ form.agency_description }}
+        {{ form.agency_remote_work }} radiobutton diye yes no dio&ndash;&gt;
+        {{ form.agency_logo }} imageupload r part add kore korte hobe&ndash;&gt;
+ -->       <!--<div class="media">
+         <img class="rounded-circle account-img"  src="/media/{{ value.agency_logo }}" />
+            <div class="media-body">
+                <p>Uploaded by {{ value.agency_company_name }}</p>
+            </div>
+        </div>-->
+        <!--<a href="{% url 'edit_post' %}">-->
+        <button type="submit" class="btn btn-default" value="" style="float: right;">
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                Save
+        </button>
+    <!--</form>-->
+{% endblock %}

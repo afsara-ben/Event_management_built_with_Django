@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+{% extends 'base2.html' %}
+<!--{% load static %}-->
+<html lang="en">
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>My Request</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <!--    <link rel="stylesheet" href="{% static 'css/popup.css' %}">-->
+    <!--<link rel="stylesheet" href="{% static 'css/custom-checkbox.css' %}">-->
+</head>
+
+<body>
+
+<div class="container">
+    <input class="form-control" id="myInput2" type="text" placeholder="Search by keyword..">
+    <br>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Specialty</th>
+            <th>Interest</th>
+            <th>Rating</th>
+        </tr>
+        </thead>
+        {% for resultlist in agencylist %}
+        <ul class='nav'>
+            <li>
+
+
+                <tbody id="myTable2">
+                <tr>
+                    <td>
+                        <label><a class="btn-link" href="mymatch/agency/?sku={{ resultlist.agency_company_name }}">
+                            {{ resultlist.agency_company_name }}</a></label><br></td>
+                    <td>
+
+                        {% for agency_info in agencyinfo %}
+                        {% if agency_info.agency_company_name == resultlist.agency_company_name %}
+                        {% if agency_info.agency_company_address %}
+                        {{ agency_info.agency_company_address }} <br>
+                        {% endif %}
+                        {% endif %}
+                        {% endfor %}
+
+                    </td>
+                    <td>
+
+                        {% for agency_brief in agencybrief %}
+                        {% if agency_brief.agency_company_name == resultlist.agency_company_name %}
+                        {% if agency_brief.agency_specialty %}
+                        {{ agency_brief.agency_specialty }} <br>
+                        {% endif %}
+                        {% endif %}
+                        {% endfor %}
+
+                    </td>
+
+                    <td>
+
+                        {% for agency_brief in agencybrief %}
+                        {% if agency_brief.agency_company_name == resultlist.agency_company_name %}
+                        {% if agency_brief.agency_interest %}
+                        {{ agency_brief.agency_interest }} <br>
+                        {% endif %}
+                        {% endif %}
+                        {% endfor %}
+
+                    </td>
+                    <td>{{ resultlist.agency_past_work }}</td>
+
+
+                </tr>
+                </tbody>
+
+
+            </li>
+        </ul>
+        <!--            <br><br><br>-->
+
+        {% endfor %}
+
+
+    </table>
+</div>
+
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("#myInput2").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable2 tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+{% endblock %}
+</html>
