@@ -1,9 +1,74 @@
 <!DOCTYPE html>
+
+{% extends 'new_base.html' %}
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Client List</title>
 </head>
+<div data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+{% block content %}
+<div class="site-wrap" id="home-section">
+
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+        <div class="container">
+            <div class="row align-items-center position-relative">
+
+
+                <div class="site-logo">
+                    <a href="{% url 'home' %}" class="text-black"><span class="text-primary"></span>Event requests</a>
+                </div>
+
+                <nav class="site-navigation text-center ml-auto" role="navigation">
+
+                    <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+
+
+                        <li><a href="#about-section" class="nav-link">About</a></li>
+                        <li><a href="#services-section" class="nav-link">Services</a></li>
+<!--                        <li><a href="#investors-section" class="nav-link">Upcoming Events</a></li>-->
+                        {% if user.is_authenticated %}
+                         <li><a href="/client/profile" class="nav-link">Profile</a></li>
+                        <li><a href="/client/myrequest" class="nav-link">Request Event</a></li>
+                        <li><a href="/client/myservicerequest" class="nav-link">Request Service</a></li>
+                        <li><a href="/client/agencylist" class="nav-link">Agencies in Site</a></li>
+                        <li><a href="/client/vendorlist" class="nav-link">Popular Vendors</a></li>
+                        <!--<li><a href="/client/history" class="nav-link">Request History</a></li>-->
+                        <li><a href="/logout" class="nav-link">Logout</a></li>
+                        {% else %}
+                        <!--<li><a href="/register" class="nav-link">Register</a></li>-->
+                        <li><a href="/accounts/signup" class="nav-link">Register</a></li>
+                        <li><a href="accounts/login" class="nav-link">Login</a></li>
+                        {% endif %}
+
+
+                        <li><a href="#blog-section" class="nav-link">Blog</a></li>
+                        <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+
+                <div class="toggle-button d-inline-block d-lg-none"><a href="#"
+                                                                       class="site-menu-toggle py-5 js-menu-toggle text-black"><span
+                        class="icon-menu h3"></span></a></div>
+
+            </div>
+        </div>
+
+    </header>
+
 <body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -11,27 +76,22 @@
 .checked {
   color: orange;
 }
+body  {
+        background-image: linear-gradient(#fffddf, #ebffe1);
 
+        }
 
     </style>
+<center>
 <table>
+    <thead>
     <tr>
-        <td>
-            Client name
-        </td>
-        <td>
-<!--            Rate Client-->
-        </td>
-        <td>
-            Rate and Comment
-        </td>
-        <td>
-            Reviewer
-        </td>
-        <td>
-            Review Date
-        </td>
+        <td>  Client name  </td>
+        <td>  Rate and Comment  </td>
+        <td>  Reviewer    </td>
+        <td> Review Date </td>
     </tr>
+    </thead>
     {% for client in clients %}
     {% if client.event_client_name %}
     <tr>
@@ -118,5 +178,9 @@
     {% endif %}
     {% endfor %}
 </table>
+</center>
+{% endblock %}
 </body>
+</div>
+</div>
 </html>

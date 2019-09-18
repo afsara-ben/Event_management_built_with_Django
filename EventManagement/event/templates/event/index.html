@@ -59,7 +59,6 @@
 
 
 <p>My list of events</p>
-<small>Basic info</small>
 
 {% if event_list %}
 
@@ -121,10 +120,7 @@
                             <td>Event Name</td>
                             <td>{{ events.event_name }}</td>
                         </tr>
-                        <tr>
-                            <td>Client</td>
-                            <td>{{ events.event_client }}</td>
-                        </tr>
+
 
                         <tr>
                             <td> Venue:</td>
@@ -156,15 +152,7 @@
                             <td> Event Time</td>
                             <td>{{ events.event_time }}</td>
                         </tr>
-                        <tr>
-                            <td> Is it being arranged remotely?</td>
-                            <td> {{ events.event_remote_arrange }}</td>
-                        </tr>
 
-                        <tr>
-                            <td> Event size</td>
-                            <td> {{ events.event_size }}</td>
-                        </tr>
 
                         <tr>
                             <td> Event description</td>
@@ -175,21 +163,7 @@
                             <td> Username</td>
                             <td>{{ events.event_username }}</td>
                         </tr>
-                        <tr>
-                            <td> Stuffs</td>
-                            <td> {{ events.stuff }}</td>
-                        </tr>
-                        <tr>
 
-                            <td> Security </td>
-                            <td>{{ events.is_secured }}</td>
-<!--                            <td> Security</td>-->
-<!--                            {% if events.is_secured == false %}-->
-<!--                            <td> Private </td>-->
-<!--                            {% else %}-->
-<!--                            <td> Public</td>-->
-<!--                            {% endif %}-->
-                        </tr>
                     </table>
 
 
@@ -208,67 +182,41 @@
                     <table>
                         <tr>
                             <th> Event Name</th>
-                            <td><input type="text" name="name" value={{ events.event_name }}>
+                            <td><input type="text" name="name" value="{{ events.event_name }}">
                             </td>
                         </tr>
                         <tr>
                             <th>Event Type</th>
-                            <td><input type="text" name="type" value={{ events.event_type }}></td>
+                            <td><input type="text" name="type" value="{{ events.event_type }}"></td>
                         </tr>
                         <tr>
                             <th> Venue</th>
-                            <td><input type="text" name="venue" value={{ events.event_venue }}></td>
+                            <td><input type="text" name="venue" value="{{ events.event_venue }}"></td>
                         </tr>
-
-                        <tr>
-                            <th>Client </th>
-                            <td><input type="text" name="event_client" value={{ events.event_client }}></td>
-                        </tr>
-
 
                         <tr>
                             <th>Guest Number</th>
-                            <td><input type="number" name="guest_number" value={{ events.event_guest_number }}></td>
+                            <td><input type="number" name="guest_number" value="{{ events.event_guest_number }}"></td>
                         </tr>
                         <tr>
                             <th> Time</th>
-                            <td><input type="time" name="time" value={{ events.event_time }}></td>
+                            <td><input type="time" name="time" value="{{ events.event_time }}"></td>
                         </tr>
                         <tr>
                             <th>Date</th>
-                            <td><input type="date" name="date" value={{ events.event_date }}></td>
+                            <td><input type="date" name="date" value="{{ events.event_date }}"></td>
                         </tr>
-                        <tr>
-                            <th> Size of my company</th>
-                            <td><input type="text" name="size" value={{ events.event_size }}></td>
-                        </tr>
+
 
                         <tr>
                             <th> Description</th>
-                            <td><input type="text" name="description"></td>
+                            <td><input type="text" name="description" value="{{ events.event_description }}"></td>
                         </tr>
 
                         <tr>
                             <th>Budget</th>
 
-                            <th>
-                                <div class="slidecontainer">
-                                    <input type="range" name="budget" min="1000" max="1000000" value={{ events.event_budget }} class="slider"
-                                           id="myRange">
-                                    <p>Value: <span id="demo1"></span></p>
-                                </div>
-                            </th>
-
-                            <script>
-
-                                var slider = document.getElementById("myRange");
-                                var output = document.getElementById("demo1");
-                                output.innerHTML = slider.value;
-
-                                slider.oninput = function () {
-                                    output.innerHTML = this.value;
-                                }
-                            </script>
+                            <td><input type="number" name="budget"  value="{{ events.event_budget }}"> </td>
                         </tr>
                     </table>
 

@@ -21,6 +21,7 @@ class Feedback(models.Model):
     professionalism = models.IntegerField(choices=Rating_CHOICES, default=1, blank=True, null=True)
     price_fairness = models.IntegerField(choices=Rating_CHOICES, default=1, blank=True, null=True)
     overall = models.IntegerField(choices=Rating_CHOICES, default=1, blank=True, null=True)
+    Average = models.IntegerField(choices=Rating_CHOICES, default=1, blank=True, null=True)
 
     # def __str__(self):
     #    return self.customer_name

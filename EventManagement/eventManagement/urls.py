@@ -22,6 +22,7 @@ from requestBrief.views import popup, request_view, servicerequest_view, service
 from requestBrief.views import servicematch_success, servicematch_message
 from requestBrief.views import request_success, match, match_success, client_request_history, match_message , agencyclient_message
 from relation.views import AdSearchView
+from vendor.views import vendorlist_view
 from agency.views import agency_vendor_success, agency_message, agencylist_view
 from django.conf import settings
 from django.conf.urls.static import static
@@ -48,6 +49,8 @@ urlpatterns = [
 
     path('client/myrequest/', request_view, name='popup'),
     path('client/agencylist', agencylist_view, name='agencylistview'),
+    path('client/vendorlist', vendorlist_view, name='vendorlistview'),
+
     path('client/myservicerequest/', servicerequest_view, name='servicepopup'),
     path('client/myBrief/', request_success, name='createBrief'),
     path('client/myserviceBrief/', servicerequest_success, name='servicecreateBrief'),

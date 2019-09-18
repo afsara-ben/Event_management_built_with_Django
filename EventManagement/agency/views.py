@@ -106,7 +106,9 @@ def agency_contact(request):
             obj.agency_company_name = agency_registration_company.agency_company_name
             obj.save()
             # form.save()
-            return redirect('agency_contact_success')
+            values = Agency_Info.objects.filter(agent_username=request.user.username)
+            return render(request, 'agency_contact_post.html', {'values': values}, )
+
     else:
         form = AgencyInfoForm()
     return render(request, 'agency_contact.html', {'form': form})
@@ -118,7 +120,7 @@ def agency_success(request):
 
 
 def agency_contact_success(request):
-    values = Agency_Info.objects.all()
+    values = Agency_Info.objects.filter(agent_username=request.user.username)
     return render(request, 'agency_contact_post.html', {'values': values}, )
 
 

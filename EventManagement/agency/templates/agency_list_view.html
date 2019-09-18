@@ -29,10 +29,11 @@
             <th>Location</th>
             <th>Specialty</th>
             <th>Interest</th>
-            <th>Rating</th>
+            <th>Past Work</th>
         </tr>
         </thead>
         {% for resultlist in agencylist %}
+        {% if resultlist.agency_company_name %}
         <ul class='nav'>
             <li>
 
@@ -86,7 +87,7 @@
             </li>
         </ul>
         <!--            <br><br><br>-->
-
+        {% endif %}
         {% endfor %}
 
 

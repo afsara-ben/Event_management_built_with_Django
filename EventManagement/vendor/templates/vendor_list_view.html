@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+{% extends 'base2.html' %}
+<!--{% load static %}-->
+<html lang="en">
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>All vendors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <!--    <link rel="stylesheet" href="{% static 'css/popup.css' %}">-->
+    <!--<link rel="stylesheet" href="{% static 'css/custom-checkbox.css' %}">-->
+</head>
+
+<body>
+
+<div class="container">
+    <input class="form-control" id="myInput2" type="text" placeholder="Search by keyword..">
+    <br>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Specialty</th>
+            <th>Interest</th>
+            <th>Rating</th>
+        </tr>
+        </thead>
+        {% for resultlist in vendorlist %}
+        {% if resultlist.vendor_company_name %}
+        <ul class='nav'>
+            <li>
+
+
+                <tbody id="myTable2">
+                <tr>
+                    <td>
+                        <label><a class="btn-link" href="myservicematch/vendor/?sku={{ resultlist.vendor_company_name }}">
+                            {{ resultlist.vendor_company_name }}</a></label><br></td>
+                    <td>
+
+                        {% for vendor_info in vendorinfo %}
+                        {% if vendor_info.vendor_company_name == resultlist.vendor_company_name %}
+                        {% if vendor_info.vendor_company_address %}
+                        {{ vendor_info.vendor_company_address }} <br>
+                        {% endif %}
+                        {% endif %}
+                        {% endfor %}
+
+                    </td>
+                    <td>
+
+                        {% for vendor_brief in vendorbrief %}
+                        {% if vendor_brief.vendor_company_name == resultlist.vendor_company_name %}
+                        {% if vendor_brief.vendor_specialty %}
+                        {{ vendor_brief.vendor_specialty }} <br>
+                        {% endif %}
+                        {% endif %}
+                        {% endfor %}
+
+                    </td>
+
+                    <td>
+
+                        {% for vendor_brief in vendorbrief %}
+                        {% if vendor_brief.vendor_company_name == resultlist.vendor_company_name %}
+                        {% if vendor_brief.vendor_interest %}
+                        {{ vendor_brief.vendor_interest }} <br>
+                        {% endif %}
+                        {% endif %}
+                        {% endfor %}
+
+                    </td>
+                    <td>{{ resultlist.vendor_past_work }}</td>
+
+
+                </tr>
+                </tbody>
+
+
+            </li>
+        </ul>
+        <!--            <br><br><br>-->
+        {% endif %}
+        {% endfor %}
+
+
+    </table>
+</div>
+
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("#myInput2").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable2 tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+{% endblock %}
+</html>

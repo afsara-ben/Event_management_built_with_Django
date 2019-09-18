@@ -1,12 +1,32 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-    <title>Thanks</title>
+    <meta charset="UTF-8">
+ <title>Thanks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <style>
+          body {
+        background-image: linear-gradient( #e3ffd4,#fefdff,#fefdff);
+        }
+        </style>
 </head>
 <body>
-<h1>Thanks for your response.</h1>
-<p><a href="/client/mymatch">Review other agencies?</a></p>
+    <center>
+     </br></br><h1 class="text-success">Thanks for your response.</h1></br></br>
 
-<p><a href="/client/mymatch/agency/?sku={{ obj.agency_name }}">Back to the agency?</a></p>
+        <a href="/client/mymatch">See my other matches?</a>
+      </br></br>
+
+  <p class="lead">
+    <a class="btn btn-primary btn-sm"  href="{% url 'home' %}"  role="button" >Back to home</a>
+  </p>
+        </br></br>
+
+        <img src="/media/images/smile.gif" style="width:500px;height:400px;">
+    </center>
 </body>
 </html>

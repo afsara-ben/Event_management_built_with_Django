@@ -32,7 +32,6 @@
     <th data-field="EventTime" data-sortable="true" scope="col">Event Time</th>
     <th data-field="EventDate" data-sortable="true" scope="col">Event Date</th>
    <th data-field="EventCreator" data-sortable="true" scope="col">Event Creator</th>
-      <th data-field="security" data-sortable="true" scope="col">Security </th>
   </tr>
     </thead>
 {% for i in event %}
@@ -44,7 +43,6 @@
         <td>{{ i.event_time }}</td>
         <td>{{ i.event_date }}</td>
         <td>{{ i.event_username }}</td>
-        <td> {{ i.is_secured }}</td>
     </tr>
 
 {% endfor %}

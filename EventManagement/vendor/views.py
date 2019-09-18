@@ -130,3 +130,11 @@ def preference_success(request):
     value = VendorBrief.objects.filter(vendor_name=request.user.username).order_by('-id')
     return render(request, 'vendor_preference_success.html', {'value': value}, )
 
+def vendorlist_view(request):
+    vendor_list_view = Vendor.objects.all()
+    vendor_info = Vendor_Info.objects.all()
+    vendor_brief = VendorBrief.objects.all()
+    feedback = Feedback.objects.all()
+    return render(request, 'vendor_list_view.html', {'vendorlist': vendor_list_view, 'feedback': feedback,
+                                                     'vendorinfo': vendor_info, 'vendorbrief': vendor_brief})
+

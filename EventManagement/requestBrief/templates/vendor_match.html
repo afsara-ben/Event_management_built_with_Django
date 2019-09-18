@@ -1,116 +1,260 @@
 <!DOCTYPE html>
-
-{% extends 'base2.html' %}
 {% load static %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>sss</title>
+    <title> {{ vendor_detail.vendor_company_name }} </title>
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/modal.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    <meta charset="UTF-8">    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Font Awesome Icon Library -->
-
-</head>
-
-
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-{% block content %}
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
+   <style>
 
 .checked {
   color: orange;
 }
+        body  {
+        background-image: linear-gradient(#fffdfe, #ccd5ff);
 
+        }
 
     </style>
+</head>
 
-<h3>About <b>{{ vendor_detail.vendor_company_name }}</b></h3>
-<p>{{ vendor_detail.vendor_description }}</p>
-<!--    <img class="rounded-circle account-img" width="200" height="200" src="/media/{{ posts.image_file }}" />-->
-<!--<a class="btn-link" href="vendor/?sku={{ resultlist.vendor_company_name }}">{{ resultlist.vendor_company_name }}</a></label>-->
-<div class="container">
-    <a href="/client/myservicematch/vendor/message?sku={{ vendor_detail.vendor_company_name }}">
-        <button type="submit" class="btn btn-default" name="sku" value="{{ vendor_detail.vendor_company_name }}"
-                style="float: left;">
-            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<div class="site-wrap" id="home-section" style="background-color:#f1edff">
+
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+        <div class="container">
+            <div class="row align-items-center position-relative">
+
+
+                <div class="site-logo">
+                    <a href="{% url 'home' %}" class="text-black"><span class="text-primary">Manage Your event</span></a>
+                </div>
+
+                <nav class="site-navigation text-center ml-auto" role="navigation">
+
+                    <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                        <li><a href="{% url 'popup' %}" class="nav-link">Request Event</a></li>
+                        <li><a href="/client/profile" class="nav-link">Profile</a></li>
+                        <li><a href="/logout" class="nav-link">Logout</a></li>
+                        <li><a href="#press-section" class="nav-link">Popular Vendors</a></li>
+                        <li><a href="#blog-section" class="nav-link">Blog</a></li>
+                        <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+
+                <div class="toggle-button d-inline-block d-lg-none"><a href="#"
+                                                                       class="site-menu-toggle py-5 js-menu-toggle text-black"><span
+                        class="icon-menu h3"></span></a></div>
+
+            </div>
+        </div>
+
+    </header>
+
+</div>
+
+<center>
+    <div class="col-8">
+
+    </br><h3 class="text-success">About <b>{{ vendor_detail.vendor_company_name }}</b>
+     <a href="/client/myservicematch/vendor/message?sku={{ vendor_detail.vendor_company_name }}">
+        <button type="submit" class="btn btn-success" name="sku" value="{{ vendor_detail.vendor_company_name }}">
             Send Message
         </button>
-    </a>
-</div><br><br><br>
-<h3>Locations:</h3>
-{% for vendorinfoaddress in vendor_info_address %}
-{% if vendorinfoaddress.vendor_company_address %}
-<p>{{ vendorinfoaddress.vendor_company_address }}</p>
-{% endif %}
-{% endfor %}
-<h3>Company website :</h3>
-<!--<p>  {{ vendor_detail.vendor_company_website }}</p>-->
-<a href="{{ vendor_detail.vendor_company_website }}">{{ vendor_detail.vendor_company_website }}</a>
-<h3>Company Contact Info: </h3>
-<p> {{ vendor_detail.vendor_contact_number }}</p>
-<h3>Social media:</h3>
-{% for vendorinfoaddress in vendor_info_address %}
-{% if vendorinfoaddress.vendor_social_media %}
-<!--    <p>{{ vendorinfoaddress.vendor_social_media }}</p>-->
-<a href="{{ vendorinfoaddress.vendor_social_media }}">{{ vendorinfoaddress.vendor_social_media }}</a>
-{% endif %}
-{% endfor %}
-<div class="container">
-    <h3>{{ message }}</h3>
-    <table style="width:100%">
-        <tr>
-            <th>Vendor : Service</th>
-            <th>Service : Specialty</th>
-            <th>Service : Interest</th>
+    </a></h3>
+
+    <p>{{ vendor_detail.vendor_description }}</p>
+    </div>
+
+<!--    <img class="rounded-circle account-img" width="200" height="200" src="/media/{{ posts.image_file }}" />-->
+<!--<a class="btn-link" href="vendor/?sku={{ resultlist.vendor_company_name }}">{{ resultlist.vendor_company_name }}</a></label>-->
+
+
+</center>
+
+<div class="container-fluid">
+<div class="row">
+    <div class="col-sm">
+   <table class= "table table-hover table-active table-bordered" id="table">
+       <thead>
+       <tr>
+           <th>Locations</th>
+           <th>Company website</th>
+           <th>Company Contact Info</th>
+           <th>Social media</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr>
+           <td>
+               {% for vendorinfoaddress in vendor_info_address %}
+               {% if vendorinfoaddress.vendor_company_address %}
+                {{ vendorinfoaddress.vendor_company_address }}
+                {% endif %}
+                {% endfor %}
+           </td>
+           <td><a href="{{ vendor_detail.vendor_company_website }}">{{ vendor_detail.vendor_company_website }}</a></td>
+           <td> +880{{ vendor_detail.vendor_contact_number }} </td>
+           <td>
+               {% for vendorinfoaddress in vendor_info_address %}
+               {% if vendorinfoaddress.vendor_social_media %}
+                <a href="{{ vendorinfoaddress.vendor_social_media }}">{{ vendorinfoaddress.vendor_social_media }}</a>
+               {% endif %}
+                {% endfor %}
+           </td>
+            </tr>
+       </tbody>
+   </table>
+
+    </div>
+
+
+<div class="col-sm">
+    <table class= "table table-hover table-active table-bordered" id="table2">
+       <thead>
+       <tr>
+            <th>Service Specialty</th>
+            <th>Service Interest</th>
             <th>vendor Size</th>
             <th>Budget</th>
             <th>Language</th>
             <th>Location</th>
+           <th>No of employees</th>
         </tr>
-        <tr>
-            <td>{{ vendor_brief_detail.vendor_service }}</td>
+       </thead>
+       <tbody>
+         <tr>
             <td>{{ vendor_brief_detail.vendor_specialty }}</td>
             <td>{{ vendor_brief_detail.vendor_interest }}</td>
             <td>{{ vendor_detail.vendor_studio_size }}</td>
             <td>{{ vendor_brief_detail.vendor_event_budget }}</td>
             <td>{{ vendor_detail.vendor_language }}</td>
             <td>{{ vendor_info_detail.vendor_company_address }}</td>
+             <td>{{ vendor_detail.vendor_employee_number }} employees</td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>{{ vendor_detail.vendor_employee_number }} employees</td>
-        </tr>
-    </table>
+       </tbody>
+   </table>
+
+    </div>
 </div>
+</div>
+ </center>
+
+<!--<h3>Locations:</h3>-->
+<!--{% for vendorinfoaddress in vendor_info_address %}-->
+<!--{% if vendorinfoaddress.vendor_company_address %}-->
+<!--<p>{{ vendorinfoaddress.vendor_company_address }}</p>-->
+<!--{% endif %}-->
+<!--{% endfor %}-->
+<!--<h3>Company website :</h3>-->
+<!--&lt;!&ndash;<p>  {{ vendor_detail.vendor_company_website }}</p>&ndash;&gt;-->
+<!--<a href="{{ vendor_detail.vendor_company_website }}">{{ vendor_detail.vendor_company_website }}</a>-->
+<!--<h3>Company Contact Info: </h3>-->
+<!--<p> {{ vendor_detail.vendor_contact_number }}</p>-->
+<!--<h3>Social media:</h3>-->
+<!--{% for vendorinfoaddress in vendor_info_address %}-->
+<!--{% if vendorinfoaddress.vendor_social_media %}-->
+<!--&lt;!&ndash;    <p>{{ vendorinfoaddress.vendor_social_media }}</p>&ndash;&gt;-->
+<!--<a href="{{ vendorinfoaddress.vendor_social_media }}">{{ vendorinfoaddress.vendor_social_media }}</a>-->
+<!--{% endif %}-->
+<!--{% endfor %}-->
+<!--<div class="container">-->
+<!--    <h3>{{ message }}</h3>-->
+<!--    <table style="width:100%">-->
+<!--        <tr>-->
+<!--            <th>Service : Specialty</th>-->
+<!--            <th>Service : Interest</th>-->
+<!--            <th>vendor Size</th>-->
+<!--            <th>Budget</th>-->
+<!--            <th>Language</th>-->
+<!--            <th>Location</th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>{{ vendor_brief_detail.vendor_specialty }}</td>-->
+<!--            <td>{{ vendor_brief_detail.vendor_interest }}</td>-->
+<!--            <td>{{ vendor_detail.vendor_studio_size }}</td>-->
+<!--            <td>{{ vendor_brief_detail.vendor_event_budget }}</td>-->
+<!--            <td>{{ vendor_detail.vendor_language }}</td>-->
+<!--            <td>{{ vendor_info_detail.vendor_company_address }}</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td></td>-->
+<!--            <td></td>-->
+<!--            <td>{{ vendor_detail.vendor_employee_number }} employees</td>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--</div>-->
+
+<!--<div class="container">-->
+<!--    <h3>Works</h3>-->
+<!--    <br><br>-->
+
+<!--</div>-->
 
 <div class="container">
-    <h3>Works</h3>
-    <br><br>
-
-</div>
-
-<div class="container">
-    <h3>Reviews</h3>
+    <h3 class="text-dark">Reviews</h3>
     <br>
     <p>Constructive reviews help the vendor to improve future client's experience. Please leave your review here.</p>
     <br><br>
     <!--<a href="{% url 'feedback_form' %}">-->
-    <a class="btn-link" href="/feedback/service/?sku={{ vendor_detail.vendor_company_name }}">
+    <a class="btn-link" href="/feedback/?sku={{ vendor_detail.vendor_company_name }}">
         <!--{{ resultlist.vendor_company_name }}-->
-        <button type="submit" class="btn btn-default" name="sku" value="{{ vendor_detail.vendor_company_name }}"
+        <button type="submit" class="btn btn-info" name="sku" value="{{ vendor_detail.vendor_company_name }}"
                 style="float: left;">
             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
             Add Your Review
         </button>
     </a>
+    <a class="btn-link" href="#review">
+        <button type="submit" class="btn btn-success" name="" value=""
+                style="float: left;">
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+            Show review
+        </button>
+    </a>
     <!--</a>-->
     <br><br><br>
+    {% for overallrate in overall_rate %}
+    <p>overall_rate: {{ overallrate }}</p>
+    {% endfor %}
+    <div class="row" id="review">
     {% for review in feedback_review %}
+    <div class="col-4">
+        <a href="{{ review.customer_email }}">{{ review.customer_email }}</a><br>
 
+     <p >By {{ review.customer_name }} : </p>
 
+<!--    <p>{{ review.is_favorite }} + {{ review.behaviour }} + {{ review.professionalism }} + {{ review.price_fairness }}</p>-->
+<!--    {{ review.is_favorite|add:review.behaviour|add:review.professionalism|add:review.price_fairness }}-->
+<!--    overall : {{ review.overall }}-->
+    Service Rating :
       {% if review.is_favorite == 5 %}
 
     <span class="fa fa-star checked"></span>
@@ -149,22 +293,178 @@
 
     {% endif %}
     <br>
-    <a href="{{ review.customer_email }}">{{ review.customer_email }}</a><br>
+    Behaviour Rating :
+      {% if review.behaviour == 5 %}
 
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
 
-     <p>{{ review.customer_name }} : </p>
-    {% if review.review %}
-        <textarea name="paragraph_text" cols="50" rows="5" disabled>{{ review.review }}</textarea>
+    {% elif review.behaviour == 4 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+
+     {% elif review.behaviour == 3 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+     {% elif review.behaviour == 2 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+     {% elif review.behaviour == 1 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
     {% endif %}
     <br>
+        Professionism Rating :
+      {% if review.professionalism == 5 %}
+
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+
+    {% elif review.professionalism == 4 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+
+     {% elif review.professionalism == 3 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+     {% elif review.professionalism == 2 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+     {% elif review.professionalism == 1 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+    {% endif %}
+    <br>
+        Price fairness Rating :
+      {% if review.price_fairness == 5 %}
+
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+
+    {% elif review.price_fairness == 4 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+
+     {% elif review.price_fairness == 3 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+     {% elif review.price_fairness == 2 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+     {% elif review.price_fairness == 1 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+    {% endif %}
+    <br>
+            Overall Rating :
+      {% if review.overall == 5 %}
+
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+
+    {% elif review.overall == 4 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+
+     {% elif review.overall == 3 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+     {% elif review.overall == 2 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+     {% elif review.overall == 1 %}
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star "></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+    {% endif %}
+    <br>
+        Average Rating(round up):
+    {{ review.Average }} star
+    <br><br>
+        {% if review.review %}
+        <textarea name="paragraph_text" cols="30" rows="2" disabled>{{ review.review }}</textarea>
+        {% endif %}
+    <br><br>
 
 
-
+    </div>
     {% endfor %}
+    </div>
     <br><br><br>
-
+        </div>
 </div>
-{% endblock %}
-
+</center>
 </body>
+{% block content %} {% endblock %}
 </html>

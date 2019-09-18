@@ -16,26 +16,27 @@ def feedback_form(request):
             client_registration_username = request.user.username  # jishatech
             obj.customer_name = client_registration_username
             obj.customer_email = request.user.email
-            obj.agency_name = sku
+            aname=sku
+            obj.agency_name = aname
             reviewer_type = User.objects.get(username=request.user.username)
             if reviewer_type.is_agency == 1:
                 print(sku)
                 obj.save()
-                obj.overall = (obj.is_favorite+obj.behaviour+obj.price_fairness+obj.professionalism)/4
+                obj.Average = (obj.is_favorite+obj.behaviour+obj.price_fairness+obj.professionalism+obj.overall)/5
                 obj.save()
                 # form.save()
-                return render(request, 'agency_rate_client.html', {'obj': obj})
+                return render(request, 'thanks.html', {'obj': obj})
             elif reviewer_type.is_vendor == 1:
                 print(sku)
                 obj.save()
-                obj.overall = (obj.is_favorite+obj.behaviour+obj.price_fairness+obj.professionalism)/4
+                obj.Average = (obj.is_favorite+obj.behaviour+obj.price_fairness+obj.professionalism+obj.overall)/5
                 obj.save()
                 # form.save()
                 return render(request, 'thanks.html', {'obj': obj})
             else:
                 print(sku)
                 obj.save()
-                obj.overall = (obj.is_favorite+obj.behaviour+obj.price_fairness+obj.professionalism)/4
+                obj.Average = (obj.is_favorite+obj.behaviour+obj.price_fairness+obj.professionalism+obj.overall)/5
                 obj.save()
                 # form.save()
                 return render(request, 'thanks.html', {'obj': obj})

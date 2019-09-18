@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c53cf434-cdcd-4538-967f-0e832f561b3a" name="Default Changelist" comment="" />
+    <list default="true" id="c53cf434-cdcd-4538-967f-0e832f561b3a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback/migrations/0006_feedback_average.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/migrations/0006_feedback_average.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requestBrief/templates/popup.html" beforeDir="false" afterPath="$PROJECT_DIR$/requestBrief/templates/popup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requestBrief/templates/popup1.html" beforeDir="false" afterPath="$PROJECT_DIR$/requestBrief/templates/popup1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/MDB/img/svg/arrow_left.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/MDB/img/svg/arrow_left.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/MDB/img/svg/arrow_right.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/MDB/img/svg/arrow_right.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/custom-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/custom-scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/dataTables/dataTables.bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/dataTables/dataTables.bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/dataTables/dataTables.bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/dataTables/dataTables.bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/dataTables/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/dataTables/jquery.dataTables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery-1.10.2.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/jquery-1.10.2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/morris/morris-0.4.3.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/morris/morris-0.4.3.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/morris/morris.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/morris/morris.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ticket/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ticket/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/event/eventDashBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/event/eventDashBoard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eventAdminBootstrap/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eventAdminBootstrap/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eventAdminBootstrap/chart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eventAdminBootstrap/chart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eventAdminBootstrap/createEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eventAdminBootstrap/createEvent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eventAdminBootstrap/empty.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eventAdminBootstrap/empty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eventAdminBootstrap/eventDashBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eventAdminBootstrap/eventDashBoard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eventAdminBootstrap/morris-chart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eventAdminBootstrap/morris-chart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eventAdminBootstrap/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eventAdminBootstrap/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eventAdminBootstrap/tab-panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eventAdminBootstrap/tab-panel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eventAdminBootstrap/table.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eventAdminBootstrap/table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/new_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/new_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction/templates/agency_payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/transaction/templates/agency_payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/templates/vendor_list_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/templates/vendor_list_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/Django-2.0.5.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/Django-2.0.5.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/Pillow-6.1.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/Pillow-6.1.0.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/admin/static/admin/fonts/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/admin/static/admin/fonts/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django_crispy_forms-1.7.2.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django_crispy_forms-1.7.2.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django_widget_tweaks-1.4.5.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django_widget_tweaks-1.4.5.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/pytz-2019.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/pytz-2019.1.dist-info/RECORD" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,13 +49,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Od9BUc4z3pCWDHCUM2MFabgGHl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -27,7 +65,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/reg_group/migrations" />
+    <property name="last_opened_file_path" value="$USER_HOME$/EventManagement_with_django_merged/EventManagement" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -78,6 +116,8 @@
       <workItem from="1567267968017" duration="168000" />
       <workItem from="1567959213151" duration="3154000" />
       <workItem from="1567969270694" duration="1286000" />
+      <workItem from="1568713463252" duration="16337000" />
+      <workItem from="1568791514647" duration="3259000" />
     </task>
     <servers />
   </component>

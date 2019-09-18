@@ -1,9 +1,37 @@
-<h1>Search Results</h1>
+<html>
+<head>
+<title> Searched Result </title>
+<center>
+<br><br><h1>Search Results</h1><br><br>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    <meta charset="UTF-8">    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
 
+.checked {
+  color: orange;
+}
+        body  {
+        background-image: linear-gradient(#fffdfe, #ccd5ff, #f2d0ff);
+
+        }
+
+    </style>
+  </head>
+<body>
+<div class="row">
+<div class="col-sm ">
 <ul>
   {% for user in object_list %}
     <li>
-      {{ user.username }}
+      <font color=#00008b style="width: 100%"> User Name:  {{ user.username }} </font>
+      <font color=#008b8b style="width: 100%"> Email:  {{ user.email }} </font><br><br>
     </li>
   {% endfor %}
 </ul>
+</div>
+</div>
+</body>
+</center>
+</html>

@@ -21,10 +21,11 @@ from .forms import EventUpdateForm, EventCreate
 
 def ViewMyEvent(request):
     event_list = Event.objects.filter(event_username=request.user.username).all()
-    event_list_next = Event.objects.filter(event_username=request.user.username).order_by('-id')[0]
-    sku = event_list_next.event_name
-    return render(request, 'event/index.html', {'event_list': event_list, 'sku': sku})
-
+    if event_list:
+        event_list_next = Event.objects.filter(event_username=request.user.username).order_by('-id')[0]
+        sku = event_list_next.event_name
+        return render(request, 'event/index.html', {'event_list': event_list, 'sku': sku})
+    return render(request, 'event/index.html', {'event_list': event_list})
 
 # view for the event entry page
 # class EventEntry(CreateView):
